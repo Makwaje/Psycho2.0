@@ -2,26 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* Name: custom color palette
+         Author: Ilias Ism
+         URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: linear-gradient(to top left, #f1f2b5, #135058);
+
+    --background: 65 45.5% 6.64%;
+    --foreground: 65 7% 99.15%;
+
+    --muted: 65 35% 24.9%;
+    --muted-foreground: 65 7% 58.3%;
+
+    --popover: 65 51% 10.79%;
+    --popover-foreground: 65 7% 99.15%;
+
+    --card: 65 51% 10.79%;
+    --card-foreground: 65 7% 99.15%;
+
+    --border: 65 35% 24.9%;
+    --input: 65 35% 24.9%;
+
+    --primary: 65 70% 83%;
+    --primary-foreground: 65 7% 8.299999999999999%;
+
+    --secondary: 65 35% 24.9%;
+    --secondary-foreground: 65 7% 99.15%;
+
+    --accent: 65 35% 24.9%;
+    --accent-foreground: 65 7% 99.15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 65 7% 99.15%;
+
+    --ring: 65 70% 83%;
+    --radius: 3.14rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+main,
+nav {
+  @apply max-w-6xl mx-auto my-12;
+}
+p {
+  @apply mt-2;
+}
+h1 {
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+}
+h2 {
+  @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+}
+
+.gradient {
+  background: linear-gradient(to top left, #f1f2b5, #135058);
 }
