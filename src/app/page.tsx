@@ -175,17 +175,55 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
               <PenIcon size={15} />
             </Button>
             {!isEdit && (
-              <Button
-                size="icon"
-                variant="destructive"
-                onClick={() => handleDelete(todo.id)}
-              >
-                <Trash2 size={15} />
-              </Button>
+              <>
+                <AlertModal handleDelete={handleDelete} id={todo.id} />
+              </>
             )}
           </>
         )}
       </CardFooter>
     </Card>
+  );
+}
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
+interface Props3 {
+  handleDelete: (id: number) => void;
+  id: number;
+}
+
+function AlertModal({ handleDelete, id }: Props3): React.ReactNode {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger>
+        <Button size="icon" variant="destructive">
+          <Trash2 size={15} />
+        </Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your Todo
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <Button variant="destructive" onClick={() => handleDelete(id)}>
+            Delete
+          </Button>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
   );
 }
