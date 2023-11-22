@@ -4,27 +4,30 @@ import React, { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { clear, log } from "console";
+
 import { Todo } from "./model";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Check, PenIcon, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
 
 // export default async function App(): React.FC {
 //   return <main></main>;
 // }
 
-function App(): React.ReactNode {
+function App(): React.JSX.Element {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
+
+  useEffect(function () {
+    console.log(mo);
+    console.log(todo);
+  }, []);
 
   function handleAdd(e: React.FormEvent) {
     e.preventDefault();
@@ -38,11 +41,11 @@ function App(): React.ReactNode {
   console.log(todos);
   return (
     <main className=" max-w-6xl">
-      <h1 className="text-center mt-16">Task App</h1>
+      <h1 className="mt-16 text-center">Task App</h1>
       <InputWithLabel onClick={handleAdd} todo={todo} setTodo={setTodo} />
 
       {/* <div className="grid grid-cols-2 gap-y-8 max-w-2xl mx-auto"> */}
-      <div className="flex justify-evenly flex-wrap gap-8">
+      <div className="flex flex-wrap justify-evenly gap-8  ">
         {todos.map((todo) => (
           <ToDoCard
             todo={todo}
@@ -58,18 +61,22 @@ function App(): React.ReactNode {
 
 export default App;
 
-interface Props {
+interface InputWithLabelProps {
   todo: string;
   setTodo: React.Dispatch<React.SetStateAction<string>>;
   onClick: (e: React.FormEvent) => void;
 }
 
-function InputWithLabel({ todo, setTodo, onClick }: Props): React.ReactNode {
+function InputWithLabel({
+  todo,
+  setTodo,
+  onClick,
+}: InputWithLabelProps): React.ReactNode {
   return (
     <>
-      <form className="grid w-full max-w-sm gap-1.5 mt-16 mx-auto mb-16">
+      <form className="mx-auto mb-16 mt-16 grid w-full max-w-sm gap-1.5">
         <Label htmlFor="text">TODOOO</Label>
-        <div className="flex gap-2 relative">
+        <div className="relative flex gap-2">
           <Input
             type="text"
             id="text"
@@ -86,13 +93,13 @@ function InputWithLabel({ todo, setTodo, onClick }: Props): React.ReactNode {
   );
 }
 
-interface Props2 {
+interface ToDoCardProps {
   todo: Todo;
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
+function ToDoCard({ todo, todos, setTodos }: ToDoCardProps): React.ReactNode {
   const [isEdit, setIsEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
@@ -100,7 +107,7 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
 
   function handleDone(id: number): void {
     setTodos(
-      todos.map((todo) => (todo.id === id ? { ...todo, isDone: true } : todo))
+      todos.map((todo) => (todo.id === id ? { ...todo, isDone: true } : todo)),
     );
   }
 
@@ -112,7 +119,9 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
     e.preventDefault();
 
     setTodos(
-      todos.map((todo) => (todo.id === id ? { ...todo, todo: editTodo } : todo))
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, todo: editTodo } : todo,
+      ),
     );
     setIsEdit(false);
   }
@@ -121,11 +130,11 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
     function () {
       inputRef.current?.focus();
     },
-    [isEdit]
+    [isEdit],
   );
 
   return (
-    <Card className="flex flex-col justify-between gap-8 w-72">
+    <Card className="flex w-72 flex-col justify-between gap-8">
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>Todo</CardTitle>
         {todo.isDone && <Badge>Done</Badge>}
@@ -133,7 +142,7 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
       <CardContent>
         {isEdit ? (
           <form
-            className="flex flex-col gap-4 items-center justify-center"
+            className="flex flex-col items-center justify-center gap-4"
             onSubmit={(e) => handleEdit(e, todo.id)}
           >
             <Input
@@ -150,7 +159,7 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
         )}
       </CardContent>
 
-      <CardFooter className="flex flex-row gap-4 items-center justify-center">
+      <CardFooter className="flex flex-row items-center justify-center gap-4">
         {!todo.isDone && (
           <>
             {!isEdit && (
@@ -187,7 +196,6 @@ function ToDoCard({ todo, todos, setTodos }: Props2): React.ReactNode {
 }
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -197,12 +205,12 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-interface Props3 {
+interface AlertModalProps {
   handleDelete: (id: number) => void;
   id: number;
 }
 
-function AlertModal({ handleDelete, id }: Props3): React.ReactNode {
+function AlertModal({ handleDelete, id }: AlertModalProps) {
   return (
     <AlertDialog>
       <AlertDialogTrigger>
