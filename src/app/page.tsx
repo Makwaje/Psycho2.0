@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Pages/LandingPage/Navigation";
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello mom</h1>
+      <Navigation />
     </main>
   );
 }
