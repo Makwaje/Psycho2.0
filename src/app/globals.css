@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Name: custom color palette
-         Author: Ilias Ism
-         URL: https://gradient.page */
+          Author: Ilias Ism
+            URL: https://gradient.page */
 
     /* CSS: .bg-gradient { background: var(--gradient) } */
     --gradient: linear-gradient(to top left, #f1f2b5, #135058);
