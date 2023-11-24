@@ -4,7 +4,7 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <div className="flex h-[100dvh] min-w-full flex-col items-center justify-center gap-4">
+    <div className="gradient flex h-[100dvh] min-w-full flex-col items-center justify-center gap-4">
       <Headers size="xxl" className="uppercase">
         Psycho
       </Headers>

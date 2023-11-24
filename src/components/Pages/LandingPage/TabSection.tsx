@@ -10,27 +10,33 @@ import {
 function TabSection() {
   return (
     <SectionContainer>
-      <div>
-        <Tabs
-          defaultValue="account"
-          className="flex items-center justify-around"
-        >
-          <TabsList className="flex h-auto flex-col items-start justify-around gap-52">
-            <TabsTrigger value="anxiety">Anxiety</TabsTrigger>
-            <TabsTrigger value="depression">Depression</TabsTrigger>
-            <TabsTrigger value="pstd">PTSD</TabsTrigger>
-            <TabsTrigger value="existential-stress">
+      <div className="h-auto bg-card">
+        <Tabs defaultValue="anxiety">
+          <TabsList className="flex h-auto flex-col items-start gap-16">
+            <TabsTrigger value="anxiety" className="w-44 p-6">
+              Anxiety
+            </TabsTrigger>
+            <TabsTrigger value="depression" className="w-44 p-6">
+              Depression
+            </TabsTrigger>
+            <TabsTrigger value="pstd" className="w-44 p-6">
+              PTSD
+            </TabsTrigger>
+            <TabsTrigger value="existential-stress" className="w-44 p-6">
               Existential Stress
             </TabsTrigger>
           </TabsList>
 
-          <div className="w-44">
+          <div className="h-auto">
             <TabsContent value="anxiety">
-              Anxiety is a feeling of worry, nervousness, or unease, typically
-              about an imminent event or something with an uncertain outcome -
-              It is a normal human emotion that everyone experiences from time
-              to time. However, if anxiety is severe or persistent, it can
-              interfere with daily life and may indicate an anxiety disorder.
+              <p className="w-full">
+                Anxiety is a feeling of worry, nervousness, or unease, typically
+                about an imminent event or something with an uncertain outcome -
+                It is a normal human emotion that everyone experiences from time
+                to time. However, if anxiety is severe or persistent, it can
+                interfere with daily life and may indicate an anxiety disorder.
+              </p>
+              <img src="asset 1.svg" alt="anxiety" className=" w-32" />
             </TabsContent>
             <TabsContent value="depression">
               Depression is a common and serious medical illness that negatively
@@ -39,6 +45,7 @@ function TabSection() {
               sadness and/or a loss of interest in activities you once enjoyed.
               It can lead to a variety of emotional and physical problems and
               can decrease your ability to function at work and at home.
+              <img src="asset 3.svg" alt="anxiety" className=" w-32" />
             </TabsContent>
             <TabsContent value="pstd">
               Post-traumatic stress disorder (PTSD) is a mental disorder that
@@ -47,6 +54,7 @@ function TabSection() {
               shocking, or dangerous. Some examples of traumatic events include
               war, natural disasters, car accidents, sexual assault, and
               physical abuse.
+              <img src="asset 2.svg" alt="anxiety" className=" w-32" />
             </TabsContent>
             <TabsContent value="existential-stress">
               Existential stress, also known as existential anxiety or dread, is
@@ -56,6 +64,7 @@ function TabSection() {
               and value. Unlike everyday anxieties or worries, existential
               stress stems from fundamental questions about the nature of
               reality and our place within it.
+              <img src="asset 4.svg" alt="anxiety" className=" w-32" />
             </TabsContent>
           </div>
         </Tabs>

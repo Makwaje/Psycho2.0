@@ -13,10 +13,8 @@ import React from "react";
 function CardsSection() {
   return (
     <SectionContainer>
-      <div className="gradient rounded-lg p-16 ">
-        <div className="grid grid-cols-2 gap-2 xl:grid-cols-3">
-          <CardComponent />
-          <CardComponent />
+      <div className=" rounded-lg p-16 ">
+        <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
           <CardComponent />
           <CardComponent />
           <CardComponent />
@@ -31,7 +29,7 @@ export default CardsSection;
 
 function CardComponent(): React.ReactNode {
   return (
-    <Card className="h-[30rem] duration-200 animate-out hover:scale-[101%]">
+    <Card className="h-[30rem] duration-200 animate-out hover:scale-[101%] ">
       <CardHeader>
         <CardTitle>Card Title</CardTitle>
         <CardDescription>Card Description</CardDescription>
