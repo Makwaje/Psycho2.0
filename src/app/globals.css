@@ -5,41 +5,40 @@
 @layer base {
   :root {
     /* Name: custom color palette
-         Author: Ilias Ism
-         URL: https://gradient.page */
+          Author: Ilias Ism
+            URL: https://gradient.page */
 
     /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: linear-gradient(to top left, #f1f2b5, #135058);
+    --gradient: linear-gradient(to top left, #076585, #fff);
 
-    --background: 65 45.5% 6.64%;
-    --foreground: 65 7% 99.15%;
+    --background: 207 58.5% 2.16%;
+    --foreground: 207 9% 96.35%;
 
-    --muted: 65 35% 24.9%;
-    --muted-foreground: 65 7% 58.3%;
+    --muted: 207 29.7% 27%;
+    --muted-foreground: 207 9% 52.7%;
 
-    --popover: 65 51% 10.79%;
-    --popover-foreground: 65 7% 99.15%;
+    --popover: 207 71.3% 13.23%;
+    --popover-foreground: 207 9% 96.35%;
 
-    --card: 65 51% 10.79%;
-    --card-foreground: 65 7% 99.15%;
+    --card: 207 71.3% 13.23%;
+    --card-foreground: 207 9% 96.35%;
 
-    --border: 65 35% 24.9%;
-    --input: 65 35% 24.9%;
+    --border: 207 29.7% 27%;
+    --input: 207 29.7% 27%;
 
-    --primary: 65 70% 83%;
-    --primary-foreground: 65 7% 8.299999999999999%;
+    --primary: 207 90% 27%;
+    --primary-foreground: 207 9% 96.35%;
 
-    --secondary: 65 35% 24.9%;
-    --secondary-foreground: 65 7% 99.15%;
+    --secondary: 207 29.7% 27%;
+    --secondary-foreground: 207 9% 96.35%;
 
-    --accent: 65 35% 24.9%;
-    --accent-foreground: 65 7% 99.15%;
+    --accent: 207 29.7% 27%;
+    --accent-foreground: 207 9% 96.35%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 65 7% 99.15%;
+    --destructive-foreground: 207 9% 96.35%;
 
-    --ring: 65 70% 83%;
-    --radius: 3.14rem;
+    --ring: 207 90% 27%;
   }
 
   .dark {
@@ -75,5 +74,5 @@
 }
 
 .gradient {
-  background: linear-gradient(to top left, #f1f2b5, #135058);
+  background: linear-gradient(to top left, #0b486b, #f56217);
 }
