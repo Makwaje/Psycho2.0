@@ -6,6 +6,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/chad-cn/tabs";
+import Image from "next/image";
 
 function TabSection() {
   return (
@@ -36,7 +37,7 @@ function TabSection() {
                 to time. However, if anxiety is severe or persistent, it can
                 interfere with daily life and may indicate an anxiety disorder.
               </p>
-              <img src="asset 1.svg" alt="anxiety" className=" w-32" />
+              <Image src="asset 1.svg" alt="anxiety" width={128} height={128} />
             </TabsContent>
             <TabsContent value="depression">
               Depression is a common and serious medical illness that negatively
@@ -45,7 +46,7 @@ function TabSection() {
               sadness and/or a loss of interest in activities you once enjoyed.
               It can lead to a variety of emotional and physical problems and
               can decrease your ability to function at work and at home.
-              <img src="asset 3.svg" alt="anxiety" className=" w-32" />
+              <Image src="asset 3.svg" alt="anxiety" width={128} height={128} />
             </TabsContent>
             <TabsContent value="pstd">
               Post-traumatic stress disorder (PTSD) is a mental disorder that
@@ -54,7 +55,7 @@ function TabSection() {
               shocking, or dangerous. Some examples of traumatic events include
               war, natural disasters, car accidents, sexual assault, and
               physical abuse.
-              <img src="asset 2.svg" alt="anxiety" className=" w-32" />
+              <Image src="asset 2.svg" alt="anxiety" width={128} height={128} />
             </TabsContent>
             <TabsContent value="existential-stress">
               Existential stress, also known as existential anxiety or dread, is
@@ -64,7 +65,7 @@ function TabSection() {
               and value. Unlike everyday anxieties or worries, existential
               stress stems from fundamental questions about the nature of
               reality and our place within it.
-              <img src="asset 4.svg" alt="anxiety" className=" w-32" />
+              <Image src="asset 4.svg" alt="anxiety" width={128} height={128} />
             </TabsContent>
           </div>
         </Tabs>
