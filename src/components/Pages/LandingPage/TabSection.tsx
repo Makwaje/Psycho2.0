@@ -60,11 +60,11 @@ function TabSection() {
             <TabsContent value="existential-stress">
               Existential stress, also known as existential anxiety or dread, is
               a type of anxiety that arises from contemplating the meaning of
-              life, death, and one's place in the universe. It can manifest as
-              feelings of unease, fear, or doubt about one's existence, purpose,
-              and value. Unlike everyday anxieties or worries, existential
-              stress stems from fundamental questions about the nature of
-              reality and our place within it.
+              life, death, and one&apos;s place in the universe. It can manifest
+              as feelings of unease, fear, or doubt about one&apos;s existence,
+              purpose, and value. Unlike everyday anxieties or worries,
+              existential stress stems from fundamental questions about the
+              nature of reality and our place within it.
               <Image src="asset 4.svg" alt="anxiety" width={128} height={128} />
             </TabsContent>
           </div>
