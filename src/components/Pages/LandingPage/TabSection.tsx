@@ -1,3 +1,4 @@
+"use client";
 import SectionContainer from "@/components/ui/SectionContainer";
 
 import {
@@ -36,7 +37,14 @@ function TabSection() {
               to time. However, if anxiety is severe or persistent, it can
               interfere with daily life and may indicate an anxiety disorder.
             </p>
-            <Image src="/Asset1.svg" alt="anxiety" width={128} height={128} />
+            <Image
+              src="/Asset1.svg"
+              alt="anxiety"
+              width={130}
+              height={130}
+              className="opacity-0 transition-opacity duration-200"
+              onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+            />
           </TabsContent>
           <TabsContent
             value="depression"
@@ -50,7 +58,14 @@ function TabSection() {
               It can lead to a variety of emotional and physical problems and
               can decrease your ability to function at work and at home.
             </p>
-            <Image src="/Asset3.svg" alt="anxiety" width={128} height={128} />
+            <Image
+              src="/Asset3.svg"
+              alt="anxiety"
+              width={150}
+              height={150}
+              className="opacity-0 transition-opacity duration-200"
+              onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+            />
           </TabsContent>
           <TabsContent value="pstd" className="-ml-8 flex justify-around py-8">
             <p className=" w-2/3 text-base">
@@ -61,7 +76,14 @@ function TabSection() {
               war, natural disasters, car accidents, sexual assault, and
               physical abuse.
             </p>
-            <Image src="/Asset2.svg" alt="anxiety" width={128} height={128} />
+            <Image
+              src="/Asset2.svg"
+              alt="anxiety"
+              width={150}
+              height={150}
+              className="opacity-0 transition-opacity duration-200"
+              onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+            />
           </TabsContent>
           <TabsContent
             value="existential-stress"
@@ -76,7 +98,14 @@ function TabSection() {
               existential stress stems from fundamental questions about the
               nature of reality and our place within it.
             </p>
-            <Image src="/Asset4.svg" alt="anxiety" width={128} height={128} />
+            <Image
+              src="/Asset4.svg"
+              alt="anxiety"
+              width={150}
+              height={150}
+              className="opacity-0 transition-opacity duration-200"
+              onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+            />
           </TabsContent>
         </Tabs>
       </div>
