@@ -36,7 +36,7 @@ function TabSection() {
               to time. However, if anxiety is severe or persistent, it can
               interfere with daily life and may indicate an anxiety disorder.
             </p>
-            <Image src="asset 1.svg" alt="anxiety" width={128} height={128} />
+            <Image src="/Asset1.svg" alt="anxiety" width={128} height={128} />
           </TabsContent>
           <TabsContent
             value="depression"
@@ -50,7 +50,7 @@ function TabSection() {
               It can lead to a variety of emotional and physical problems and
               can decrease your ability to function at work and at home.
             </p>
-            <Image src="asset 3.svg" alt="anxiety" width={128} height={128} />
+            <Image src="/Asset3.svg" alt="anxiety" width={128} height={128} />
           </TabsContent>
           <TabsContent value="pstd" className="-ml-8 flex justify-around py-8">
             <p className=" w-2/3 text-base">
@@ -61,7 +61,7 @@ function TabSection() {
               war, natural disasters, car accidents, sexual assault, and
               physical abuse.
             </p>
-            <Image src="asset 2.svg" alt="anxiety" width={128} height={128} />
+            <Image src="/Asset2.svg" alt="anxiety" width={128} height={128} />
           </TabsContent>
           <TabsContent
             value="existential-stress"
@@ -76,7 +76,7 @@ function TabSection() {
               existential stress stems from fundamental questions about the
               nature of reality and our place within it.
             </p>
-            <Image src="asset 4.svg" alt="anxiety" width={128} height={128} />
+            <Image src="/Asset4.svg" alt="anxiety" width={128} height={128} />
           </TabsContent>
         </Tabs>
       </div>
