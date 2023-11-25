@@ -13,7 +13,7 @@ function CardsSection() {
   return (
     <SectionContainer>
       <div className=" h-auto rounded-lg p-16">
-        <div className="m-16 rounded-2xl p-16 ring-1">
+        <div className="my-16 mt-12 rounded-2xl p-16 ">
           <Headers
             className="text-center font-extrabold tracking-wider"
             size="xxl"
@@ -22,7 +22,7 @@ function CardsSection() {
           </Headers>
         </div>
         <div className="grid grid-cols-2  gap-4 xl:grid-cols-4">
-          <Card className=" h-[30rem] bg-[#E4F1FF] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[30rem] bg-[#2E4F4F] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">
                 {"Emergency Psychotherapy"}
@@ -36,7 +36,7 @@ function CardsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className=" h-[30rem] bg-[#27005D] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[30rem] bg-[#0F4C75] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">
                 {"Daily art therapy session"}
@@ -50,7 +50,7 @@ function CardsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className=" h-[30rem] bg-[#9400FF] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[30rem] bg-[#3282B8] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">
                 {"Weekly self-help support"}
@@ -64,7 +64,7 @@ function CardsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className=" h-[30rem] bg-[#AED2FF] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[30rem] bg-[#CA3E47] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">{"Interactive community"}</CardTitle>
             </CardHeader>
