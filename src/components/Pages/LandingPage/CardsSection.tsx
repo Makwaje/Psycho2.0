@@ -18,11 +18,11 @@ function CardsSection() {
             className="text-center font-extrabold tracking-wider"
             size="xxl"
           >
-            How our program helps
+            What services do we provide?
           </Headers>
         </div>
-        <div className="grid grid-cols-2  gap-4 xl:grid-cols-4">
-          <Card className=" h-[30rem] bg-[#809A6F] duration-200 animate-out hover:scale-[101%] ">
+        <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
+          <Card className=" h-[32rem] bg-[#809A6F] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">
                 {"Emergency Psychotherapy"}
@@ -36,7 +36,7 @@ function CardsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className=" h-[30rem] bg-[#A2A378] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[32rem] bg-[#A2A378] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">
                 {"Daily art therapy session"}
@@ -50,7 +50,7 @@ function CardsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className=" h-[30rem] bg-[#739072] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[32rem] bg-[#739072] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">
                 {"Weekly self-help support"}
@@ -64,7 +64,7 @@ function CardsSection() {
               </p>
             </CardContent>
           </Card>
-          <Card className=" h-[30rem] bg-[#ECE3CE] duration-200 animate-out hover:scale-[101%] ">
+          <Card className=" h-[32rem] bg-[#ECE3CE] duration-200 animate-out hover:scale-[101%] ">
             <CardHeader>
               <CardTitle className="mb-8">{"Interactive community"}</CardTitle>
             </CardHeader>

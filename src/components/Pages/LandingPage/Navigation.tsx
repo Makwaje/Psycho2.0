@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/chad-cn/button";
 
 function Navigation() {
   return (
-    <nav className="sticky top-0 z-50 flex h-20 items-center justify-between bg-inherit p-4 drop-shadow-md">
+    <nav className="sticky top-0 z-50 flex h-20 items-center justify-between bg-inherit p-4 opacity-90 drop-shadow-md">
       <Headers size="lg" className="uppercase">
         psycho
       </Headers>

@@ -3,6 +3,9 @@ import HeroSection from "@/components/Pages/LandingPage/HeroSection";
 import CardsSection from "@/components/Pages/LandingPage/CardsSection";
 import TabSection from "@/components/Pages/LandingPage/TabSection";
 import HowSection from "@/components/Pages/LandingPage/HowSection";
+import FreeSection from "@/components/Pages/LandingPage/FreeSection";
+import HappySadSection from "@/components/Pages/LandingPage/HappySadSection";
+import Free2Section from "@/components/Pages/LandingPage/Free2Section";
 
 export default function Home() {
   return (
@@ -12,7 +15,10 @@ export default function Home() {
         <HeroSection />
         <HowSection />
         <CardsSection />
-        <TabSection />
+        <FreeSection />
+        <Free2Section />
+        {/* <TabSection /> */}
+        <HappySadSection />
       </main>
     </>
   );

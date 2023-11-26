@@ -6,7 +6,7 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <div className="flex h-[100dvh] min-w-full flex-row items-center justify-center gap-52">
+    <div className="flex h-[93dvh] min-w-full flex-row items-center justify-center gap-52">
       <div className="flex flex-col gap-32 text-left">
         <div className="space-y-4 text-left">
           <Headers size="xxl" className=" uppercase">
