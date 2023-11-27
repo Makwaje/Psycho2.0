@@ -6,6 +6,7 @@ import HowSection from "@/components/Pages/LandingPage/HowSection";
 import FreeSection from "@/components/Pages/LandingPage/FreeSection";
 import HappySadSection from "@/components/Pages/LandingPage/HappySadSection";
 import Free2Section from "@/components/Pages/LandingPage/Free2Section";
+import FaqSection from "@/components/Pages/LandingPage/FaqSection";
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
         <CardsSection />
         <FreeSection />
         <Free2Section />
-        {/* <TabSection /> */}
+        <TabSection />
         <HappySadSection />
+        <FaqSection />
       </main>
     </>
   );
