@@ -21,14 +21,9 @@ export default function Home() {
         <Free2Section />
         <CtaSection />
         <FaqSection />
+        {/* <TabSection /> */}
+        {/* <HappySadSection /> */}
       </main>
     </>
   );
-}
-
-{
-  /* <TabSection /> */
-}
-{
-  /* <HappySadSection /> */
 }
