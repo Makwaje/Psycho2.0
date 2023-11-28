@@ -91,13 +91,15 @@ function CardComponent({
         </CardHeader>
         <CardContent>
           <p>{content}</p>
-          <Image
-            src={image}
-            width={"250"}
-            height={"250"}
-            className="ml-12 justify-self-start opacity-50"
-            alt="hands"
-          />
+          <div className="relative">
+            <Image
+              src={image}
+              width={"250"}
+              height={"250"}
+              className="absolute -bottom-28 -right-6 -top-8 max-w-[10rem] justify-self-start opacity-50 sm:top-0 md:max-w-fit"
+              alt="hands"
+            />
+          </div>
         </CardContent>
       </Card>
 

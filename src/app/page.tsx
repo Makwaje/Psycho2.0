@@ -19,11 +19,16 @@ export default function Home() {
         <CardsSection />
         <FreeSection />
         <Free2Section />
-        {/* <TabSection /> */}
-        {/* <HappySadSection /> */}
         <CtaSection />
         <FaqSection />
       </main>
     </>
   );
+}
+
+{
+  /* <TabSection /> */
+}
+{
+  /* <HappySadSection /> */
 }

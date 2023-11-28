@@ -2,11 +2,15 @@
 import Headers from "@/components/ui/Headers";
 import SectionContainer from "@/components/ui/SectionContainer";
 import { Button } from "@/components/ui/chad-cn/button";
+import { ArrowUpIcon } from "lucide-react";
 
 function CtaSection() {
   return (
     <div className="cta-background relative flex h-[100dvh] flex-col items-center justify-center gap-6 bg-accent-foreground text-accent">
-      <Headers size="xxl" className="font-extrabold uppercase ">
+      <Headers
+        size="xxl"
+        className="text-center text-4xl font-extrabold uppercase sm:text-5xl "
+      >
         You&apos;re not alone
       </Headers>
       <p className="text-xl text-accent opacity-60">
@@ -19,6 +23,8 @@ function CtaSection() {
       >
         Get Help Now
       </Button>
+      <ArrowUpIcon />
+      <p className="font-bold opacity-75">You think it works 😂?</p>
     </div>
   );
 }

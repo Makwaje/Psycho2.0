@@ -55,8 +55,8 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList className="flex justify-around gap-x-10">
+    <NavigationMenu className="hidden md:block">
+      <NavigationMenuList className="grid grid-cols-5 place-items-center justify-items-center">
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
