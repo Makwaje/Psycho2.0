@@ -1,8 +1,6 @@
-import { NavigationMenuSub } from "@radix-ui/react-navigation-menu";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navigation from "@/components/Pages/LandingPage/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 

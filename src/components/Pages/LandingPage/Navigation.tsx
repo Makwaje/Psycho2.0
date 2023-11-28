@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/chad-cn/button";
 
 function Navigation() {
   return (
-    <nav className="sticky top-0 z-50 flex h-20 max-w-full items-center justify-between bg-inherit p-4 opacity-90 drop-shadow-md">
+    <nav className="sticky top-0 z-50 flex h-16 max-w-full items-center justify-between bg-inherit p-4 opacity-95 drop-shadow-md">
       <Headers
         size="xxl"
         className="hidden text-base uppercase md:block md:text-xl lg:text-5xl"

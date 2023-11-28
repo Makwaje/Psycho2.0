@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
@@ -12,39 +11,38 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/chad-cn/navigation-menu";
-import { MenuIcon, MenuSquareIcon, StopCircleIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import Headers from "./Headers";
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
+    title: "How it works?",
     href: "/",
     description: "",
   },
   {
-    title: "Hover Card",
+    title: "Services",
     href: "/",
     description: "",
   },
   {
-    title: "Progress",
+    title: "FREE",
     href: "/",
     description: "",
   },
   {
-    title: "Scroll-area",
+    title: "FAQ",
     href: "/",
     description: "",
   },
   {
-    title: "Tabs",
+    title: "For volunteers",
     href: "/",
     description: "",
   },
   {
-    title: "Tooltip",
+    title: "For psychos (losers)",
     href: "/",
     description: "",
   },
@@ -56,7 +54,7 @@ export function NavigationMenuMobile() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            <MenuIcon size={32} />
+            <MenuIcon size={32} className="bg-inherit" />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-3 p-4 ">
