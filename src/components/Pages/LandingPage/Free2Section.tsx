@@ -6,7 +6,7 @@ import Image from "next/image";
 function Free2Section() {
   return (
     <SectionContainer>
-      <div className="relative mx-2 h-[60dvh] rounded-md  p-6 ring-4 ring-ring md:p-14">
+      <div className="relative mx-8 h-[60dvh] rounded-md p-6  ring-4 ring-ring md:mx-0 md:p-14">
         <Headers
           size="xl"
           className="mb-4 text-2xl md:mb-8 md:text-left md:text-4xl"

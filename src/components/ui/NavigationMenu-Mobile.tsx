@@ -50,11 +50,11 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuMobile() {
   return (
-    <NavigationMenu className="block md:hidden">
+    <NavigationMenu className="block bg-inherit md:hidden">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>
-            <MenuIcon size={32} className="bg-inherit" />
+          <NavigationMenuTrigger className="flex flex-row-reverse gap-1  p-1 text-base">
+            Psycho
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-3 p-4 ">
