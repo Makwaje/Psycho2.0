@@ -20,13 +20,15 @@ function HeroSection() {
             deserunt fugit deleniti velit sit
           </p>
         </div>
-        <Button
-          size="lg"
-          variant="default"
-          className="hidden w-48 uppercase md:block"
-        >
-          Get Help Now
-        </Button>
+        <Link href="/login" className="hidden md:block ">
+          <Button
+            size="lg"
+            variant="default"
+            className="hidden w-48 uppercase md:block"
+          >
+            Get Help Now
+          </Button>
+        </Link>
       </div>
       <Image
         src="/card3.svg"
