@@ -2,6 +2,7 @@
 import Headers from "@/components/ui/Headers";
 import { Button } from "@/components/ui/chad-cn/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function HeroSection() {
@@ -35,13 +36,15 @@ function HeroSection() {
         className="opacity-0 transition-opacity duration-200"
         onLoadingComplete={(image) => image.classList.remove("opacity-0")}
       />
-      <Button
-        size="lg"
-        variant="default"
-        className="block w-48 p-3 uppercase md:hidden"
-      >
-        Get Help Now
-      </Button>
+      <Link href="/login">
+        <Button
+          size="lg"
+          variant="default"
+          className="block w-48 p-3 uppercase md:hidden"
+        >
+          Get Help Now
+        </Button>
+      </Link>
     </div>
   );
 }

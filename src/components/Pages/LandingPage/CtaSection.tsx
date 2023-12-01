@@ -3,6 +3,7 @@ import Headers from "@/components/ui/Headers";
 import SectionContainer from "@/components/ui/SectionContainer";
 import { Button } from "@/components/ui/chad-cn/button";
 import { ArrowUpIcon } from "lucide-react";
+import Link from "next/link";
 
 function CtaSection() {
   return (
@@ -16,13 +17,15 @@ function CtaSection() {
       <p className="text-xl text-accent opacity-60">
         (guess what?, <strong>you&#39;re 💀</strong>)
       </p>
-      <Button
-        size="lg"
-        variant="outline"
-        className="uppercase text-accent-foreground ring-8 ring-primary transition-all duration-150 hover:bg-primary hover:text-primary-foreground"
-      >
-        Get Help Now
-      </Button>
+      <Link href="/login">
+        <Button
+          size="lg"
+          variant="outline"
+          className="uppercase text-accent-foreground ring-8 ring-primary transition-all duration-150 hover:bg-primary hover:text-primary-foreground"
+        >
+          Get Help Now
+        </Button>
+      </Link>
       <ArrowUpIcon />
       <p className="font-bold opacity-75">You think it works 😂?</p>
     </div>

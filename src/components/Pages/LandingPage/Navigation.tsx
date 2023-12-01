@@ -3,6 +3,7 @@ import { NavigationMenuDemo as NavigationMenuDesktop } from "../../ui/Navigation
 import Headers from "@/components/ui/Headers";
 import { NavigationMenuMobile } from "@/components/ui/NavigationMenu-Mobile";
 import { Button } from "@/components/ui/chad-cn/button";
+import Link from "next/link";
 
 function Navigation() {
   return (
@@ -17,21 +18,27 @@ function Navigation() {
       <NavigationMenuDesktop />
       <NavigationMenuMobile />
 
-      <Button
-        size="lg"
-        variant="outline"
-        className="hidden uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground md:block"
-      >
-        Get Help Now
-      </Button>
+      {/* Desktop Button */}
+      <Link href="/login">
+        <Button
+          size="lg"
+          variant="outline"
+          className="hidden uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground md:block"
+        >
+          Get Help Now
+        </Button>
+      </Link>
 
-      <Button
-        size="sm"
-        variant="outline"
-        className="block uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground md:hidden"
-      >
-        Get Help Now
-      </Button>
+      {/* Mobile Button */}
+      <Link href="/login" className="block md:hidden ">
+        <Button
+          size="sm"
+          variant="outline"
+          className="block uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground md:hidden"
+        >
+          Get Help Now
+        </Button>
+      </Link>
     </nav>
   );
 }
