@@ -38,12 +38,8 @@ function HeroSection() {
         className="opacity-0 transition-opacity duration-200"
         onLoadingComplete={(image) => image.classList.remove("opacity-0")}
       />
-      <Link href="/login">
-        <Button
-          size="lg"
-          variant="default"
-          className="block w-48 p-3 uppercase md:hidden"
-        >
+      <Link href="/login" className="block w-48 p-3 uppercase md:hidden">
+        <Button size="lg" variant="default">
           Get Help Now
         </Button>
       </Link>

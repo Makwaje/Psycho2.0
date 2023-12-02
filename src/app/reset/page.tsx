@@ -5,21 +5,17 @@ import { Button } from "@/components/ui/chad-cn/button";
 import { Input } from "@/components/ui/chad-cn/input";
 import { useForm } from "react-hook-form";
 import { Separator } from "@/components/ui/chad-cn/separator";
-import {
-  FaArrowLeft,
-  FaGoogle,
-  FaSquareFacebook,
-  FaSquareXTwitter,
-} from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
 
 export default function ResetPage() {
   const {
     register,
-    formState: { errors },
     handleSubmit,
+    formState: { errors },
+    reset,
+    getValues,
   } = useForm();
 
   function onSubmit(data: Object) {
@@ -45,12 +41,17 @@ export default function ResetPage() {
         >
           <Headers size="xl">Psycho</Headers>
         </Link>
-        <div className="flex flex-col justify-between">
-          <Headers size="xl" className="mx-auto mb-20 text-2xl md:text-4xl">
+        <div className="flex w-80 flex-col justify-between text-center">
+          <Headers size="xl" className="mx-auto mb-20 text-3xl md:text-4xl">
             Don&#39;t panic!
           </Headers>
+          <p className="mb-12 font-medium ">
+            Please fill the required fields below, so we can help you to return
+            your account
+          </p>
         </div>
-        <form>
+
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex w-80 flex-col items-center justify-center gap-4">
             {/* Email */}
             <div className="w-full max-w-2xl space-y-1">
@@ -58,8 +59,9 @@ export default function ResetPage() {
                 Email
               </label>
               <Input
-                id="email"
                 {...register("email")}
+                id="email"
+                type="email"
                 placeholder="Example@email.com"
                 className="w-full"
               />

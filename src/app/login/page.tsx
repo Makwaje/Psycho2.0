@@ -3,21 +3,28 @@
 import Headers from "@/components/ui/Headers";
 import { Button } from "@/components/ui/chad-cn/button";
 import { Input } from "@/components/ui/chad-cn/input";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { Separator } from "@/components/ui/chad-cn/separator";
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 
-function AuthPage() {
+import { zodResolver } from "@hookform/resolvers/zod";
+import { TLoginSchema, loginSchema } from "@/lib/types";
+
+export default function LoginPage() {
   const {
     register,
-    formState: { errors },
     handleSubmit,
-  } = useForm();
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<TLoginSchema>({
+    resolver: zodResolver(loginSchema),
+  });
 
-  function onSubmit(data: Object) {
+  function onSubmit(data: TLoginSchema) {
     console.log(data);
+    reset();
   }
 
   return (
@@ -44,7 +51,7 @@ function AuthPage() {
             Welcome back!
           </Headers>
         </div>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex w-80 flex-col items-center justify-center gap-4">
             {/* Email */}
             <div className="w-full max-w-2xl space-y-1">
@@ -52,23 +59,34 @@ function AuthPage() {
                 Email
               </label>
               <Input
-                id="email"
                 {...register("email")}
+                id="email"
+                type="text"
                 placeholder="Example@email.com"
                 className="w-full"
               />
             </div>
+            {errors?.email && (
+              <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
+                {`${errors.email.message}`}
+              </div>
+            )}
             {/* Password */}
             <div className="w-full space-y-1">
               <label htmlFor="password" className="text-sm">
                 Password
               </label>
               <Input
+                {...register("password")}
                 id="password"
                 type="password"
-                {...register("password")}
                 placeholder="Password"
               />
+              {errors?.password && (
+                <div className="-mt-3 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
+                  {`${errors.password.message}`}
+                </div>
+              )}
               <label className="ml-[11.5rem] text-xs font-semibold text-destructive hover:underline">
                 <Link href="/reset">forgot your password?</Link>
               </label>
@@ -93,7 +111,11 @@ function AuthPage() {
         </div>
         <p className="mt-4 text-lg font-medium">
           Don&#39;t have an account?
-          <Button variant="link" className="pl-1 text-lg text-blue-600">
+          <Button
+            disabled={isSubmitting}
+            variant="link"
+            className="pl-1 text-lg text-blue-600"
+          >
             <Link href="/signup">Signup</Link>
           </Button>
         </p>
@@ -101,4 +123,3 @@ function AuthPage() {
     </div>
   );
 }
-export default AuthPage;
