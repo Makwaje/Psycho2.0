@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { TLoginSchema, loginSchema } from "@/lib/types";
+import { TSignUpSchema, signUpSchema } from "@/lib/types";
 
 export default function LoginPage() {
   const {
@@ -18,13 +18,12 @@ export default function LoginPage() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<TLoginSchema>({
-    resolver: zodResolver(loginSchema),
+  } = useForm<TSignUpSchema>({
+    resolver: zodResolver(signUpSchema),
   });
 
-  function onSubmit(data: TLoginSchema) {
+  function onSubmit(data: TSignUpSchema) {
     console.log(data);
-    reset();
   }
 
   return (
@@ -47,12 +46,30 @@ export default function LoginPage() {
           <Headers size="xl">Psycho</Headers>
         </Link>
         <div className="flex flex-col justify-between">
-          <Headers size="xl" className="mx-auto mb-20 text-2xl md:text-4xl">
-            Welcome back!
+          <Headers size="xl" className="mx-auto mb-20 text-3xl md:text-4xl">
+            Signup
           </Headers>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex w-80 flex-col items-center justify-center gap-4">
+            {/* FullName */}
+            <div className="w-full max-w-2xl space-y-1">
+              <label htmlFor="fullName" className="text-sm">
+                Full Name
+              </label>
+              <Input
+                {...register("fullName")}
+                id="fullName"
+                type="text"
+                placeholder="Mohamed alfadel"
+                className="w-full"
+              />
+            </div>
+            {errors?.fullName && (
+              <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
+                {`${errors.fullName.message}`}
+              </div>
+            )}
             {/* Email */}
             <div className="w-full max-w-2xl space-y-1">
               <label htmlFor="email" className="text-sm">
@@ -87,17 +104,54 @@ export default function LoginPage() {
                   {`${errors.password.message}`}
                 </div>
               )}
-              <label className="ml-[11.5rem] text-xs font-semibold text-destructive hover:underline">
-                <Link href="/reset">forgot your password?</Link>
-              </label>
             </div>
-            <Button className="mt-6 w-3/4 uppercase" size="lg" type="submit">
-              Login
+            {/* confirmPassword */}
+            <div className="w-full space-y-1">
+              <label htmlFor="confirmPassword" className="text-sm">
+                Confirm Password
+              </label>
+              <Input
+                {...register("confirmPassword")}
+                id="confirmPassword"
+                type="password"
+                placeholder="Re-enter password"
+              />
+              {errors?.confirmPassword && (
+                <div className="-mt-3 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
+                  {`${errors.confirmPassword.message}`}
+                </div>
+              )}
+            </div>
+            {/* Phone Number */}
+            <div className="w-full max-w-2xl space-y-1">
+              <label htmlFor="phoneNumber" className="text-sm">
+                Phone number
+              </label>
+              <Input
+                {...register("phoneNumber")}
+                id="phoneNumber"
+                type="number"
+                placeholder="Example@email.com"
+                className="w-full"
+              />
+            </div>
+            {errors?.phoneNumber && (
+              <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
+                {`${errors.phoneNumber.message}`}
+              </div>
+            )}
+            <Button
+              disabled={isSubmitting}
+              className="mt-6 w-3/4 uppercase"
+              size="lg"
+              type="submit"
+            >
+              Signup
             </Button>
           </div>
         </form>
         <Separator className="my-6 w-1/2" orientation="horizontal" />
-        <p className="mb-6">Or login with</p>
+        <p className="mb-6">Or signup with</p>
         <div className="space-x-4">
           <Button variant="secondary" className="px-4 py-8">
             <FaSquareXTwitter size={40} />
@@ -110,13 +164,9 @@ export default function LoginPage() {
           </Button>
         </div>
         <p className="mt-4 text-lg font-medium">
-          Don&#39;t have an account?
-          <Button
-            disabled={isSubmitting}
-            variant="link"
-            className="pl-1 text-lg text-blue-600"
-          >
-            <Link href="/signup">Signup</Link>
+          Already have an account?
+          <Button variant="link" className="pl-1 text-lg text-blue-600">
+            <Link href="/signup">Login</Link>
           </Button>
         </p>
       </div>
