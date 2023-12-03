@@ -131,7 +131,7 @@ export default function LoginPage() {
                 {...register("phoneNumber")}
                 id="phoneNumber"
                 type="number"
-                placeholder="Example@email.com"
+                placeholder="09XXXXXXXX"
                 className="w-full"
               />
             </div>
