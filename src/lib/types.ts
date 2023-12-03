@@ -10,7 +10,9 @@ export type TLoginSchema = z.infer<typeof loginSchema>;
 // signup schema validation to be used in react hook form
 export const signUpSchema = z
   .object({
-    fullName: z.string({ required_error: "This field is required" }),
+    fullName: z
+      .string({ required_error: "This field is required" })
+      .includes(" ", { message: "Full name is required" }),
     email: z.string().email(),
     password: z.string().min(10, "Password must be at least 8 characters"),
     confirmPassword: z.string(),

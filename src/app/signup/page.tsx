@@ -166,7 +166,7 @@ export default function LoginPage() {
         <p className="mt-4 text-lg font-medium">
           Already have an account?
           <Button variant="link" className="pl-1 text-lg text-blue-600">
-            <Link href="/signup">Login</Link>
+            <Link href="/login  ">Login</Link>
           </Button>
         </p>
       </div>
