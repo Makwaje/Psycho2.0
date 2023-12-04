@@ -47,7 +47,7 @@ export default function Sidebar() {
           </NavItem>
         </div>
         <Separator orientation="horizontal" className="my-2" />
-        <div className="mb-8 mt-auto flex flex-col justify-between gap-4">
+        <div className="mb-16 mt-auto flex flex-col justify-between gap-4">
           <NavItem href="#">
             <FaGear size={20} />
             Settings
@@ -59,7 +59,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <NavItem href="#" className="mb-2  ring-2">
+      <NavItem href="#" className="mb-2 ring-2">
         <CgProfile size={22} />
         Mohamed Alfadel
       </NavItem>
@@ -78,7 +78,7 @@ function NavItem({ children, href, className }: NavItemProps) {
     <Link
       href={href}
       className={cn(
-        "flex items-center justify-start gap-2 rounded-md px-2 py-3 shadow-md ring-1 ring-ring transition-all duration-150 hover:bg-primary/80 hover:text-primary-foreground",
+        "flex items-center justify-start gap-2 rounded-md px-2 py-3 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none ",
         className,
       )}
     >
