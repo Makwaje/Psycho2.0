@@ -23,36 +23,36 @@ export default function Sidebar() {
 
       <div className="flex h-full flex-col">
         <div className="grid items-center gap-4">
-          <NavItem href="#">
+          <NavItem href="/app/home">
             <FaHome size={20} /> Home
           </NavItem>
-          <NavItem href="#">
+          <NavItem href="/app/doctors">
             <FaHeartCircleCheck size={20} /> Doctors
           </NavItem>
-          <NavItem href="#">
+          <NavItem href="/app/activities">
             <TbActivityHeartbeat size={20} />
             Activities
           </NavItem>
-          <NavItem href="#">
+          <NavItem href="/app/reports">
             <BiSolidReport size={20} />
             Reports
           </NavItem>
-          <NavItem href="#">
+          <NavItem href="/app/blog">
             <MdComment size={20} />
             Blog
           </NavItem>
-          <NavItem href="#">
+          <NavItem href="/app/messages">
             <AiFillMessage size={20} />
             Messages
           </NavItem>
         </div>
         <Separator orientation="horizontal" className="my-2" />
         <div className="mb-16 mt-auto flex flex-col justify-between gap-4">
-          <NavItem href="#">
+          <NavItem href="/app/settings">
             <FaGear size={20} />
             Settings
           </NavItem>
-          <NavItem href="#">
+          <NavItem href="/app/notifications">
             <IoMdNotifications size={20} />
             Notifications
           </NavItem>

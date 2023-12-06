@@ -8,7 +8,6 @@ import HappySadSection from "@/components/Pages/LandingPage/HappySadSection";
 import Free2Section from "@/components/Pages/LandingPage/Free2Section";
 import FaqSection from "@/components/Pages/LandingPage/FaqSection";
 import CtaSection from "@/components/Pages/LandingPage/CtaSection";
-import AuthPage from "@/app/login/page";
 
 export default function LandingPage() {
   return (

@@ -37,6 +37,7 @@ export default function LoginPage() {
           className="hidden h-screen w-full object-cover md:block"
           src="AssetLogin.svg"
           alt="hi mom"
+          loading="eager"
         />
       </div>
 
