@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <main className="flex w-full gap-2">
+        <main className="flex w-full">
           <Sidebar />
-          {children}
+          <div className="w-full flex-1 px-6 pt-6">{children}</div>
         </main>
       </body>
     </html>

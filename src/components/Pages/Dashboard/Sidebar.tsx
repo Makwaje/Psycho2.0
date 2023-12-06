@@ -16,7 +16,7 @@ import { Separator } from "@/components/ui/chad-cn/separator";
 
 export default function Sidebar() {
   return (
-    <aside className="flex h-[100dvh] w-60 flex-col overflow-scroll bg-popover px-4 text-popover-foreground">
+    <aside className="sticky top-0 flex h-[100dvh] w-60 flex-col bg-popover px-4 text-popover-foreground">
       <Headers size="xl" className="-ml-2 mb-12 mt-4">
         Psycho
       </Headers>
