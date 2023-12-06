@@ -9,7 +9,8 @@ import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+// import { zodResolver } from "@hookform/resolvers/zod";
+import {zodResolver} from '@hookform/resolvers/zod'
 import { TLoginSchema, loginSchema } from "@/lib/types";
 
 export default function LoginPage() {

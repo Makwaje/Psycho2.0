@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  
   :root {
     /* Name: custom color palette
           Author: Ilias Ism
