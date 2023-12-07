@@ -1,3 +1,4 @@
+import Headers from "@/components/ui/Headers";
 import { Button } from "@/components/ui/chad-cn/button";
 import {
   Card,
@@ -11,28 +12,45 @@ import { VerifiedIcon } from "lucide-react";
 import Image from "next/image";
 import { LuClock3, LuStar, LuTimerReset, LuX } from "react-icons/lu";
 
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/chad-cn/dialog";
+import { Separator } from "@/components/ui/chad-cn/separator";
+
 export default function DoctorsPage() {
   return (
-    <div className="grid w-full justify-items-center gap-x-2 gap-y-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-    </div>
+    <>
+      <Headers size="xl" className="pb-10 font-extrabold">
+        Our doctors
+      </Headers>
+      <div className="grid w-full justify-items-center gap-x-2 gap-y-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+      </div>
+    </>
   );
 }
 
@@ -44,7 +62,7 @@ function CardComponent() {
 
   return (
     <>
-      <Card className="flex w-full min-w-fit flex-col gap-4 drop-shadow-md lg:h-[22.5rem] lg:w-[22.5rem]">
+      <Card className="flex w-[95%] min-w-[22.5rem] max-w-[40rem] flex-col gap-4 drop-shadow-md lg:h-[22.5rem] ">
         <CardHeader>
           <CardTitle className="flex gap-1">
             {name} <VerifiedIcon size={20} stroke="white" fill="black" />
@@ -87,7 +105,81 @@ function CardComponent() {
         </CardContent>
         <CardFooter className=" flex flex-row-reverse gap-2">
           <Button variant="default">Send chat request</Button>
-          <Button variant="secondary">Details</Button>
+          {/* MODAL */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="secondary">Details</Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle className="flex items-center gap-1 text-2xl">
+                  {name} <VerifiedIcon />
+                </DialogTitle>
+
+                <DialogDescription>
+                  {/* IMAGE */}
+                  <Image
+                    src="/doctor.jpg"
+                    width={300}
+                    height={300}
+                    alt="The doctor"
+                    className="mx-auto my-8 rounded-md"
+                  />
+                  {/* TIME */}
+                  <div className="flex flex-row items-center justify-center gap-6 text-center">
+                    <div className="flex flex-col items-center gap-1.5">
+                      <LuTimerReset size={35} />
+                      <div className="text-sm">
+                        <p className="font-medium">Response time</p>
+                        <span className="text-xs">
+                          within {responseTime} minutes
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center gap-1.5">
+                      <LuStar size={35} />
+                      <div className="text-sm">
+                        <p className="font-medium">Rating</p>
+                        <span className="text-xs">{rating}/10</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center gap-1.5">
+                      <LuClock3 size={35} />
+                      <div className="text-sm">
+                        <p className="font-medium">Availability time</p>
+                        <span className="text-xs">{availabilityTime}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <Separator className="my-4" />
+
+                  <div className="mt-8 space-y-4">
+                    <Headers size="lg" className="text-left">
+                      Bio
+                    </Headers>
+                    <p className="px-6 text-left text-lg">
+                      An an valley indeed so no wonder future nature vanity.
+                      Debating all she mistaken indulged believed provided
+                      declared. He many kept on draw lain song as same. Whether
+                      at dearest certain spirits is entered in to. Rich fine
+                      bred real use too many good. She compliment unaffected
+                      expression favourable any. Unknown chiefly showing to
+                      conduct no. Hung as love evil able to post at as.
+                    </p>
+                  </div>
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter className="mt-4 sm:justify-end">
+                <DialogClose asChild>
+                  <Button type="button" variant="secondary">
+                    Close
+                  </Button>
+                </DialogClose>
+                <Button variant="default">Send chat request</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+          {/*  */}
         </CardFooter>
       </Card>
     </>
