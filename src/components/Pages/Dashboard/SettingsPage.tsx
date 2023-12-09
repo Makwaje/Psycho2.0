@@ -7,11 +7,12 @@ import { IoMdNotifications } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 export default function SettingsPage() {
   return (
-  <>
+  <div>
+  
     <Headers size='xl'>Account settings</Headers>
     <div className='mt-16 grid gap-1 grid-cols-3'>
      <div className='flex w-72  flex-col gap-4'>
-      <NavItem href="#" className='grid grid-cols-2 items-center'>
+      <NavItem href="/app/settings/profile" className='grid grid-cols-2 items-center'>
         <div className='flex items-center gap-2'>
             <CgProfile size={20} />
              Profile
@@ -34,7 +35,7 @@ export default function SettingsPage() {
       </NavItem>
      </div>
     </div>
-  </>
+  </div>
   )
 }
 

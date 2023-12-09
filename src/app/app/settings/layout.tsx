@@ -3,6 +3,7 @@ import SettingsPage from "@/components/Pages/Dashboard/SettingsPage";
 import Sidebar from "@/components/Pages/Dashboard/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Settingpage from "./page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,10 @@ export default function SettingsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-          <SettingsPage/>
-          <div>{children}</div>
-        </>
+    <div className="grid grid-cols-3">
+          <Settingpage/>
+             {children}
+        </div>
   
   
   );

@@ -1,5 +1,6 @@
+import SettingsPage from '@/components/Pages/Dashboard/SettingsPage'
 import React from 'react'
 
-export default function page() {
-  return <></>
+export default function Settingpage() {
+  return <SettingsPage/>
 }
