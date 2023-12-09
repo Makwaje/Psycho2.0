@@ -1,7 +1,7 @@
 import "@/app/globals.css";
-import Sidebar from "@/components/Pages/Dashboard/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +18,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <main className="flex w-full">
-          <Sidebar />
-          <div className="w-full flex-1 px-6 pt-6">{children}</div>
-        </main>
+        <div className="flex h-[100dvh]">
+          <div className="hidden w-2/3 bg-destructive md:block">
+            <Image
+              width={0}
+              height={0}
+              className="hidden h-screen w-full object-cover md:block"
+              src="AssetLogin.svg"
+              alt="hi mom"
+              loading="eager"
+            />
+          </div>
+          {children}
+        </div>
       </body>
     </html>
   );

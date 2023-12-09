@@ -1,8 +1,5 @@
-import React from 'react'
+import DoctorsPage from "@/components/Pages/Dashboard/DoctorsPage";
 
 export default function Doctors() {
-  return (
-
-    <div>Doctors</div>
-  )
+  return <DoctorsPage />;
 }
