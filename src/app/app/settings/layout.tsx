@@ -11,20 +11,17 @@ export const metadata: Metadata = {
   description: "i hope you die soon",
 };
 
-export default function RootLayout({
+export default function SettingsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <main className="flex w-full">
-          <Sidebar />
+    <>
           <SettingsPage/>
           <div>{children}</div>
-        </main>
-      </body>
-    </html>
+        </>
+  
+  
   );
 }
