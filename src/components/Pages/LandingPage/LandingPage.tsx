@@ -17,12 +17,12 @@ export default function LandingPage() {
         <HeroSection />
         <HowSection />
         <CardsSection />
+        {/* <HappySadSection /> */}
         <FreeSection />
         <Free2Section />
         <CtaSection />
         <FaqSection />
         {/* <TabSection /> */}
-        {/* <HappySadSection /> */}
       </main>
     </>
   );

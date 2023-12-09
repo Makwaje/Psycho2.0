@@ -14,7 +14,7 @@ function HappySadSection() {
       </div>
       <div className=" flex w-1/2  items-end justify-center bg-accent text-accent-foreground">
         <Image
-          src={"/happy.png"}
+          src={"/sad2.png"}
           width={450}
           height={1}
           alt="sad person with a lot of terrible thoughts on his mind"
