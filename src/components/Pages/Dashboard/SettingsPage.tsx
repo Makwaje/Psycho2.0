@@ -1,13 +1,14 @@
-import Headers from '@/components/ui/Headers'
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import React from 'react'
+import Headers from "@/components/ui/Headers";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import React from "react";
 import { CgProfile } from "react-icons/cg";
 import { IoMdNotifications } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 
 export default function SettingsPage() {
   return (
+
     <div className='w-1/4'>
 
       <Headers size='xl'>Account settings</Headers>
@@ -17,9 +18,12 @@ export default function SettingsPage() {
             <div className='flex items-center gap-2'>
               <CgProfile size={20} />
               Profile
+
+
             </div>
             <div className=" justify-self-end">&rarr;</div>
           </NavItem>
+
 
           <NavItem href="/app/settings/notification" className='grid grid-cols-2 items-center'>
             <div className='flex items-center gap-2'>
@@ -38,6 +42,7 @@ export default function SettingsPage() {
       </div>
     </div>
   )
+
 }
 
 type NavItemProps = {
@@ -51,7 +56,9 @@ function NavItem({ children, href, className }: NavItemProps) {
     <Link
       href={href}
       className={cn(
+
         " px-3 py-3 gap-2 rounded-md  shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none ",
+
         className,
       )}
     >

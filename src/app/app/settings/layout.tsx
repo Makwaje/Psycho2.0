@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import SettingsPage from "@/components/Pages/Dashboard/SettingsPage";
-import Sidebar from "@/components/Pages/Dashboard/Sidebar";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -17,12 +17,12 @@ export default function SettingsLayout({
   children: React.ReactNode;
 }) {
   return (
+
     <div className="flex gap-2">
           <SettingsPage/>
             
              {children}
         </div>
-  
   
   );
 }
