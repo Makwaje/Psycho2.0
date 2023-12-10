@@ -48,7 +48,7 @@ export default function Sidebar() {
         </div>
         <Separator orientation="horizontal" className="my-2" />
         <div className="mb-16 mt-auto flex flex-col justify-between gap-4">
-          <NavItem href="/app/settings">
+          <NavItem href="/app/settings/profile">
             <FaGear size={20} />
             Settings
           </NavItem>
