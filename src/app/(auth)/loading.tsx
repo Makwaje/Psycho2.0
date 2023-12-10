@@ -2,7 +2,7 @@ import { CgSpinner } from "react-icons/cg";
 
 function loading() {
   return (
-    <div className="flex h-full animate-spin items-center justify-center text-8xl font-extrabold">
+    <div className="relative  flex w-full animate-spin flex-col items-center justify-center text-8xl font-extrabold md:w-1/2">
       <CgSpinner />
     </div>
   );
