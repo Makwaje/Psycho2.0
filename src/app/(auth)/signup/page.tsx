@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import { Separator } from "@/components/ui/chad-cn/separator";
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-import Image from "next/image";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TSignUpSchema, signUpSchema } from "@/lib/types";

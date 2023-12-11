@@ -1,6 +1,6 @@
 import { CgSpinner } from "react-icons/cg";
 
-function loading() {
+function Loading() {
   return (
     <div className="relative flex w-full animate-spin flex-col items-center justify-center text-8xl font-extrabold md:w-1/2">
       <CgSpinner />
@@ -8,4 +8,4 @@ function loading() {
   );
 }
 
-export default loading;
+export default Loading;

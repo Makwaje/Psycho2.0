@@ -64,7 +64,6 @@ export default function Sidebar() {
         <CgProfile size={22} />
         Mohamed Alfadel
       </NavItem>
-      <Button>click</Button>
     </aside>
   );
 }
