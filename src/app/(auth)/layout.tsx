@@ -2,6 +2,8 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,22 +18,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <div className="flex h-[100dvh]">
-          <div className="hidden w-2/3 bg-destructive md:block">
-            <Image
-              width={0}
-              height={0}
-              className="hidden h-screen w-full object-cover md:block"
-              src="AssetLogin.svg"
-              alt="hi mom"
-              loading="eager"
-            />
-          </div>
-          {children}
+    <main className="h-screen w-screen">
+      <div className="flex h-[100dvh]">
+        <div className="hidden w-2/3 bg-destructive md:block">
+          <Image
+            width={0}
+            height={0}
+            className="hidden h-screen w-full object-cover md:block"
+            src="AssetLogin.svg"
+            alt="hi mom"
+            loading="eager"
+          />
         </div>
-      </body>
-    </html>
+        {children}
+      </div>
+    </main>
   );
 }

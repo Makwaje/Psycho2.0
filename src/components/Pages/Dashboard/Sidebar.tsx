@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { Separator } from "@/components/ui/chad-cn/separator";
+import { Button } from "@/components/ui/chad-cn/button";
 
 export default function Sidebar() {
   return (
@@ -78,7 +79,7 @@ function NavItem({ children, href, className }: NavItemProps) {
     <Link
       href={href}
       className={cn(
-        "flex items-center justify-start gap-2 rounded-md px-2 py-3 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none ",
+        "flex items-center justify-start gap-2 rounded-md px-2 py-3 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none",
         className,
       )}
     >

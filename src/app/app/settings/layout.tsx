@@ -17,12 +17,9 @@ export default function SettingsLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <div className="flex gap-2">
-          <SettingsPage/>
-            
-             {children}
-        </div>
-  
+      <SettingsPage />
+      {children}
+    </div>
   );
 }
