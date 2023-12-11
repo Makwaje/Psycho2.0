@@ -1,9 +1,13 @@
+"use client";
 import Headers from '@/components/ui/Headers'
 import { Button } from '@/components/ui/chad-cn/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/chad-cn/card'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
+import {Line} from 'react-chartjs-2'
+import Data from '../../../Data.json'
 
 export default function Reports() {
   return (
@@ -14,7 +18,7 @@ export default function Reports() {
         <Card className='flex p-4 w-[37rem]'>
             <Image  src="/doctor.jpg"
             width={190}
-            height={140}
+            height={190}
             alt="The doctor"
             className="rounded-full"/>
                  <CardHeader>
@@ -35,6 +39,25 @@ export default function Reports() {
           <Button size='lg' >Edit</Button>
           </Link>
         </Card>
+      </div>
+      <div>
+
+      {/* <Line data={{
+        labels:Data.map((data)=> data.label),
+        datasets:[
+          {
+            label: 'f',
+            data:Data.map((data)=> data.revenue),
+            backgroundColor: '#085242',
+            borderColor: '#052ff1'
+          },{
+            label: 'Const',
+            data: Data.map((data)=> data.cost),
+            backgroundColor: '#ff3033',
+            borderColor: '#FFaf'
+          },
+        ],
+      }}/> */}
       </div>
     </div>
   )
