@@ -179,7 +179,6 @@ function CardComponent() {
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          {/*  */}
         </CardFooter>
       </Card>
     </>
