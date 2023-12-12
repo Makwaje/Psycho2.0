@@ -10,6 +10,12 @@ import React from 'react'
 import { ResponsiveLine } from '@nivo/line'
 import Data from '../../../Data.json'
 
+
+
+
+
+
+
 export default function Reports() {
   return (
     
@@ -53,9 +59,18 @@ export default function Reports() {
 }
 
 
+type dataProps = {
+  data: {
+    id: string;
+    color: string;
+    data: {
+      x: string;
+      y: number;
+    }[];
+  }[];
+};
 
-
-const MyResponsiveLine = ({ data }) => (
+const MyResponsiveLine = ({ data } : dataProps) => (
   <ResponsiveLine
       data={data}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -120,3 +135,4 @@ const MyResponsiveLine = ({ data }) => (
       ]}
   />
 )
+
