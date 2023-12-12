@@ -16,13 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <main className="flex w-full">
-          <Sidebar />
-          <div className="w-full flex-1 px-6 pt-6">{children}</div>
-        </main>
-      </body>
-    </html>
+    <main className="flex w-full">
+      <Sidebar />
+      <div className="w-full flex-1 px-6 pt-6">{children}</div>
+    </main>
   );
 }
