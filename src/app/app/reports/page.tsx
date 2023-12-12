@@ -24,7 +24,7 @@ export default function Reports() {
       <Headers size='sm'>31/12/2030</Headers>
       <div>
         <Card className='flex p-4 w-[37rem]'>
-            <Image  src="/doctor.jpg"
+            <Image  src="/file.jpg"
             width={190}
             height={190}
             alt="The doctor"
