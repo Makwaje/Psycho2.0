@@ -9,10 +9,10 @@ import React from 'react'
 
 import { ResponsiveLine } from '@nivo/line'
 import Data from '../../../Data.json'
-
-
-
-
+import Paragraph from '@/components/ui/Paragraph';
+import { IoMdPerson } from "react-icons/io";
+import { FaWeight } from "react-icons/fa";
+import { GiRelationshipBounds } from "react-icons/gi";
 
 
 
@@ -21,7 +21,7 @@ export default function Reports() {
     
     <div>
       <Headers size='xl'>Reports</Headers>
-      <Headers size='sm'>31/12/2030</Headers>
+      <Paragraph tracking='lg' variant='thin'>31/12/2030</Paragraph>
       <div>
         <Card className='flex p-4 w-[37rem]'>
             <Image  src="/file.jpg"
@@ -33,15 +33,22 @@ export default function Reports() {
                   <Headers size='lg'>
                    Musab Softare
                   </Headers>
-                  <p className='font-bold'>
+                  <div className='p-1 rounded-sm'>
+
+                  <Paragraph className='text-primary flex items-center gap-1' variant='uppercase' tracking='sm' >
+                  <IoMdPerson/>
+
                     25 Years
-                  </p>
-                  <p className='font-bold'>
-                    50.3kg
-                  </p>
-                  <p className='font-bold'>
+                  </Paragraph>
+                  <Paragraph className='text-primary flex items-center gap-1' tracking='sm' >
+<FaWeight/>
+50.3KG
+                  </Paragraph>
+                  <Paragraph className='text-primary flex items-center gap-1' variant='uppercase' tracking='sm' >
+                  <GiRelationshipBounds/>
                     single
-                  </p>
+                  </Paragraph>
+                  </div>
           </CardHeader>
           <Link href='settings/profile' className=' self-end'>
           <Button size='lg' >Edit</Button>
