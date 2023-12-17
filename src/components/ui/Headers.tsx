@@ -18,8 +18,7 @@ const headerVariants = cva("font-bold", {
   },
 });
 
-interface HeadersProps
-  extends React.HTMLAttributes<HTMLHeadingElement>,
+interface HeadersProps extends React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headerVariants> {}
 
 function Headers({
