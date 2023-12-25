@@ -1,4 +1,4 @@
-import { BookmarkIcon, SearchIcon } from "lucide-react";
+import { BookmarkIcon } from "lucide-react";
 import Image from "next/image";
 
 import { Badge } from "@/components/ui/chad-cn/badge";
