@@ -1,8 +1,7 @@
 import "@/app/globals.css";
-import Sidebar from "@/components/Pages/Dashboard/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Tooltip from "../../../components/Pages/Dashboard/blogPage/Tooltip";
+import Tooltip from "@/components/Pages/Dashboard/blogPage/Tooltip";
 import Headers from "@/components/ui/Headers";
 
 const inter = Inter({ subsets: ["latin"] });

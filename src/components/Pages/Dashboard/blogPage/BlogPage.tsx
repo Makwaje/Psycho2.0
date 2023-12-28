@@ -14,7 +14,7 @@ import {
 function BlogPage() {
   return (
     <>
-      <div className="mx-auto grid max-w-[95%] place-items-center gap-y-4 py-2">
+      <div className=" mx-auto grid max-w-[95%] place-items-center gap-y-4 py-8">
         <CardComponent />
         <CardComponent />
         <CardComponent />
