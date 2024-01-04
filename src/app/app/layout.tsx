@@ -3,6 +3,8 @@ import Sidebar from "@/components/Pages/Dashboard/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { motion } from "framer-motion";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
