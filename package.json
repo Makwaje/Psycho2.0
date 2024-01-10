@@ -58,7 +58,10 @@
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
     "yarn": "^1.22.21",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "@react-email/components": "^0.0.12",
+    "@react-email/tailwind": "^0.0.13",
+    "resend": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -71,6 +74,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "typescript": "^5"
   }
 }

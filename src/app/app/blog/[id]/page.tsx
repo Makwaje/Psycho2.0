@@ -1,6 +1,6 @@
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
-function ArticlePage({ params }: Params) {
+function ArticlePage({ params }: { params: Params }) {
   return <div>blog id {params.id}</div>;
 }
 
