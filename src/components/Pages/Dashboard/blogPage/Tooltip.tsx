@@ -12,8 +12,8 @@ import { SearchIcon } from "lucide-react";
 
 function Tooltip() {
   return (
-    <nav className="sticky top-0 z-[100] h-fit border-b-2 border-border bg-background/95 py-8  ">
-      <div className="flex items-center justify-center">
+    <nav className="sticky top-0 z-[100] h-fit w-full border-b-2 border-border bg-background/95 py-8  ">
+      <div className="flex w-full items-center justify-between">
         <SelectComponent />
         <TabsComponent />
         <Search />
@@ -24,7 +24,7 @@ function Tooltip() {
 
 function Search() {
   return (
-    <div className="ml-auto flex w-full max-w-sm items-center rounded-md border border-border drop-shadow-sm">
+    <div className="flex w-full max-w-sm items-center rounded-md border border-border drop-shadow-sm">
       <Input
         type="text"
         placeholder="Search..."
@@ -35,7 +35,7 @@ function Search() {
         variant="ghost"
         className="h-10 rounded-none rounded-r-sm border-b border-r border-t border-input hover:ring-0 hover:ring-secondary"
       >
-        <SearchIcon size={22} />
+        <SearchIcon size={22} className="opacity-75" />
       </Button>
     </div>
   );
@@ -45,7 +45,7 @@ function TabsComponent() {
   return (
     <Tabs
       defaultValue="Feed"
-      className="ml-auto flex w-96 items-center justify-center drop-shadow-xl "
+      className="flex w-96 items-center justify-center drop-shadow-xl "
     >
       <TabsList className="h-14 w-full justify-evenly ring-2 ring-ring/70">
         <TabsTrigger value="Followings" className="text-md">
@@ -64,9 +64,9 @@ function TabsComponent() {
 
 function SelectComponent() {
   return (
-    <div className="ml-4">
+    <div className="ml-4 w-96">
       <Select>
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-2/3">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>
         <SelectContent className="z-[101] bg-popover/95">
