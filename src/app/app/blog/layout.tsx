@@ -1,8 +1,9 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Tooltip from "@/components/Pages/Dashboard/blogPage/Tooltip";
+
 import Headers from "@/components/ui/Headers";
+import { Separator } from "@/components/ui/chad-cn/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <Headers size="xl" className="font-bold">
         Blog
       </Headers>
-      <Tooltip />
+      <Separator className="my-4" />
 
       <div>{children}</div>
     </>

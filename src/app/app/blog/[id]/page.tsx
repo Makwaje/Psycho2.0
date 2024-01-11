@@ -1,7 +1,8 @@
+import ArticlePage from "@/components/Pages/Dashboard/blogPage/ArticlePage";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
-function ArticlePage({ params }: { params: Params }) {
-  return <div>blog id {params.id}</div>;
+function Article({ params }: { params?: Params }) {
+  return <ArticlePage />;
 }
 
-export default ArticlePage;
+export default Article;

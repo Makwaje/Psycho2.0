@@ -20,22 +20,26 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/chad-cn/avatar";
+import Tooltip from "./Tooltip";
 
 function BlogPageNew() {
   return (
-    <section className=" mx-auto grid max-w-5xl place-items-center gap-y-8 py-8">
-      <PostComponent image />
-      <PostComponent />
+    <>
+      <Tooltip />
+      <section className=" mx-auto grid max-w-5xl place-items-center gap-y-8 py-8">
+        <PostComponent image />
+        <PostComponent />
 
-      <PostComponent image />
-      <PostComponent />
+        <PostComponent image />
+        <PostComponent />
 
-      <PostComponent image />
-      <PostComponent />
+        <PostComponent image />
+        <PostComponent />
 
-      <PostComponent image />
-      <PostComponent />
-    </section>
+        <PostComponent image />
+        <PostComponent />
+      </section>
+    </>
   );
 }
 
