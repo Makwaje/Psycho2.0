@@ -26,14 +26,14 @@ function BlogPageNew() {
     <section className=" mx-auto grid max-w-5xl place-items-center gap-y-8 py-8">
       <PostComponent image />
       <PostComponent />
-      <PostComponent image />
-
-      <PostComponent />
-      <PostComponent />
 
       <PostComponent image />
       <PostComponent />
+
+      <PostComponent image />
       <PostComponent />
+
+      <PostComponent image />
       <PostComponent />
     </section>
   );
@@ -47,7 +47,7 @@ function PostComponent({ image = false }: { image?: boolean }) {
       <CardHeader className="space-y-2">
         <CardTitle>5 Tips to die quickly</CardTitle>
         <CardDescription className="flex items-center gap-2">
-          <Avatar>
+          <Avatar className="ring-[1px] ring-ring/50">
             <AvatarImage>
               <Image src={doctorImage} alt="doctor avatar" />
             </AvatarImage>
