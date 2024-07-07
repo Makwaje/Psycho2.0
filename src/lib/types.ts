@@ -7,14 +7,6 @@ export const loginSchema = z.object({
 });
 export type TLoginSchema = z.infer<typeof loginSchema>;
 
-export const CodeSchema = z.object({
-  code: z
-    .string()
-    .min(6, "Code should be 6 characters")
-    .max(6, "Code should not be more than 6 characters"),
-});
-export type TCodeSchema = z.infer<typeof CodeSchema>;
-
 // signup schema validation to be used in react hook form
 export const signUpSchema = z
   .object({
