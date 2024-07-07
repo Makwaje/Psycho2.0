@@ -82,37 +82,6 @@ function ArticlePage() {
 
       <div>
         <p className="mx-auto my-8 max-w-4xl text-center font-normal leading-relaxed tracking-wider">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-          perferendis accusantium quos omnis facere excepturi aperiam corrupti!
-          Accusantium est illum enim commodi voluptate? Hic doloremque deserunt
-          perferendis quia, eum recusandae ipsam repellendus ex ad earum?
-          Tempora, repellendus assumenda, corrupti eaque sint officia
-          consectetur officiis hic fugit error ipsam aspernatur ipsa, nesciunt
-          vel ex maxime fugiat! Vero corrupti deserunt aliquid labore odit omnis
-          laudantium accusamus aut sed qui, nisi reiciendis, culpa voluptatem
-          voluptatibus, reprehenderit impedit blanditiis tenetur consectetur
-          animi! Sit neque voluptate ipsa ea quia repudiandae, cupiditate
-          consequatur laborum mollitia maxime, obcaecati quidem odio cum modi
-          inventore, harum illo eaque esse. Quaerat nam, porro asperiores culpa
-          hic debitis. Magni repellendus corporis alias numquam aperiam totam. A
-          provident ipsa incidunt nihil! Hic, odio. Consectetur eligendi sed
-          consequatur sit debitis cupiditate, culpa quia quas accusamus nisi
-          natus asperiores laudantium quis deleniti tempora, possimus aperiam
-          atque! Commodi quas sapiente ipsum odio dolor, at exercitationem.
-          Corporis itaque explicabo, reprehenderit perferendis eligendi eum
-          voluptas ab molestiae voluptatibus vitae quidem quod ratione ad harum
-          minus distinctio modi vero est excepturi consectetur eos laudantium?
-          Cumque sequi voluptatem animi expedita quod quasi harum soluta
-          accusantium vero! Necessitatibus eius cum veniam quasi in consequatur
-          asperiores nisi sequi ab. Fugit, porro. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Voluptas, necessitatibus velit ea iste
-          autem odio delectus suscipit facere earum debitis placeat dolores fuga
-          excepturi sunt ipsam commodi reiciendis quis maxime modi, laborum
-          cumque totam reprehenderit? Modi cumque placeat quos inventore? Illo
-          hic nesciunt quidem earum. Hic, corporis sequi magni laborum omnis sed
-          harum aut autem iusto aspernatur aliquam nihil facilis et itaque
-          mollitia labore fugiat veniam aperiam similique eligendi vel quos.
-          Sequi voluptates delectus, dolorum quidem harum adipisci dolores id,
           earum animi mollitia voluptas quasi quia, pariatur optio? Dolore earum
           itaque odit laborum, vel sequi assumenda maxime ipsa sunt cum ipsam
           vitae ab eius asperiores suscipit modi dicta sed omnis optio? Dolorum,
