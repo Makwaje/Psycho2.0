@@ -1,4 +1,4 @@
-import Sidebar from "@/components/Pages/Dashboard/Sidebar";
+import Sidebar from "@components/appComponent/Sidebar";
 
 export default function AppLayout() {
   return (

@@ -2,22 +2,16 @@
 
 import Headers from "@/components/ui/Headers";
 import { Button } from "@/components/ui/chad-cn/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/chad-cn/card";
+import { Card, CardHeader } from "@/components/ui/chad-cn/card";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-import { ResponsiveLine } from "@nivo/line";
-import Data from "@/lib/Data.json";
 import Paragraph from "@/components/ui/Paragraph";
-import { IoMdPerson } from "react-icons/io";
+import Data from "@/lib/Data.json";
+import { ResponsiveLine } from "@nivo/line";
 import { FaWeight } from "react-icons/fa";
 import { GiRelationshipBounds } from "react-icons/gi";
+import { IoMdPerson } from "react-icons/io";
 
 export default function Reports() {
   return (

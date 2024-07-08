@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import SettingsPage from "@/components/Pages/Dashboard/SettingsPage";
+import SettingsPage from "@components/appComponent/settingsPage/SettingsPage";
 
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
