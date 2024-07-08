@@ -2,7 +2,15 @@ import { AiFillMessage } from "react-icons/ai";
 import { BiSolidReport } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { FaHome } from "react-icons/fa";
+<<<<<<< HEAD
 import { FaGear, FaHeartCircleCheck } from "react-icons/fa6";
+=======
+import {
+  FaGear,
+  FaHeartCircleCheck,
+  FaTriangleExclamation,
+} from "react-icons/fa6";
+>>>>>>> 8e3ceafb41fa454d3657ea61c17c0d92350cc711
 import { IoMdNotifications } from "react-icons/io";
 import { MdComment } from "react-icons/md";
 import { TbActivityHeartbeat } from "react-icons/tb";
@@ -10,10 +18,16 @@ import { TbActivityHeartbeat } from "react-icons/tb";
 import Headers from "@/components/ui/Headers";
 import { cn } from "@/lib/utils";
 
+<<<<<<< HEAD
 import Link from "next/link";
 import React from "react";
 import { Separator } from "@/components/ui/chad-cn/separator";
 import { Button } from "@/components/ui/chad-cn/button";
+=======
+import { Separator } from "@/components/ui/chad-cn/separator";
+import Link from "next/link";
+import React from "react";
+>>>>>>> 8e3ceafb41fa454d3657ea61c17c0d92350cc711
 
 export default function Sidebar() {
   return (
@@ -79,7 +93,11 @@ function NavItem({ children, href, className }: NavItemProps) {
     <Link
       href={href}
       className={cn(
+<<<<<<< HEAD
         "flex items-center justify-start gap-2 rounded-md px-2 py-3 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none",
+=======
+        " group-[a]: flex items-center justify-start gap-2 rounded-md px-2 py-3 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none",
+>>>>>>> 8e3ceafb41fa454d3657ea61c17c0d92350cc711
         className,
       )}
     >

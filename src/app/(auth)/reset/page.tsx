@@ -3,11 +3,10 @@
 import Headers from "@/components/ui/Headers";
 import { Button } from "@/components/ui/chad-cn/button";
 import { Input } from "@/components/ui/chad-cn/input";
-import { useForm } from "react-hook-form";
 import { Separator } from "@/components/ui/chad-cn/separator";
-import { FaArrowLeft } from "react-icons/fa6";
 import Link from "next/link";
-import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { FaArrowLeft } from "react-icons/fa6";
 
 export default function ResetPage() {
   const {

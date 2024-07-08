@@ -30,7 +30,11 @@ export default function DoctorsPage() {
       <Headers size="xl" className="pb-10 font-extrabold">
         Our doctors
       </Headers>
+<<<<<<< HEAD
       <div className="grid w-full justify-items-center gap-x-2 gap-y-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+=======
+      <div className="flex flex-wrap items-center justify-center gap-4">
+>>>>>>> 8e3ceafb41fa454d3657ea61c17c0d92350cc711
         <CardComponent />
         <CardComponent />
         <CardComponent />
@@ -62,7 +66,11 @@ function CardComponent() {
 
   return (
     <>
+<<<<<<< HEAD
       <Card className="flex w-[95%] min-w-[22.5rem] max-w-[40rem] flex-col gap-4 drop-shadow-md lg:h-[22.5rem] ">
+=======
+      <Card className="flex h-fit min-w-fit max-w-xl flex-grow flex-col gap-4 drop-shadow-md">
+>>>>>>> 8e3ceafb41fa454d3657ea61c17c0d92350cc711
         <CardHeader>
           <CardTitle className="flex gap-1">
             {name} <VerifiedIcon size={20} stroke="white" fill="black" />

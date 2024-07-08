@@ -5,6 +5,7 @@ export default function AppLayout() {
     <>
       {/* Sidebar */}
       {/* Header ？？？？*/}
+      hello bitch
       {/* Outlet */}
     </>
   );
