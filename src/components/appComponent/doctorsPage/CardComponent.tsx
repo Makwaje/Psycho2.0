@@ -10,8 +10,7 @@ import {
 } from "@/components/ui/chad-cn/card";
 import { VerifiedIcon } from "lucide-react";
 import Image from "next/image";
-import { LuClock3, LuStar, LuTimerReset, LuX } from "react-icons/lu";
-
+import { LuClock3, LuStar, LuTimerReset } from "react-icons/lu";
 import {
   Dialog,
   DialogClose,
@@ -24,37 +23,7 @@ import {
 } from "@/components/ui/chad-cn/dialog";
 import { Separator } from "@/components/ui/chad-cn/separator";
 
-export default function DoctorsPage() {
-  return (
-    <>
-      <Headers size="xl" className="pb-10 font-extrabold">
-        Our doctors
-      </Headers>
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-      </div>
-    </>
-  );
-}
-
-function CardComponent() {
+export default function CardComponent() {
   const name = "Musab Ibrahim";
   const responseTime = Math.floor(Math.random() * 11 + 20);
   const rating = Math.floor(Math.random() * 11);

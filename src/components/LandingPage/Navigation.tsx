@@ -1,4 +1,4 @@
-import { NavigationMenuDemo as NavigationMenuDesktop } from "../../ui/NavigationMenu-Desktop";
+import { NavigationMenuDemo as NavigationMenuDesktop } from "../ui/NavigationMenu-Desktop";
 
 import Headers from "@/components/ui/Headers";
 import { NavigationMenuMobile } from "@/components/ui/NavigationMenu-Mobile";

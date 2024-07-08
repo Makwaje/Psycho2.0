@@ -2,7 +2,6 @@ import { BookmarkIcon, VerifiedIcon } from "lucide-react";
 import Image from "next/image";
 import Hizb from "@/../public/hizb.jpg";
 import doctorImage from "@/../public/doctor.jpg";
-
 import { Badge } from "@/components/ui/chad-cn/badge";
 import { Button } from "@/components/ui/chad-cn/button";
 import {
@@ -12,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/chad-cn/card";
-
 import { Separator } from "@/components/ui/chad-cn/separator";
 import { TbThumbUp } from "react-icons/tb";
 import {
@@ -20,33 +18,15 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/chad-cn/avatar";
-import Tooltip from "./Tooltip";
 import Link from "next/link";
 
-function BlogPage() {
-  return (
-    <>
-      <Tooltip />
-      <section className=" mx-auto grid max-w-5xl place-items-center gap-y-8 py-8">
-        <PostComponent id={1} image />
-        <PostComponent id={2} />
-
-        <PostComponent id={3} image />
-        <PostComponent id={4} />
-
-        <PostComponent id={5} image />
-        <PostComponent id={6} />
-
-        <PostComponent id={7} image />
-        <PostComponent id={8} />
-      </section>
-    </>
-  );
-}
-
-export default BlogPage;
-
-function PostComponent({ image = false, id }: { image?: boolean; id: number }) {
+export default function PostComponent({
+  image = false,
+  id,
+}: {
+  image?: boolean;
+  id: number;
+}) {
   return (
     <Card className="flex h-fit w-full flex-col rounded-md shadow-md ring-[0.5px] ring-ring drop-shadow-sm duration-150 hover:scale-[1.005] hover:shadow-xl hover:ring-2 hover:drop-shadow-md">
       <CardHeader className="space-y-2">

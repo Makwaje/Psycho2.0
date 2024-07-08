@@ -1,5 +1,5 @@
 import Headers from "@/components/ui/Headers";
-import CardComponent from "@/components/appComponent/doctorsPage/CardComponent";
+import CardComponent from "./CardComponent";
 
 export default function DoctorsPage() {
   return (

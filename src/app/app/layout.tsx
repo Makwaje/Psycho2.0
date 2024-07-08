@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import Sidebar from "@/components/Pages/Dashboard/Sidebar";
+import Sidebar from "@components/appComponent/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
