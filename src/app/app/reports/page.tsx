@@ -22,9 +22,11 @@ import { GiRelationshipBounds } from 'react-icons/gi';
 import Paragraph from '@/components/ui/paragraph';
 
 export default function Reports() {
+  
   const year = new Date().getFullYear();
   const month = new Date().getMonth();
   const day = new Date().getDate();
+
 
   return (
     <div>
