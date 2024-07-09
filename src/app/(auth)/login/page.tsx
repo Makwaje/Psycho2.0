@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Headers from "@/components/ui/Headers";
-import { Button } from "@/components/ui/chad-cn/button";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import { Input } from '@/components/ui/input';
+import { useForm } from 'react-hook-form';
+import { Separator } from '@/components/ui/separator';
+import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
+import Link from 'next/link';
 
-import { TLoginSchema, loginSchema } from "@/lib/types";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { TLoginSchema, loginSchema } from '@/lib/types';
+import Headers from '@/components/ui/headers';
+import { Button } from '@/components/ui/button';
 
 export default function LoginPage() {
   const {
@@ -32,7 +32,7 @@ export default function LoginPage() {
         className="absolute left-6 top-4 bg-accent-foreground p-4 text-2xl text-accent md:text-4xl"
         href="/"
       >
-        <Headers size="xl">Psycho</Headers>
+        <Headers size="sm">Psycho</Headers>
       </Link>
       <div className="flex flex-col justify-between">
         <Headers size="xl" className="mx-auto mb-20 text-2xl md:text-4xl">
@@ -47,7 +47,7 @@ export default function LoginPage() {
               Email
             </label>
             <Input
-              {...register("email")}
+              {...register('email')}
               id="email"
               type="text"
               placeholder="Example@email.com"
@@ -65,7 +65,7 @@ export default function LoginPage() {
               Password
             </label>
             <Input
-              {...register("password")}
+              {...register('password')}
               id="password"
               type="password"
               placeholder="Password"

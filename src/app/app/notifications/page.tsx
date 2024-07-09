@@ -1,8 +1,13 @@
-import React from 'react'
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Notifications() {
   return (
-    <div>Notifications</div>
-  )
+    <div>
+      <Link href={'/app/settings/notification'}>
+        <Button>Notifications Settings</Button>
+      </Link>
+    </div>
+  );
 }
-

@@ -1,18 +1,17 @@
-"use client";
+'use client';
 
-import Headers from "@/components/ui/Headers";
-import { Button } from "@/components/ui/chad-cn/button";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import Link from "next/link";
-
-import { useState } from "react";
-import OtpInput from "react-otp-input";
+import Headers from '@/components/ui/headers';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
+import { useState } from 'react';
+import OtpInput from 'react-otp-input';
 
 export default function VerifyPage() {
-  const [otp, setOtp] = useState("");
+  const [otp, setOtp] = useState('');
 
-  const email = "makwaje@gmail.com";
+  const email = 'makwaje@gmail.com';
 
   function handleSubmitCode() {
     console.log(otp);
@@ -31,7 +30,7 @@ export default function VerifyPage() {
           Verification
         </Headers>
         <p className="mb-10">
-          We&apos;ve sent you a code in{""}
+          We&apos;ve sent you a code in{''}
           <span className="block text-center font-bold">({email})</span>
         </p>
       </div>

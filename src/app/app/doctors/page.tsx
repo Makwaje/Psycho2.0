@@ -1,4 +1,4 @@
-import DoctorsPage from "@/components/Pages/Dashboard/DoctorsPage";
+import DoctorsPage from '../../../components/appComponents/doctorsPage/doctorsPage';
 
 export default function Doctors() {
   return <DoctorsPage />;

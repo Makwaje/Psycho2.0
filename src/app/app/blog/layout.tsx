@@ -2,10 +2,10 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Headers from "@/components/ui/Headers";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import { Button } from "@/components/ui/chad-cn/button";
 import { PlusSquare } from "lucide-react";
+import Headers from "@components/ui/headers";
+import { Button } from "@components/ui/button";
+import { Separator } from "@components/ui/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 

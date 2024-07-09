@@ -1,5 +1,3 @@
-import React, { ReactNode } from "react";
-
 type SectionContinuerProps = {
   children: React.ReactNode;
 };
