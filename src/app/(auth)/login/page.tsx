@@ -1,18 +1,20 @@
 'use client';
 
-import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
-import { Separator } from '@components/ui/chad-cn/separator';
+
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { TLoginSchema, loginSchema } from '@/lib/types';
-import { Button } from '@components/ui/chad-cn/button';
-import { useRouter } from 'next/navigation';
-import Headers from '@components/ui/Headers';
 
-export default  function LogInPage() {
+import { useRouter } from 'next/navigation';
+import { loginSchema, TLoginSchema } from '@/src/lib/types';
+import Headers from '@/src/components/ui/Headers';
+import { Input } from '@/src/components/ui/chad-cn/input';
+import { Button } from '@/src/components/ui/chad-cn/button';
+import { Separator } from '@/src/components/ui/chad-cn/separator';
+
+export default function LogInPage() {
   const {
     register,
     handleSubmit,
@@ -24,35 +26,30 @@ export default  function LogInPage() {
   const router = useRouter();
 
   async function onSubmit(data: TLoginSchema) {
+    const { email, password } = data;
 
-const {email,password}=data
-
-
-    const request = await fetch('https://psycho-de4o.onrender.com/api/v1/users/login',
+    const request = await fetch(
+      'https://psycho-de4o.onrender.com/api/v1/users/login',
       {
-        method:"POST",
-        body:JSON.stringify({
-          email:email,
-          password:password
+        method: 'POST',
+        body: JSON.stringify({
+          email: email,
+          password: password,
         }),
-        headers:{
-          'Content-type': 'application/json'
-        }
+        headers: {
+          'Content-type': 'application/json',
+        },
       }
-    
-      
-    )
-const resData=await request.json()
+    );
+    const resData = await request.json();
 
-if (resData.status === 'success') {
-  router.push('/app')
-  console.log(resData);
-  reset();
-}else{
-  throw new Error('Login failed')
-}
-
-
+    if (resData.status === 'success') {
+      router.push('/app');
+      console.log(resData);
+      reset();
+    } else {
+      throw new Error('Login failed');
+    }
   }
 
   return (

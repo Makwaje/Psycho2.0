@@ -1,26 +1,22 @@
 import { BookmarkIcon, VerifiedIcon } from 'lucide-react';
 import Image from 'next/image';
-import Hizb from '@/../public/hizb.jpg';
+import hizb from '@/../public/hizb.jpg';
 import doctorImage from '@/../public/doctor.jpg';
 
-import { Badge } from '@components/ui/chad-cn/badge';
-import { Button } from '@components/ui/chad-cn/button';
+import { TbThumbUp } from 'react-icons/tb';
+
+import Tooltip from './Tooltip';
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@components/ui/chad-cn/card';
-
-import { Separator } from '@components/ui/chad-cn/separator';
-import { TbThumbUp } from 'react-icons/tb';
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from '@components/ui/chad-cn/avatar';
-import Tooltip from './Tooltip';
+} from '../../ui/chad-cn/card';
+import { Avatar, AvatarFallback, AvatarImage } from '../../ui/chad-cn/avatar';
+import { Separator } from '../../ui/chad-cn/separator';
+import { Badge } from '../../ui/chad-cn/badge';
+import { Button } from '../../ui/chad-cn/button';
 
 function BlogPageNew() {
   return (
@@ -97,7 +93,7 @@ function PostComponent({ image = false }: { image?: boolean }) {
 
       {image && (
         <Image
-          src={Hizb}
+          src={hizb}
           alt="article"
           quality={35}
           width={250}

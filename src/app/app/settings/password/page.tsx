@@ -1,11 +1,8 @@
-
-import { Button } from '@components/ui/chad-cn/button';
-import { Input } from '@/components/ui/input';
-import { Separator } from '@components/ui/chad-cn/separator';
-
+import { Button } from '@/src/components/ui/chad-cn/button';
+import { Input } from '@/src/components/ui/chad-cn/input';
+import Headers from '@/src/components/ui/Headers';
 import Link from 'next/link';
 import React from 'react';
-import Headers from '@components/ui/Headers';
 
 export default function PasswordPage() {
   return (

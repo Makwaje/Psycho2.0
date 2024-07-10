@@ -1,5 +1,4 @@
-import { Badge } from '@components/ui/chad-cn/badge';
-import { Separator } from '@components/ui/chad-cn/separator';
+
 import Image from 'next/image';
 import hizb from '@../public/hizb.jpg';
 import Link from 'next/link';
@@ -10,8 +9,11 @@ import {
   BookmarkIcon,
 } from 'lucide-react';
 import { TbThumbUp } from 'react-icons/tb';
-import { Button } from '@components/ui/chad-cn/button';
-import Headers from '@components/ui/Headers';
+
+import Headers from '../../ui/Headers';
+import { Badge } from '../../ui/chad-cn/badge';
+import { Button } from '../../ui/chad-cn/button';
+import { Separator } from '../../ui/chad-cn/separator';
 
 function ArticlePage() {
   return (

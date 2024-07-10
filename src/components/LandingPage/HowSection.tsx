@@ -5,11 +5,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@components/ui/chad-cn/card';
+} from '../ui/chad-cn/card';
 import Image from 'next/image';
 import React from 'react';
-import Headers from '@components/ui/Headers';
-import SectionContainer from '@components/ui/SectionContainer';
+import Headers from '../ui/Headers';
+import SectionContainer from '../ui/SectionContainer';
 
 export default function HowSection(): React.ReactNode {
   return (

@@ -1,6 +1,5 @@
-import '@/app/globals.css';
-import SettingsPage from '@/components/appComponents/settingsPage/SettingsPageNav';
-import Headers from '@components/ui/Headers';
+
+import Headers from '@/src/components/ui/Headers';
 
 
 import type { Metadata } from 'next';

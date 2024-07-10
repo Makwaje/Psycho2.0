@@ -1,16 +1,10 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@components/ui/chad-cn/card';
-import Headers from '@components/ui/Headers';
-import SectionContainer from '@components/ui/SectionContainer';
-
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/chad-cn/card';
+import Headers from '../ui/Headers';
+import SectionContainer from '../ui/SectionContainer';
 
 function CardsSection() {
   return (
-    <SectionContainer >
+    <SectionContainer>
       <div className=" h-auto rounded-lg p-2 md:p-16">
         <div className="my-16 mt-12 rounded-2xl p-2 md:p-16 ">
           <Headers

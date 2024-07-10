@@ -7,12 +7,13 @@ import { IoMdNotifications } from 'react-icons/io';
 import { MdComment } from 'react-icons/md';
 import { TbActivityHeartbeat } from 'react-icons/tb';
 
-import { cn } from '@/lib/utils';
+
 
 import Link from 'next/link';
 import React from 'react';
-import { Separator } from '@components/ui/chad-cn/separator';
-import Headers from '@components/ui/Headers';
+import { Separator } from '../ui/chad-cn/separator';
+import Headers from '../ui/Headers';
+import { cn } from '@/src/lib/utils';
 
 export default function Sidebar() {
   return (

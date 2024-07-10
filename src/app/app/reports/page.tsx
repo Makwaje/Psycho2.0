@@ -1,34 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-
-import { Button } from '@components/ui/chad-cn/button';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@components/ui/chad-cn/card';
+import Data from '@/src/lib/Data.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 import { ResponsiveLine } from '@nivo/line';
-import Data from '@/lib/Data.json';
 
 import { IoMdPerson } from 'react-icons/io';
 import { FaWeight } from 'react-icons/fa';
 import { GiRelationshipBounds } from 'react-icons/gi';
-import Headers from '@components/ui/Headers';
-import Paragraph from '@components/ui/Paragraph';
-
+import Headers from '@/src/components/ui/Headers';
+import Paragraph from '@/src/components/ui/Paragraph';
+import { Card, CardHeader } from '@/src/components/ui/chad-cn/card';
+import { Button } from '@/src/components/ui/chad-cn/button';
 
 export default function Reports() {
-  
   const year = new Date().getFullYear();
   const month = new Date().getMonth();
   const day = new Date().getDate();
-
 
   return (
     <div>

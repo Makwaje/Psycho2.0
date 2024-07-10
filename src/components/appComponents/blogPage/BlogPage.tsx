@@ -1,15 +1,15 @@
 import { BookmarkIcon } from 'lucide-react';
 import Image from 'next/image';
 
-import { Badge } from '@components/ui/chad-cn/badge';
-import { Button } from '@components/ui/chad-cn/button';
+import { Badge } from '../../ui/chad-cn/badge';
+import { Button } from '../../ui/chad-cn/button';
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@components/ui/chad-cn/card';
+} from '../../ui/chad-cn/card';
 
 function BlogPage() {
   return (

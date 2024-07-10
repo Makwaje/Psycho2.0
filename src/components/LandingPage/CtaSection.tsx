@@ -1,8 +1,8 @@
 'use client';
-import { Button } from '@components/ui/chad-cn/button';
+import { Button } from '../ui/chad-cn/button';
 import { ArrowUpIcon } from 'lucide-react';
 import Link from 'next/link';
-import Headers from '@components/ui/Headers';
+import Headers from '../ui/Headers';
 
 function CtaSection() {
   return (

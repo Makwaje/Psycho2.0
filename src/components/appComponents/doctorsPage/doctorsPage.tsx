@@ -1,5 +1,7 @@
-
-import { Button } from '@components/ui/chad-cn/button';
+import { VerifiedIcon } from 'lucide-react';
+import Image from 'next/image';
+import { LuClock3, LuStar, LuTimerReset, LuX } from 'react-icons/lu';
+import Headers from '../../ui/Headers';
 import {
   Card,
   CardContent,
@@ -7,11 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@components/ui/chad-cn/card';
-import { VerifiedIcon } from 'lucide-react';
-import Image from 'next/image';
-import { LuClock3, LuStar, LuTimerReset, LuX } from 'react-icons/lu';
-
+} from '../../ui/chad-cn/card';
 import {
   Dialog,
   DialogClose,
@@ -21,9 +19,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@components/ui/chad-cn/dialog';
-import { Separator } from '@components/ui/chad-cn/separator';
-import Headers from '@components/ui/Headers';
+} from '../../ui/chad-cn/dialog';
+import { Button } from '../../ui/chad-cn/button';
+import { Separator } from '../../ui/chad-cn/separator';
 
 export default function DoctorsPage() {
   return (

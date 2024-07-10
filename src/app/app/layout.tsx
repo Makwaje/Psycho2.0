@@ -1,7 +1,6 @@
-import '@/app/globals.css';
-import { MobileNav } from '@/components/appComponents/SidebarMobile';
-import Footer from '@/components/appComponents/footer';
-import Sidebar from '@/components/appComponents/Sidebar';
+import Sidebar from '@/src/components/appComponents/Sidebar';
+import { MobileNav } from '@/src/components/LandingPage/LandingPageMobileNavbar';
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 

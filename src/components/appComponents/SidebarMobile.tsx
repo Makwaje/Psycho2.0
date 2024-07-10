@@ -1,4 +1,4 @@
-import { Button } from '@components/ui/chad-cn/button';
+import { Button } from '../ui/chad-cn/button';
 
 import {
   Sheet,
@@ -9,7 +9,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@components/ui/chad-cn/sheet';
+} from '../ui/chad-cn/sheet';
 import Link from 'next/link';
 import { CgProfile } from 'react-icons/cg';
 import { FaGear, FaHeartCircleCheck } from 'react-icons/fa6';
@@ -20,7 +20,7 @@ import { MdComment } from 'react-icons/md';
 import { BiSolidReport } from 'react-icons/bi';
 import { TbActivityHeartbeat } from 'react-icons/tb';
 import { FaHome } from 'react-icons/fa';
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/lib/utils';
 
 const navItems = [
   {

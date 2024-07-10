@@ -1,11 +1,11 @@
 
-import { Button } from '@components/ui/chad-cn/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@components/ui/chad-cn/label';
+import { Button } from '@/src/components/ui/chad-cn/button';
+import { Input } from '@/src/components/ui/chad-cn/input';
+import { Label } from '@/src/components/ui/chad-cn/label';
+import Headers from '@/src/components/ui/Headers';
 import Image from 'next/image';
 import React from 'react';
-import { FaKey } from 'react-icons/fa';
-import Headers from '@components/ui/Headers';
+
 
 export default function ProfileSettings() {
   return (

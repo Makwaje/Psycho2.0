@@ -1,16 +1,20 @@
 'use client';
 
-import { Button } from '@components/ui/chad-cn/button';
-import { Input } from '@/components/ui/input';
+
 import { useForm } from 'react-hook-form';
-import { Separator } from '@components/ui/chad-cn/separator';
+
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { TSignUpSchema, signUpSchema } from '@/lib/types';
+
 import { useRouter } from 'next/navigation';
-import Headers from '@components/ui/Headers';
+import { signUpSchema, TSignUpSchema } from '@/src/lib/types';
+import Headers from '@/src/components/ui/Headers';
+import { Input } from '@/src/components/ui/chad-cn/input';
+import { Button } from '@/src/components/ui/chad-cn/button';
+import { Separator } from '@/src/components/ui/chad-cn/separator';
+
 
 export default function SignUpPage() {
   const {
@@ -24,40 +28,31 @@ export default function SignUpPage() {
 
   const router = useRouter();
   async function onSubmit(data: TSignUpSchema) {
+    const { name, email, password } = data;
 
-    
-const {name,email,password} =data
-  
-const request = await fetch('https://psycho-de4o.onrender.com/api/v1/users/signup',
-  {
-    method:"POST",
-    body:JSON.stringify({
-      name:name,
-      email:email,
-      password:password
-    }),
-    headers:{
-      'Content-type': 'application/json'
+    const request = await fetch(
+      'https://psycho-de4o.onrender.com/api/v1/users/signup',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      }
+    );
+
+    const reqData = await request.json();
+
+    if (reqData.status === 'success') {
+      router.push('/login');
+    } else {
+      throw new Error('SignUp failed');
     }
   }
-
-  
-)
-
- const reqData=await request.json()
-
-if (reqData.status === 'success') {
-  router.push('/login')
-}else{
-
-  throw new Error('SignUp failed')
-
-}
- 
-
-
-
-}
 
   return (
     <div className="relative flex w-full flex-col items-center justify-center md:w-1/2">
@@ -87,9 +82,9 @@ if (reqData.status === 'success') {
               className="w-full"
             />
           </div>
-          {errors?.fullName && (
+          {errors?.name && (
             <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
-              {`${errors.fullName.message}`}
+              {`${errors.name.message}`}
             </div>
           )}
           {/* Email */}
@@ -146,7 +141,7 @@ if (reqData.status === 'success') {
           </div>
 
           {/* Phone Number */}
-           {/* <div className="w-full max-w-2xl space-y-1">
+          {/* <div className="w-full max-w-2xl space-y-1">
             <label htmlFor="phoneNumber" className="text-sm">
               Phone number
             </label>
@@ -158,7 +153,7 @@ if (reqData.status === 'success') {
               className="w-full"
             />
           </div>  */}
-         
+
           <Button
             disabled={isSubmitting}
             className="mt-6 w-3/4 uppercase"
