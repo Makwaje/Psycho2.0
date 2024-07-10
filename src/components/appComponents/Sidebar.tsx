@@ -23,7 +23,7 @@ import {
 
 export default function Sidebar() {
   return (
-    <aside className="sticky top-0 flex h-screen w-60 flex-col bg-popover px-4 text-popover-foreground">
+    <aside className="sticky top-0 flex h-screen w-full flex-col bg-popover px-4 text-popover-foreground">
       <Headers size="xl" className="-ml-2 mb-12 mt-4">
         Psycho
       </Headers>

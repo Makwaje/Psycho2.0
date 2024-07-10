@@ -11,7 +11,7 @@ import { TLoginSchema, loginSchema } from '@/lib/types';
 import Headers from '@/components/ui/headers';
 import { Button } from '@/components/ui/button';
 
-export default function LoginPage() {
+export default function LogInPage() {
   const {
     register,
     handleSubmit,

@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TSignUpSchema, signUpSchema } from '@/lib/types';
 
-export default function LoginPage() {
+export default function SignUpPage() {
   const {
     register,
     handleSubmit,
@@ -21,9 +21,30 @@ export default function LoginPage() {
     resolver: zodResolver(signUpSchema),
   });
 
-  function onSubmit(data: TSignUpSchema) {
-    console.log(data);
+  async function onSubmit(data: TSignUpSchema) {
+const {name,email,password} =data
+const postData={name,email,password}
+    console.log(postData);
+  
+let response = await fetch('https://psycho-de4o.onrender.com/api/v1/users/signup',
+  {
+    method:"POST",
+    body:JSON.stringify({
+      name:name,
+      email:email,
+      password:password
+    }),
+    headers:{
+      'Content-type': 'application/json'
+    }
   }
+)
+
+response=await response.json()
+
+console.log(response);
+
+}
 
   return (
     <div className="relative flex w-full flex-col items-center justify-center md:w-1/2">
@@ -42,12 +63,12 @@ export default function LoginPage() {
         <div className="flex w-80 flex-col items-center justify-center gap-4">
           {/* FullName */}
           <div className="w-full max-w-2xl space-y-1">
-            <label htmlFor="fullName" className="text-sm">
+            <label htmlFor="name" className="text-sm">
               Full Name
             </label>
             <Input
-              {...register('fullName')}
-              id="fullName"
+              {...register('name')}
+              id="name"
               type="text"
               placeholder="Mohamed alfadel"
               className="w-full"
@@ -110,8 +131,9 @@ export default function LoginPage() {
               </div>
             )}
           </div>
+
           {/* Phone Number */}
-          {/* <div className="w-full max-w-2xl space-y-1">
+           {/* <div className="w-full max-w-2xl space-y-1">
             <label htmlFor="phoneNumber" className="text-sm">
               Phone number
             </label>
@@ -122,12 +144,8 @@ export default function LoginPage() {
               placeholder="09XXXXXXXX"
               className="w-full"
             />
-          </div> */}
-          {errors?.phoneNumber && (
-            <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
-              {`${errors.phoneNumber.message}`}
-            </div>
-          )}
+          </div>  */}
+         
           <Button
             disabled={isSubmitting}
             className="mt-6 w-3/4 uppercase"
@@ -156,7 +174,7 @@ export default function LoginPage() {
         <p className="mt-4 text-lg font-medium">
           Already have an account?
           <Button variant="link" className="pl-1 text-lg text-blue-600">
-            <Link href="/login  ">Login</Link>
+            <Link href="/login">Login</Link>
           </Button>
         </p>
       </div>
