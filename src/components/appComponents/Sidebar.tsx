@@ -1,19 +1,17 @@
-import { AiFillMessage } from 'react-icons/ai';
-import { BiSolidReport } from 'react-icons/bi';
-import { CgProfile } from 'react-icons/cg';
-import { FaHome } from 'react-icons/fa';
-import { FaGear, FaHeartCircleCheck } from 'react-icons/fa6';
-import { IoMdNotifications } from 'react-icons/io';
-import { MdComment } from 'react-icons/md';
-import { TbActivityHeartbeat } from 'react-icons/tb';
+import { AiFillMessage } from "react-icons/ai";
+import { BiSolidReport } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
+import { FaHome } from "react-icons/fa";
+import { FaGear, FaHeartCircleCheck } from "react-icons/fa6";
+import { IoMdNotifications } from "react-icons/io";
+import { MdComment } from "react-icons/md";
+import { TbActivityHeartbeat } from "react-icons/tb";
 
-
-
-import Link from 'next/link';
-import React from 'react';
-import { Separator } from '../ui/chad-cn/separator';
-import Headers from '../ui/Headers';
-import { cn } from '@/src/lib/utils';
+import Link from "next/link";
+import React from "react";
+import { Separator } from "../ui/chad-cn/separator";
+import Headers from "../ui/Headers";
+import { cn } from "@/lib/utils";
 
 export default function Sidebar() {
   return (
@@ -47,7 +45,7 @@ export default function Sidebar() {
             Messages
           </NavItem>
         </div>
-        <div className=" flex flex-col gap-4 mt-6">
+        <div className=" mt-6 flex flex-col gap-4">
           <NavItem href="/app/settings/password">
             <FaGear size={20} />
             Settings
@@ -79,8 +77,8 @@ function NavItem({ children, href, className }: NavItemProps) {
     <Link
       href={href}
       className={cn(
-        'flex items-center justify-start gap-2 rounded-md px-2 py-2 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none',
-        className
+        "flex items-center justify-start gap-2 rounded-md px-2 py-2 shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none",
+        className,
       )}
     >
       {children}

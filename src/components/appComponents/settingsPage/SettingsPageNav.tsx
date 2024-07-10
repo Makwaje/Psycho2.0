@@ -1,11 +1,9 @@
-
-
-import { cn } from '@/src/lib/utils';
-import Link from 'next/link';
-import React from 'react';
-import { CgProfile } from 'react-icons/cg';
-import { IoMdNotifications } from 'react-icons/io';
-import { RiLockPasswordFill } from 'react-icons/ri';
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import React from "react";
+import { CgProfile } from "react-icons/cg";
+import { IoMdNotifications } from "react-icons/io";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 export default function SettingsPage() {
   return (
@@ -59,9 +57,9 @@ function NavItem({ children, href, className }: NavItemProps) {
     <Link
       href={href}
       className={cn(
-        ' px-3 py-2 gap-2 rounded-md  shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none ',
+        " gap-2 rounded-md px-3 py-2  shadow-md ring-1 ring-ring/25 transition-all duration-150 hover:scale-[1.02] hover:bg-primary/80 hover:text-primary-foreground active:scale-100 active:bg-accent-foreground active:shadow-none ",
 
-        className
+        className,
       )}
     >
       {children}

@@ -1,4 +1,4 @@
-import { Button } from '../ui/chad-cn/button';
+import { Button } from "../ui/chad-cn/button";
 
 import {
   Sheet,
@@ -9,34 +9,34 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '../ui/chad-cn/sheet';
-import Link from 'next/link';
+} from "../ui/chad-cn/sheet";
+import Link from "next/link";
 
 const navItems = [
   {
     id: 1,
     name: "How it's work?",
-    link: '/',
+    link: "/",
   },
   {
     id: 2,
-    name: 'Services',
-    link: '/',
+    name: "Services",
+    link: "/",
   },
   {
     id: 3,
-    name: 'FREE',
-    link: '/',
+    name: "FREE",
+    link: "/",
   },
   {
     id: 4,
-    name: 'FAQ',
-    link: '/',
+    name: "FAQ",
+    link: "/",
   },
   {
     id: 5,
-    name: '  For Volunteers',
-    link: '/',
+    name: "  For Volunteers",
+    link: "/",
   },
 ];
 
@@ -46,32 +46,34 @@ export function MobileNav() {
       <SheetTrigger asChild className="md:hidden">
         <Button variant="outline">Open</Button>
       </SheetTrigger>
-      <SheetContent side={'right'}>
+      <SheetContent side={"right"}>
         <SheetHeader>
           <SheetTitle>PSYCHO</SheetTitle>
           {/* Add Description later */}
           {/* <SheetDescription></SheetDescription> */}
         </SheetHeader>
 
-        <ul className="flex flex-col mt-6 font-bold text-lg  gap-8 justify-center">
+        <ul className="mt-6 flex flex-col justify-center gap-8  text-lg font-bold">
           {navItems.map(({ id, link, name }) => (
             <li
               key={id}
-              className=" p-3 cursor-pointer hover:bg-accent hover:rounded-md"
+              className=" cursor-pointer p-3 hover:rounded-md hover:bg-accent"
             >
               <Link href={link}>{name}</Link>
             </li>
           ))}
         </ul>
         <div className="mt-8">
-          <Button
-            className="uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground
-            w-full
+          <Link href="/login">
+            <Button
+              className="w-full uppercase transition-all duration-150 hover:bg-primary
+            hover:text-primary-foreground
             "
-            variant="outline"
-          >
-            Get Help Now!
-          </Button>
+              variant="outline"
+            >
+              Get Help Now!
+            </Button>
+          </Link>
         </div>
       </SheetContent>
     </Sheet>

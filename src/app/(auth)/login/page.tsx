@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
-import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
-import Link from 'next/link';
+import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import Link from "next/link";
 
-import { zodResolver } from '@hookform/resolvers/zod';
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useRouter } from 'next/navigation';
-import { loginSchema, TLoginSchema } from '@/src/lib/types';
-import Headers from '@/src/components/ui/Headers';
-import { Input } from '@/src/components/ui/chad-cn/input';
-import { Button } from '@/src/components/ui/chad-cn/button';
-import { Separator } from '@/src/components/ui/chad-cn/separator';
+import { useRouter } from "next/navigation";
+import { loginSchema, TLoginSchema } from "@/lib/types";
+import Headers from "@/components/ui/Headers";
+import { Input } from "@/components/ui/chad-cn/input";
+import { Button } from "@/components/ui/chad-cn/button";
+import { Separator } from "@/components/ui/chad-cn/separator";
 
 export default function LogInPage() {
   const {
@@ -29,26 +29,26 @@ export default function LogInPage() {
     const { email, password } = data;
 
     const request = await fetch(
-      'https://psycho-de4o.onrender.com/api/v1/users/login',
+      "https://psycho-de4o.onrender.com/api/v1/users/login",
       {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({
           email: email,
           password: password,
         }),
         headers: {
-          'Content-type': 'application/json',
+          "Content-type": "application/json",
         },
-      }
+      },
     );
     const resData = await request.json();
 
-    if (resData.status === 'success') {
-      router.push('/app');
+    if (resData.status === "success") {
+      router.push("/app");
       console.log(resData);
       reset();
     } else {
-      throw new Error('Login failed');
+      throw new Error("Login failed");
     }
   }
 
@@ -73,7 +73,7 @@ export default function LogInPage() {
               Email
             </label>
             <Input
-              {...register('email')}
+              {...register("email")}
               id="email"
               type="text"
               placeholder="Example@email.com"
@@ -91,7 +91,7 @@ export default function LogInPage() {
               Password
             </label>
             <Input
-              {...register('password')}
+              {...register("password")}
               id="password"
               type="password"
               placeholder="Password"

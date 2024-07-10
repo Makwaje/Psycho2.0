@@ -1,4 +1,4 @@
-import DoctorsPage from '../../../components/appComponents/doctorsPage/doctorsPage';
+import DoctorsPage from "@/components/appComponents/doctorsPage/DoctorsPage";
 
 export default function Doctors() {
   return <DoctorsPage />;

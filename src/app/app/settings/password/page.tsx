@@ -1,35 +1,35 @@
-import { Button } from '@/src/components/ui/chad-cn/button';
-import { Input } from '@/src/components/ui/chad-cn/input';
-import Headers from '@/src/components/ui/Headers';
-import Link from 'next/link';
-import React from 'react';
+import Headers from "@/components/ui/Headers";
+import { Button } from "@/components/ui/chad-cn/button";
+import { Input } from "@/components/ui/chad-cn/input";
+import { Separator } from "@/components/ui/chad-cn/separator";
+
+import Link from "next/link";
+import React from "react";
 
 export default function PasswordPage() {
   return (
-    <div className="mt-16 w-full">
+    <div className="mt-24 flex flex-col gap-8">
       <Headers>Password Settings</Headers>
-      <form className="flex flex-col gap-8">
-        <Input
-          className=""
-          type="password"
-          id="currentpassword"
-          placeholder="Current Password"
-        />
+      <Input
+        className="w-[65rem]"
+        type="password"
+        id="currentpassword"
+        placeholder="Current Password"
+      />
 
-        <Input
-          className=""
-          type="password"
-          id="newpassword"
-          placeholder="New Password"
-        />
-        <Input
-          className=""
-          type="password"
-          id="confirmpassword"
-          placeholder="Confirm Password"
-        />
-        <Button>save changes</Button>
-      </form>
+      <Input
+        className="w-[65rem]"
+        type="password"
+        id="newpassword"
+        placeholder="New Password"
+      />
+      <Input
+        className="w-[65rem]"
+        type="password"
+        id="confirmpassword"
+        placeholder="Confirm Password"
+      />
+      <Button className="w-[65rem]">save changes</Button>
     </div>
   );
 }

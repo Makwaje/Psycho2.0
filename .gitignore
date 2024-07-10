@@ -37,3 +37,9 @@ next-env.d.ts
 
 # vscode settings related
 /.vscode
+
+
+
+# makwaje bullshits
+prettier.config.js
+.prettierrc

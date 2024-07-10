@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/src/components/ui/chad-cn/button";
-import { Input } from "@/src/components/ui/chad-cn/input";
-import { Separator } from "@/src/components/ui/chad-cn/separator";
-import Headers from "@/src/components/ui/Headers";
+import { Button } from "@/components/ui/chad-cn/button";
+import { Input } from "@/components/ui/chad-cn/input";
+import { Separator } from "@/components/ui/chad-cn/separator";
+import Headers from "@/components/ui/Headers";
 import Link from "next/link";
 import { useState } from "react";
 import OtpInput from "react-otp-input";

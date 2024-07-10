@@ -12,6 +12,6 @@
   },
   "aliases": {
     "components": "@/components/ui/chad-cn",
-    "utils": "@/lib/utils"
+    "utils": "@@/lib/utils"
   }
 }

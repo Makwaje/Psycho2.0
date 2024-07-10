@@ -1,14 +1,14 @@
-import hizb from '@/public/hizb.jpg';
-import { Badge } from '@/src/components/ui/chad-cn/badge';
-import { Button } from '@/src/components/ui/chad-cn/button';
-import { Separator } from '@/src/components/ui/chad-cn/separator';
-import Headers from '@/src/components/ui/Headers';
+import hizb from "@/../public/hizb.jpg";
+import { Badge } from "@/components/ui/chad-cn/badge";
+import { Button } from "@/components/ui/chad-cn/button";
+import { Separator } from "@/components/ui/chad-cn/separator";
+import Headers from "@/components/ui/Headers";
 
-import { ArrowLeftSquare, BookmarkIcon } from 'lucide-react';
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
-import Image from 'next/image';
-import Link from 'next/link';
-import { TbThumbUp } from 'react-icons/tb';
+import { ArrowLeftSquare, BookmarkIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { TbThumbUp } from "react-icons/tb";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
 function ArticlePage({ params }: { params?: Params }) {
   // const likes = Math.floor(Math.random() * 2000);
@@ -18,7 +18,7 @@ function ArticlePage({ params }: { params?: Params }) {
     <article>
       <header className="bg sticky top-0 bg-background/95">
         <Headers size="lg" className="pt-2">
-          5 Tips to kill yourself in unique way{' '}
+          5 Tips to kill yourself in unique way{" "}
           <span className="text-red-700">(MUST Try!)</span>
         </Headers>
 
@@ -65,7 +65,7 @@ function ArticlePage({ params }: { params?: Params }) {
           <ArrowLeftSquare
             className="fill-primary-foreground stroke-primary"
             size={32}
-          />{' '}
+          />{" "}
           Back
         </Link>
       </header>

@@ -1,22 +1,22 @@
-import { BookmarkIcon, VerifiedIcon } from 'lucide-react';
-import Image from 'next/image';
-import hizb from '@/public/hizb.jpg';
-import doctorImage from '@/public/doctor.jpg';
+import { BookmarkIcon, VerifiedIcon } from "lucide-react";
+import Image from "next/image";
+import hizb from "@/../public/hizb.jpg";
+import doctorImage from "@/../public/doctor.jpg";
 
-import { TbThumbUp } from 'react-icons/tb';
+import { TbThumbUp } from "react-icons/tb";
 
-import Link from 'next/link';
-import { Avatar, AvatarFallback, AvatarImage } from '../../ui/chad-cn/avatar';
-import { Separator } from '../../ui/chad-cn/separator';
-import { Badge } from '../../ui/chad-cn/badge';
-import { Button } from '../../ui/chad-cn/button';
+import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "../../ui/chad-cn/avatar";
+import { Separator } from "../../ui/chad-cn/separator";
+import { Badge } from "../../ui/chad-cn/badge";
+import { Button } from "../../ui/chad-cn/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '../../ui/chad-cn/card';
+} from "../../ui/chad-cn/card";
 
 export default function PostComponent({
   image = false,
@@ -39,7 +39,7 @@ export default function PostComponent({
             </AvatarFallback>
           </Avatar>
           <span className="flex gap-0.5 text-base font-medium">
-            Dr. Musab Ibrahim{' '}
+            Dr. Musab Ibrahim{" "}
             <VerifiedIcon
               size={20}
               stroke="white"
@@ -65,7 +65,7 @@ export default function PostComponent({
       <p className="font-base max-w-[75%] self-center text-center text-xl">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
         quam a omnis facilis et, consectetur voluptas mollitia quo aspernatur?
-        Accusamus officia optio molestiae...{' '}
+        Accusamus officia optio molestiae...{" "}
         <Link
           href={`blog/${id}`}
           className="text-lg font-semibold text-blue-800 duration-150 hover:text-blue-950"

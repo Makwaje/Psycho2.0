@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
-import { FaArrowLeft } from 'react-icons/fa6';
-import Link from 'next/link';
-import Headers from '@/src/components/ui/Headers';
-import { Input } from '@/src/components/ui/chad-cn/input';
-import { Button } from '@/src/components/ui/chad-cn/button';
-import { Separator } from '@/src/components/ui/chad-cn/separator';
+import { FaArrowLeft } from "react-icons/fa6";
+import Link from "next/link";
+import Headers from "@/components/ui/Headers";
+import { Input } from "@/components/ui/chad-cn/input";
+import { Button } from "@/components/ui/chad-cn/button";
+import { Separator } from "@/components/ui/chad-cn/separator";
 
 export default function ResetPage() {
   const {
@@ -48,7 +48,7 @@ export default function ResetPage() {
               Email
             </label>
             <Input
-              {...register('email')}
+              {...register("email")}
               id="email"
               type="email"
               placeholder="Example@email.com"

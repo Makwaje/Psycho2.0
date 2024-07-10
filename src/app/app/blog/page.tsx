@@ -1,6 +1,5 @@
-import PostComponent from "@/src/components/appComponents/blogPage/PostComponent";
-import Tooltip from "@/src/components/appComponents/blogPage/Tooltip";
-
+import PostComponent from "@/components/appComponents/blogPage/PostComponent";
+import Tooltip from "@/components/appComponents/blogPage/Tooltip";
 
 function BlogPage() {
   return (

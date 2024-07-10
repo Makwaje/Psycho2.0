@@ -1,14 +1,14 @@
-import Sidebar from '@/src/components/appComponents/Sidebar';
-import { MobileNav } from '@/src/components/LandingPage/LandingPageMobileNavbar';
+import Sidebar from "@/components/appComponents/Sidebar";
+import { MobileNav } from "@/components/LandingPage/LandingPageMobileNavbar";
 
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import type { Metadata } from "next";
+// import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Psycho - الله معاك',
-  description: 'i hope you die soon',
+  title: "Psycho - الله معاك",
+  description: "i hope you die soon",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="md:flex w-full">
+    <main className="w-full md:flex">
       <div className=" hidden md:block">
         <Sidebar />
       </div>

@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -20,7 +20,8 @@ const headerVariants = cva("font-bold", {
   },
 });
 
-interface HeadersProps extends React.HTMLAttributes<HTMLHeadingElement>,
+interface HeadersProps
+  extends React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headerVariants> {}
 
 function Headers({

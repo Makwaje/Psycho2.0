@@ -8,11 +8,11 @@ import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useRouter } from "next/navigation";
-import { signUpSchema, TSignUpSchema } from "@/src/lib/types";
-import Headers from "@/src/components/ui/Headers";
-import { Input } from "@/src/components/ui/chad-cn/input";
-import { Button } from "@/src/components/ui/chad-cn/button";
-import { Separator } from "@/src/components/ui/chad-cn/separator";
+import { signUpSchema, TSignUpSchema } from "@/lib/types";
+import Headers from "@/components/ui/Headers";
+import { Input } from "@/components/ui/chad-cn/input";
+import { Button } from "@/components/ui/chad-cn/button";
+import { Separator } from "@/components/ui/chad-cn/separator";
 
 export default function SignUpPage() {
   const {
@@ -40,7 +40,7 @@ export default function SignUpPage() {
         headers: {
           "Content-type": "application/json",
         },
-      }
+      },
     );
 
     const reqData = await request.json();
@@ -164,7 +164,7 @@ export default function SignUpPage() {
       </form>
 
       <Separator className="my-6 w-1/2" orientation="horizontal" />
-      <div className=" flex flex-col justify-center items-center">
+      <div className=" flex flex-col items-center justify-center">
         <p className="mb-6">Or SignUp With</p>
         <div className="space-x-4">
           <Button variant="secondary" className="px-4 py-8">
