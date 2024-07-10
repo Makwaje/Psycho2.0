@@ -2,7 +2,7 @@
 import { Button } from '@components/ui/chad-cn/button';
 import { ArrowUpIcon } from 'lucide-react';
 import Link from 'next/link';
-import Headers from '../ui/headers';
+import Headers from '../ui/Headers';
 
 function CtaSection() {
   return (

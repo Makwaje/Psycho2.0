@@ -8,7 +8,7 @@ import {
 } from '@components/ui/chad-cn/card';
 import Image from 'next/image';
 import React from 'react';
-import Headers from '../ui/headers';
+import Headers from '../ui/Headers';
 import SectionContainer from '../ui/sectionContainer';
 
 export default function HowSection(): React.ReactNode {

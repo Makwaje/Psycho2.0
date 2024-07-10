@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Headers from '../ui/headers';
+import Headers from '../ui/Headers';
 import { Button } from '../ui/chad-cn/button';
 import SectionContainer from '../ui/sectionContainer';
 

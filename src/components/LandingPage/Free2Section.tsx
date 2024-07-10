@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import Headers from '../ui/headers';
+import Headers from '../ui/Headers';
 import SectionContainer from '../ui/sectionContainer';
 
 function Free2Section() {

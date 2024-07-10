@@ -4,8 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@components/ui/chad-cn/accordion';
-import Headers from '../ui/headers';
-import SectionContainer from '../ui/sectionContainer';
+import Headers from '../ui/Headers';
+import SectionContainer from '@components/ui/SectionContainer';
+
 
 function FaqSection() {
   return (
