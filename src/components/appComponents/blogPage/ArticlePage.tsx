@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { TbThumbUp } from 'react-icons/tb';
 import { Button } from '@components/ui/chad-cn/button';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 function ArticlePage() {
   return (

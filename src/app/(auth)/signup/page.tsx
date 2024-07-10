@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TSignUpSchema, signUpSchema } from '@/lib/types';
 import { useRouter } from 'next/navigation';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default function SignUpPage() {
   const {

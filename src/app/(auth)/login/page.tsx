@@ -10,7 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { TLoginSchema, loginSchema } from '@/lib/types';
 import { Button } from '@components/ui/chad-cn/button';
 import { useRouter } from 'next/navigation';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default  function LogInPage() {
   const {

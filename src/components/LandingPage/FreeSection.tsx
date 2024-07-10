@@ -1,5 +1,5 @@
 
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 import SectionContainer from '@components/ui/sectionContainer';
 
 

@@ -19,7 +19,7 @@ import Data from '@/lib/Data.json';
 import { IoMdPerson } from 'react-icons/io';
 import { FaWeight } from 'react-icons/fa';
 import { GiRelationshipBounds } from 'react-icons/gi';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 import Paragraph from '@components/ui/Paragraph';
 
 

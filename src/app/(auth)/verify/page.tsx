@@ -6,7 +6,7 @@ import { Separator } from '@components/ui/chad-cn/separator';
 import Link from 'next/link';
 import { useState } from 'react';
 import OtpInput from 'react-otp-input';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default function VerifyPage() {
   const [otp, setOtp] = useState('');

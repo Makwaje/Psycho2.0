@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { Separator } from '@components/ui/chad-cn/separator';
 import { FaArrowLeft } from 'react-icons/fa6';
 import Link from 'next/link';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 
 export default function ResetPage() {

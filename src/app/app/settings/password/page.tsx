@@ -5,7 +5,7 @@ import { Separator } from '@components/ui/chad-cn/separator';
 
 import Link from 'next/link';
 import React from 'react';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default function PasswordPage() {
   return (

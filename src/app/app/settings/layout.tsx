@@ -1,6 +1,6 @@
 import '@/app/globals.css';
 import SettingsPage from '@/components/appComponents/settingsPage/SettingsPageNav';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 
 import type { Metadata } from 'next';

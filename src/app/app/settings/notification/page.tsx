@@ -2,7 +2,7 @@
 import { Button } from '@components/ui/chad-cn/button';
 import React from 'react';
 import { Switch } from '@/components/ui/switch';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default function NotificationPage() {
   return (

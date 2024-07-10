@@ -5,7 +5,7 @@ import { Label } from '@components/ui/chad-cn/label';
 import Image from 'next/image';
 import React from 'react';
 import { FaKey } from 'react-icons/fa';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default function ProfileSettings() {
   return (

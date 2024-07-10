@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react';
 import { Separator } from '@components/ui/chad-cn/separator';
-import Headers from '@components/ui/headers';
+import Headers from '@components/ui/Headers';
 
 export default function Sidebar() {
   return (
