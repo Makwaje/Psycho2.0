@@ -1,8 +1,8 @@
 import hizb from "@/../public/hizb.jpg";
-import Headers from "@/components/ui/headers";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from "@components/ui/chad-cn/badge";
+import { Button } from "@components/ui/chad-cn/button";
+import { Separator } from "@components/ui/chad-cn/separator";
+import Headers from "@components/ui/headers";
 import { ArrowLeftSquare, BookmarkIcon } from "lucide-react";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";

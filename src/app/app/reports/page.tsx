@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import Headers from '@/components/ui/headers';
-import { Button } from '@/components/ui/button';
+
+import { Button } from '@components/ui/chad-cn/button';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@components/ui/chad-cn/card';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -19,7 +19,9 @@ import Data from '@/lib/Data.json';
 import { IoMdPerson } from 'react-icons/io';
 import { FaWeight } from 'react-icons/fa';
 import { GiRelationshipBounds } from 'react-icons/gi';
-import Paragraph from '@/components/ui/paragraph';
+import Headers from '@components/ui/headers';
+import Paragraph from '@components/ui/Paragraph';
+
 
 export default function Reports() {
   

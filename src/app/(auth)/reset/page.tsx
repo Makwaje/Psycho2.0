@@ -1,13 +1,13 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@components/ui/chad-cn/separator';
 import { FaArrowLeft } from 'react-icons/fa6';
 import Link from 'next/link';
-import Image from 'next/image';
-import Headers from '@/components/ui/headers';
+import Headers from '@components/ui/headers';
+
 
 export default function ResetPage() {
   const {

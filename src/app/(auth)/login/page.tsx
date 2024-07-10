@@ -2,16 +2,17 @@
 
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@components/ui/chad-cn/separator';
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TLoginSchema, loginSchema } from '@/lib/types';
-import Headers from '@/components/ui/headers';
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
+import { useRouter } from 'next/navigation';
+import Headers from '@components/ui/headers';
 
-export default function LogInPage() {
+export default  function LogInPage() {
   const {
     register,
     handleSubmit,
@@ -20,10 +21,38 @@ export default function LogInPage() {
   } = useForm<TLoginSchema>({
     resolver: zodResolver(loginSchema),
   });
+  const router = useRouter();
 
-  function onSubmit(data: TLoginSchema) {
-    console.log(data);
-    reset();
+  async function onSubmit(data: TLoginSchema) {
+
+const {email,password}=data
+
+
+    const request = await fetch('https://psycho-de4o.onrender.com/api/v1/users/login',
+      {
+        method:"POST",
+        body:JSON.stringify({
+          email:email,
+          password:password
+        }),
+        headers:{
+          'Content-type': 'application/json'
+        }
+      }
+    
+      
+    )
+const resData=await request.json()
+
+if (resData.status === 'success') {
+  router.push('/app')
+  console.log(resData);
+  reset();
+}else{
+  throw new Error('Login failed')
+}
+
+
   }
 
   return (

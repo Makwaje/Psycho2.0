@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Headers from '../ui/headers';
-import { Button } from '../ui/button';
+import { Button } from '../ui/chad-cn/button';
 import SectionContainer from '../ui/sectionContainer';
 
 function HeroSection() {

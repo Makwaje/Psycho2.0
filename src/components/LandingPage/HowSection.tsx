@@ -5,7 +5,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@components/ui/chad-cn/card';
 import Image from 'next/image';
 import React from 'react';
 import Headers from '../ui/headers';

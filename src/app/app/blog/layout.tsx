@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 
 import { PlusSquare } from "lucide-react";
 import Headers from "@components/ui/headers";
-import { Button } from "@components/ui/button";
-import { Separator } from "@components/ui/separator";
+import { Button } from "@components/ui/chad-cn/button";
+import { Separator } from "@components/ui/chad-cn/separator";
 
 const inter = Inter({ subsets: ["latin"] });
 

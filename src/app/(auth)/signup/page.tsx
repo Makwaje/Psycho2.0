@@ -1,15 +1,16 @@
 'use client';
 
-import Headers from '@/components/ui/headers';
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@components/ui/chad-cn/separator';
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { TSignUpSchema, signUpSchema } from '@/lib/types';
+import { useRouter } from 'next/navigation';
+import Headers from '@components/ui/headers';
 
 export default function SignUpPage() {
   const {
@@ -21,12 +22,13 @@ export default function SignUpPage() {
     resolver: zodResolver(signUpSchema),
   });
 
+  const router = useRouter();
   async function onSubmit(data: TSignUpSchema) {
+
+    
 const {name,email,password} =data
-const postData={name,email,password}
-    console.log(postData);
   
-let response = await fetch('https://psycho-de4o.onrender.com/api/v1/users/signup',
+const request = await fetch('https://psycho-de4o.onrender.com/api/v1/users/signup',
   {
     method:"POST",
     body:JSON.stringify({
@@ -38,11 +40,22 @@ let response = await fetch('https://psycho-de4o.onrender.com/api/v1/users/signup
       'Content-type': 'application/json'
     }
   }
+
+  
 )
 
-response=await response.json()
+ const reqData=await request.json()
 
-console.log(response);
+if (reqData.status === 'success') {
+  router.push('/login')
+}else{
+
+  throw new Error('SignUp failed')
+
+}
+ 
+
+
 
 }
 

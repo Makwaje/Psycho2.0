@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from '@components/ui/chad-cn/accordion';
 import Headers from '../ui/headers';
 import SectionContainer from '../ui/sectionContainer';
 

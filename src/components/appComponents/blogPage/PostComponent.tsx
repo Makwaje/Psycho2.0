@@ -2,22 +2,22 @@ import { BookmarkIcon, VerifiedIcon } from "lucide-react";
 import Image from "next/image";
 import Hizb from "@/../public/hizb.jpg";
 import doctorImage from "@/../public/doctor.jpg";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@components/ui/chad-cn/badge";
+import { Button } from "@components/ui/chad-cn/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+} from "@components/ui/chad-cn/card";
+import { Separator } from "@components/ui/chad-cn/separator";
 import { TbThumbUp } from "react-icons/tb";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/ui/avatar";
+} from "@components/ui/chad-cn/avatar";
 import Link from "next/link";
 
 export default function PostComponent({

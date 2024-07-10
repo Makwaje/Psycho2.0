@@ -1,6 +1,7 @@
 import '@/app/globals.css';
 import SettingsPage from '@/components/appComponents/settingsPage/SettingsPageNav';
-import Headers from '@/components/ui/headers';
+import Headers from '@components/ui/headers';
+
 
 import type { Metadata } from 'next';
 // import { Inter } from "next/font/google";

@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
 import { ArrowUpIcon } from 'lucide-react';
 import Link from 'next/link';
 import Headers from '../ui/headers';

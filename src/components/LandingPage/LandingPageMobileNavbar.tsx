@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
 
 import {
   Sheet,
@@ -9,7 +9,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
+} from '@components/ui/chad-cn/sheet';
 import Link from 'next/link';
 
 const navItems = [

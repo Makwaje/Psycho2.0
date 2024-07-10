@@ -7,19 +7,12 @@ import { IoMdNotifications } from 'react-icons/io';
 import { MdComment } from 'react-icons/md';
 import { TbActivityHeartbeat } from 'react-icons/tb';
 
-import Headers from '@/components/ui/headers';
 import { cn } from '@/lib/utils';
 
 import Link from 'next/link';
 import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '../ui/navigation-menu';
+import { Separator } from '@components/ui/chad-cn/separator';
+import Headers from '@components/ui/headers';
 
 export default function Sidebar() {
   return (

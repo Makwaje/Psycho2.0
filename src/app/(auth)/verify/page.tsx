@@ -1,12 +1,12 @@
 'use client';
 
-import Headers from '@/components/ui/headers';
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
 import { Input } from '@/components/ui/input';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '@components/ui/chad-cn/separator';
 import Link from 'next/link';
 import { useState } from 'react';
 import OtpInput from 'react-otp-input';
+import Headers from '@components/ui/headers';
 
 export default function VerifyPage() {
   const [otp, setOtp] = useState('');

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@components/ui/chad-cn/button';
 
 import {
   Sheet,
@@ -9,12 +9,12 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
+} from '@components/ui/chad-cn/sheet';
 import Link from 'next/link';
 import { CgProfile } from 'react-icons/cg';
 import { FaGear, FaHeartCircleCheck } from 'react-icons/fa6';
 import { IoMdNotifications } from 'react-icons/io';
-import { Separator } from '../ui/separator';
+import { Separator } from '../ui/chad-cn/separator';
 import { AiFillMessage } from 'react-icons/ai';
 import { MdComment } from 'react-icons/md';
 import { BiSolidReport } from 'react-icons/bi';

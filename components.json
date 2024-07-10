@@ -9,8 +9,8 @@
     "baseColor": "neutral",
     "cssVariables": true
   },
-  "aliases": {
-    "components": "@/components",
+ "aliases": {
+    "components": "@/components/ui/chad-cn",
     "utils": "@/lib/utils"
   }
 }

@@ -1,5 +1,5 @@
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
+import { Badge } from '@components/ui/chad-cn/badge';
+import { Separator } from '@components/ui/chad-cn/separator';
 import Image from 'next/image';
 import hizb from '@../public/hizb.jpg';
 import Link from 'next/link';
@@ -10,8 +10,8 @@ import {
   BookmarkIcon,
 } from 'lucide-react';
 import { TbThumbUp } from 'react-icons/tb';
-import { Button } from '@/components/ui/button';
-import Headers from '@/components/ui/headers';
+import { Button } from '@components/ui/chad-cn/button';
+import Headers from '@components/ui/headers';
 
 function ArticlePage() {
   return (

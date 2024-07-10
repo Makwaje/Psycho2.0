@@ -1,5 +1,5 @@
-import Headers from '@/components/ui/headers';
-import { Button } from '@/components/ui/button';
+
+import { Button } from '@components/ui/chad-cn/button';
 import {
   Card,
   CardContent,
@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@components/ui/chad-cn/card';
 import { VerifiedIcon } from 'lucide-react';
 import Image from 'next/image';
 import { LuClock3, LuStar, LuTimerReset, LuX } from 'react-icons/lu';
@@ -21,8 +21,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import { Separator } from '@/components/ui/separator';
+} from '@components/ui/chad-cn/dialog';
+import { Separator } from '@components/ui/chad-cn/separator';
+import Headers from '@components/ui/headers';
 
 export default function DoctorsPage() {
   return (
@@ -155,7 +156,7 @@ function CardComponent() {
                   </div>
                   <Separator className="my-4" />
 
-                  <div className="mt-8 space-y-4">
+                  <div className="mt-8 space-y-4 text-left">
                     <Headers size="sm">Bio</Headers>
 
                     <p className="text-sm">
@@ -170,7 +171,7 @@ function CardComponent() {
                   </div>
                 </DialogDescription>
               </DialogHeader>
-              <DialogFooter className="mt-4 sm:justify-end">
+              <DialogFooter className="mt-4 sm:justify-end gap-2">
                 <DialogClose asChild>
                   <Button type="button" variant="secondary">
                     Close

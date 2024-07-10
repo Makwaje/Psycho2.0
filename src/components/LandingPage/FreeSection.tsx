@@ -1,5 +1,7 @@
-import Headers from '../ui/headers';
-import SectionContainer from '../ui/sectionContainer';
+
+import Headers from '@components/ui/headers';
+import SectionContainer from '@components/ui/sectionContainer';
+
 
 function FreeSection() {
   return (

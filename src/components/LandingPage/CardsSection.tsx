@@ -3,14 +3,14 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import React from 'react';
-import Headers from '../ui/headers';
-import SectionContainer from '../ui/sectionContainer';
+} from '@components/ui/chad-cn/card';
+import Headers from '@components/ui/headers';
+import SectionContainer from '@components/ui/sectionContainer';
+
 
 function CardsSection() {
   return (
-    <SectionContainer>
+    <SectionContainer >
       <div className=" h-auto rounded-lg p-2 md:p-16">
         <div className="my-16 mt-12 rounded-2xl p-2 md:p-16 ">
           <Headers

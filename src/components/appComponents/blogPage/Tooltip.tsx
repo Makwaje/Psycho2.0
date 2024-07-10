@@ -1,13 +1,13 @@
 import { Input } from '@/components/ui/input';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger } from '@components/ui/chad-cn/tabs';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
+} from '@components/ui/chad-cn/select';
+import { Button } from '@components/ui/chad-cn/button';
 import { SearchIcon } from 'lucide-react';
 
 function Tooltip() {
