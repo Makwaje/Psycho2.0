@@ -1,7 +1,7 @@
-import { VerifiedIcon } from 'lucide-react';
-import Image from 'next/image';
-import { LuClock3, LuStar, LuTimerReset, LuX } from 'react-icons/lu';
-import Headers from '../../ui/Headers';
+import { VerifiedIcon } from "lucide-react";
+import Image from "next/image";
+import { LuClock3, LuStar, LuTimerReset, LuX } from "react-icons/lu";
+import Headers from "../../ui/Headers";
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '../../ui/chad-cn/card';
+} from "../../ui/chad-cn/card";
 import {
   Dialog,
   DialogClose,
@@ -19,9 +19,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '../../ui/chad-cn/dialog';
-import { Button } from '../../ui/chad-cn/button';
-import { Separator } from '../../ui/chad-cn/separator';
+} from "../../ui/chad-cn/dialog";
+import { Button } from "../../ui/chad-cn/button";
+import { Separator } from "../../ui/chad-cn/separator";
 
 export default function DoctorsPage() {
   return (
@@ -54,10 +54,10 @@ export default function DoctorsPage() {
 }
 
 function CardComponent() {
-  const name = 'Musab Ibrahim';
+  const name = "Musab Ibrahim";
   const responseTime = Math.floor(Math.random() * 11 + 20);
   const rating = Math.floor(Math.random() * 11);
-  const availabilityTime = '7:25PM - 10:45AM';
+  const availabilityTime = "7:25PM - 10:45AM";
 
   return (
     <>

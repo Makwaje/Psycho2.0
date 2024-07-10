@@ -11,12 +11,7 @@
     "prefix": ""
   },
   "aliases": {
-<<<<<<< HEAD
-    "components": "@/components",
-    "utils": "@/src/lib/utils"
-=======
     "components": "@/components/ui/chad-cn",
     "utils": "@/lib/utils"
->>>>>>> 414373e (starter)
   }
 }
