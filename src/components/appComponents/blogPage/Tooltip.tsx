@@ -1,14 +1,12 @@
-import { Input } from "@/components/ui/chad-cn/input";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/chad-cn/tabs";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/chad-cn/select";
-import { Button } from "@/components/ui/chad-cn/button";
-import { SearchIcon } from "lucide-react";
+
+
+
+
+import { SearchIcon } from 'lucide-react';
+import { Input } from '../../ui/chad-cn/input';
+import { Button } from '../../ui/chad-cn/button';
+import { Tabs, TabsList, TabsTrigger } from '../../ui/chad-cn/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../ui/chad-cn/select';
 
 function Tooltip() {
   return (

@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import Headers from "@/components/ui/Headers";
-import { Button } from "@/components/ui/chad-cn/button";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { FaArrowLeft } from "react-icons/fa6";
+import { useForm } from 'react-hook-form';
+
+import { FaArrowLeft } from 'react-icons/fa6';
+import Link from 'next/link';
+import Headers from '@/src/components/ui/Headers';
+import { Input } from '@/src/components/ui/chad-cn/input';
+import { Button } from '@/src/components/ui/chad-cn/button';
+import { Separator } from '@/src/components/ui/chad-cn/separator';
 
 export default function ResetPage() {
   const {
@@ -27,7 +28,7 @@ export default function ResetPage() {
         className="absolute left-6 top-4 bg-accent-foreground p-4 text-2xl text-accent md:text-4xl"
         href="/"
       >
-        <Headers size="xl">Psycho</Headers>
+        <Headers size="sm">Psycho</Headers>
       </Link>
       <div className="flex w-80 flex-col justify-between text-center">
         <Headers size="xl" className="mx-auto mb-20 text-3xl md:text-4xl">
@@ -47,7 +48,7 @@ export default function ResetPage() {
               Email
             </label>
             <Input
-              {...register("email")}
+              {...register('email')}
               id="email"
               type="email"
               placeholder="Example@email.com"

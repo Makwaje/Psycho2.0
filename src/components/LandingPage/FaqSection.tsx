@@ -1,11 +1,11 @@
-import Headers from "@/components/ui/Headers";
-import SectionContainer from "@/components/ui/SectionContainer";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/chad-cn/accordion";
+} from '../ui/chad-cn/accordion';
+import Headers from '../ui/Headers';
+import SectionContainer from '../ui/SectionContainer';
 
 function FaqSection() {
   return (

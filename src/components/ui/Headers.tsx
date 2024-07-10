@@ -1,6 +1,8 @@
 "use client";
+import { cn } from "@/src/lib/utils";
+
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+
 import React from "react";
 
 const headerVariants = cva("font-bold", {

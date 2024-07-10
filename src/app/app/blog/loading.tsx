@@ -1,4 +1,4 @@
-import { CgSpinner } from "react-icons/cg";
+import { CgSpinner } from 'react-icons/cg';
 
 function loading() {
   return (

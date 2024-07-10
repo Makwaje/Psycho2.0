@@ -1,13 +1,6 @@
-import Headers from "@/components/ui/Headers";
-import SectionContainer from "@/components/ui/SectionContainer";
-
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/chad-cn/card";
-import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/chad-cn/card';
+import Headers from '../ui/Headers';
+import SectionContainer from '../ui/SectionContainer';
 
 function CardsSection() {
   return (
@@ -25,13 +18,13 @@ function CardsSection() {
           <Card className="h-auto bg-[#809A6F] duration-200 animate-out hover:scale-[101%] md:h-[32rem]  ">
             <CardHeader>
               <CardTitle className="mb-4 md:mb-8">
-                {"Emergency Psychotherapy"}
+                {'Emergency Psychotherapy'}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm sm:text-base">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis"
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis'
                 }
               </p>
             </CardContent>
@@ -39,13 +32,13 @@ function CardsSection() {
           <Card className="h-auto bg-[#A2A378] duration-200 animate-out hover:scale-[101%] md:h-[32rem] ">
             <CardHeader>
               <CardTitle className="mb-4 md:mb-8">
-                {"Daily art therapy session"}
+                {'Daily art therapy session'}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm sm:text-base">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis"
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis'
                 }
               </p>
             </CardContent>
@@ -53,13 +46,13 @@ function CardsSection() {
           <Card className="h-auto bg-[#739072] duration-200 animate-out hover:scale-[101%] md:h-[32rem] ">
             <CardHeader>
               <CardTitle className="mb-4 md:mb-8">
-                {"Weekly self-help support"}
+                {'Weekly self-help support'}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm sm:text-base">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis"
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis'
                 }
               </p>
             </CardContent>
@@ -67,13 +60,13 @@ function CardsSection() {
           <Card className="h-auto bg-[#ECE3CE] duration-200 animate-out hover:scale-[101%] md:h-[32rem] ">
             <CardHeader>
               <CardTitle className="mb-4 md:mb-8">
-                {"Interactive community"}
+                {'Interactive community'}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm sm:text-base">
                 {
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis"
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque soluta officiis distinctio est suscipit! Unde magnam suscipit accusamus quo. Minus fuga, repellendus tenetur aspernatur harum aut illum accusantium blanditiis'
                 }
               </p>
             </CardContent>

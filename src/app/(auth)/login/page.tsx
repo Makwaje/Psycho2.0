@@ -1,17 +1,20 @@
-"use client";
+'use client';
 
-import Headers from "@/components/ui/Headers";
-import { Button } from "@/components/ui/chad-cn/button";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import { useForm } from 'react-hook-form';
 
-import { TLoginSchema, loginSchema } from "@/lib/types";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
+import Link from 'next/link';
 
-export default function LoginPage() {
+import { zodResolver } from '@hookform/resolvers/zod';
+
+import { useRouter } from 'next/navigation';
+import { loginSchema, TLoginSchema } from '@/src/lib/types';
+import Headers from '@/src/components/ui/Headers';
+import { Input } from '@/src/components/ui/chad-cn/input';
+import { Button } from '@/src/components/ui/chad-cn/button';
+import { Separator } from '@/src/components/ui/chad-cn/separator';
+
+export default function LogInPage() {
   const {
     register,
     handleSubmit,
@@ -20,10 +23,33 @@ export default function LoginPage() {
   } = useForm<TLoginSchema>({
     resolver: zodResolver(loginSchema),
   });
+  const router = useRouter();
 
-  function onSubmit(data: TLoginSchema) {
-    console.log(data);
-    reset();
+  async function onSubmit(data: TLoginSchema) {
+    const { email, password } = data;
+
+    const request = await fetch(
+      'https://psycho-de4o.onrender.com/api/v1/users/login',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      }
+    );
+    const resData = await request.json();
+
+    if (resData.status === 'success') {
+      router.push('/app');
+      console.log(resData);
+      reset();
+    } else {
+      throw new Error('Login failed');
+    }
   }
 
   return (
@@ -32,7 +58,7 @@ export default function LoginPage() {
         className="absolute left-6 top-4 bg-accent-foreground p-4 text-2xl text-accent md:text-4xl"
         href="/"
       >
-        <Headers size="xl">Psycho</Headers>
+        <Headers size="sm">Psycho</Headers>
       </Link>
       <div className="flex flex-col justify-between">
         <Headers size="xl" className="mx-auto mb-20 text-2xl md:text-4xl">
@@ -47,7 +73,7 @@ export default function LoginPage() {
               Email
             </label>
             <Input
-              {...register("email")}
+              {...register('email')}
               id="email"
               type="text"
               placeholder="Example@email.com"
@@ -65,7 +91,7 @@ export default function LoginPage() {
               Password
             </label>
             <Input
-              {...register("password")}
+              {...register('password')}
               id="password"
               type="password"
               placeholder="Password"

@@ -1,7 +1,7 @@
-"use client";
-import Headers from "@/components/ui/Headers";
-import SectionContainer from "@/components/ui/SectionContainer";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
+import Headers from '../ui/Headers';
+import SectionContainer from '../ui/SectionContainer';
 
 function Free2Section() {
   return (
@@ -16,7 +16,7 @@ function Free2Section() {
             LMAO you think so?
           </span>
         </Headers>
-        <Headers size={"default"} className="text-xl md:text-2xl">
+        <Headers size={'default'} className="text-xl md:text-2xl">
           All the doctors here are volunteers.
         </Headers>
 
@@ -26,7 +26,7 @@ function Free2Section() {
           width="700"
           height="500"
           className="absolute -bottom-4 right-0 -z-30 w-96 opacity-0 transition-opacity duration-200 md:-bottom-16 md:w-[700px]"
-          onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+          onLoadingComplete={(image) => image.classList.remove('opacity-0')}
         />
 
         <p className="absolute bottom-2 flex flex-col p-2 font-medium">

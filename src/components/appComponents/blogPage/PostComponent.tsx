@@ -1,24 +1,22 @@
-import { BookmarkIcon, VerifiedIcon } from "lucide-react";
-import Image from "next/image";
-import Hizb from "@/../public/hizb.jpg";
-import doctorImage from "@/../public/doctor.jpg";
-import { Badge } from "@/components/ui/chad-cn/badge";
-import { Button } from "@/components/ui/chad-cn/button";
+import { BookmarkIcon, VerifiedIcon } from 'lucide-react';
+import Image from 'next/image';
+import hizb from '@/public/hizb.jpg';
+import doctorImage from '@/public/doctor.jpg';
+
+import { TbThumbUp } from 'react-icons/tb';
+
+import Link from 'next/link';
+import { Avatar, AvatarFallback, AvatarImage } from '../../ui/chad-cn/avatar';
+import { Separator } from '../../ui/chad-cn/separator';
+import { Badge } from '../../ui/chad-cn/badge';
+import { Button } from '../../ui/chad-cn/button';
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/chad-cn/card";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import { TbThumbUp } from "react-icons/tb";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/chad-cn/avatar";
-import Link from "next/link";
+} from '../../ui/chad-cn/card';
 
 export default function PostComponent({
   image = false,
@@ -41,7 +39,7 @@ export default function PostComponent({
             </AvatarFallback>
           </Avatar>
           <span className="flex gap-0.5 text-base font-medium">
-            Dr. Musab Ibrahim{" "}
+            Dr. Musab Ibrahim{' '}
             <VerifiedIcon
               size={20}
               stroke="white"
@@ -67,7 +65,7 @@ export default function PostComponent({
       <p className="font-base max-w-[75%] self-center text-center text-xl">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
         quam a omnis facilis et, consectetur voluptas mollitia quo aspernatur?
-        Accusamus officia optio molestiae...{" "}
+        Accusamus officia optio molestiae...{' '}
         <Link
           href={`blog/${id}`}
           className="text-lg font-semibold text-blue-800 duration-150 hover:text-blue-950"
@@ -78,7 +76,7 @@ export default function PostComponent({
 
       {image && (
         <Image
-          src={Hizb}
+          src={hizb}
           alt="article"
           quality={35}
           width={250}
