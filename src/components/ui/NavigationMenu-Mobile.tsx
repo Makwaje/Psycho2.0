@@ -13,7 +13,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/chad-cn/navigation-menu";
 import { MenuIcon } from "lucide-react";
-import Headers from "./headers";
+import Headers from "@components/ui/Headers";
+
 
 
 

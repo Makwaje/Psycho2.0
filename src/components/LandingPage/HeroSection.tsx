@@ -2,9 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Headers from '../ui/Headers';
-import { Button } from '../ui/chad-cn/button';
-import SectionContainer from '../ui/sectionContainer';
+
+import SectionContainer from '@components/ui/SectionContainer';
+import { Button } from '@components/ui/chad-cn/button';
+import Headers from '@components/ui/Headers';
 
 function HeroSection() {
   return (

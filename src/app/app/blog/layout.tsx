@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { PlusSquare } from "lucide-react";
-import Headers from "@components/ui/headers";
+import Headers from "@components/ui/Headers";
 import { Button } from "@components/ui/chad-cn/button";
 import { Separator } from "@components/ui/chad-cn/separator";
 
