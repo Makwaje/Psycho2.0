@@ -1,4 +1,4 @@
-# [makwaje.creative]
+# [psychotherapist]
 
 ## [GSAP - NEXT.JS - TAILWINDCSS - TYPESCRIPT ]
 
