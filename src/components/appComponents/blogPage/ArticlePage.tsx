@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import hizb from '@../public/hizb.jpg';
 import Link from 'next/link';

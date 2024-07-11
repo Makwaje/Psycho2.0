@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 
-import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
-import Link from "next/link";
+import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
+import Link from 'next/link';
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from '@hookform/resolvers/zod';
 
-import { useRouter } from "next/navigation";
-import { signUpSchema, TSignUpSchema } from "@/lib/types";
-import Headers from "@/components/ui/Headers";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Button } from "@/components/ui/chad-cn/button";
-import { Separator } from "@/components/ui/chad-cn/separator";
+import { signUpSchema, TSignUpSchema } from '@/lib/types';
+import Headers from '@/components/ui/Headers';
+import { Input } from '@/components/ui/chad-cn/input';
+import { Button } from '@/components/ui/chad-cn/button';
+import { Separator } from '@/components/ui/chad-cn/separator';
+import { signUp } from '@/lib/actions';
 
 export default function SignUpPage() {
   const {
@@ -24,32 +24,8 @@ export default function SignUpPage() {
     resolver: zodResolver(signUpSchema),
   });
 
-  const router = useRouter();
   async function onSubmit(data: TSignUpSchema) {
-    const { name, email, password } = data;
-
-    const request = await fetch(
-      "https://psycho-de4o.onrender.com/api/v1/users/signup",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
-        headers: {
-          "Content-type": "application/json",
-        },
-      },
-    );
-
-    const reqData = await request.json();
-
-    if (reqData.status === "success") {
-      router.push("/login");
-    } else {
-      throw new Error("SignUp failed");
-    }
+    await signUp(data);
   }
 
   return (
@@ -73,7 +49,7 @@ export default function SignUpPage() {
               Full Name
             </label>
             <Input
-              {...register("name")}
+              {...register('name')}
               id="name"
               type="text"
               placeholder="Mohamed alfadel"
@@ -91,7 +67,7 @@ export default function SignUpPage() {
               Email
             </label>
             <Input
-              {...register("email")}
+              {...register('email')}
               id="email"
               type="text"
               placeholder="Example@email.com"
@@ -109,7 +85,7 @@ export default function SignUpPage() {
               Password
             </label>
             <Input
-              {...register("password")}
+              {...register('password')}
               id="password"
               type="password"
               placeholder="Password"
@@ -126,7 +102,7 @@ export default function SignUpPage() {
               Confirm Password
             </label>
             <Input
-              {...register("confirmPassword")}
+              {...register('confirmPassword')}
               id="confirmPassword"
               type="password"
               placeholder="Re-enter password"
