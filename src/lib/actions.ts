@@ -4,20 +4,17 @@ import { redirect } from 'next/navigation';
 import { TLoginSchema, TSignUpSchema } from './types';
 
 export async function signUp(formData: TSignUpSchema) {
-  const request = await fetch(
-    'https://psycho-de4o.onrender.com/api/v1/users/signup',
-    {
-      method: 'POST',
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        password: formData.password,
-      }),
-      headers: {
-        'Content-type': 'application/json',
-      },
-    }
-  );
+  const request = await fetch(`${process.env.BASE_URL}/users/signup`, {
+    method: 'POST',
+    body: JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+    }),
+    headers: {
+      'Content-type': 'application/json',
+    },
+  });
 
   const reqData = await request.json();
   console.log(reqData);
@@ -30,19 +27,16 @@ export async function signUp(formData: TSignUpSchema) {
 }
 
 export async function logIn(formData: TLoginSchema) {
-  const request = await fetch(
-    'https://psycho-de4o.onrender.com/api/v1/users/login',
-    {
-      method: 'POST',
-      body: JSON.stringify({
-        email: formData.email,
-        password: formData.password,
-      }),
-      headers: {
-        'Content-type': 'application/json',
-      },
-    }
-  );
+  const request = await fetch(`${process.env.BASE_URL}/users/login`, {
+    method: 'POST',
+    body: JSON.stringify({
+      email: formData.email,
+      password: formData.password,
+    }),
+    headers: {
+      'Content-type': 'application/json',
+    },
+  });
   const reqData = await request.json();
   console.log(reqData);
 
