@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 
+import { useRouter } from 'next/navigation';
 import { signUpSchema, TSignUpSchema } from '@/lib/types';
 import Headers from '@/components/ui/Headers';
 import { Input } from '@/components/ui/chad-cn/input';
@@ -25,7 +26,15 @@ export default function SignUpPage() {
   });
 
   async function onSubmit(data: TSignUpSchema) {
-    await signUp(data);
+    const res = await signUp(data);
+
+    if (res.status === 'success') {
+      console.log(res);
+      router.push('/verify');
+    } else {
+      console.error(res);
+      throw new Error('SignUp failed');
+    }
   }
 
   return (
