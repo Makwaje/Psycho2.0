@@ -49,6 +49,6 @@ export async function logIn(formData: TLoginSchema) {
   if (reqData.status === 'success') {
     redirect('/app');
   } else {
-    throw new Error('signUp failed');
+    throw new Error('login failed');
   }
 }
