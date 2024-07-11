@@ -16,6 +16,7 @@ import { Separator } from '@/components/ui/chad-cn/separator';
 import { signUp } from '@/lib/actions';
 
 export default function SignUpPage() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -27,6 +28,8 @@ export default function SignUpPage() {
 
   async function onSubmit(data: TSignUpSchema) {
     const res = await signUp(data);
+
+    console.log(res);
 
     if (res.status === 'success') {
       console.log(res);
