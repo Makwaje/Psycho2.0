@@ -2,20 +2,19 @@
 
 import { useForm } from 'react-hook-form';
 
-import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
+import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { useRouter } from 'next/navigation';
-import { loginSchema, TLoginSchema } from '@/lib/types';
-import Headers from '@/components/ui/Headers';
-import { Input } from '@/components/ui/chad-cn/input';
 import { Button } from '@/components/ui/chad-cn/button';
+import { Input } from '@/components/ui/chad-cn/input';
 import { Separator } from '@/components/ui/chad-cn/separator';
-import { logIn } from '@/lib/actions';
+import Headers from '@/components/ui/Headers';
+import { loginSchema, TLoginSchema } from '@/lib/types';
+import { useRouter } from 'next/navigation';
 
-import { setCookie, getCookies } from 'cookies-next';
+import axios from 'axios';
 
 export default function LogInPage() {
   const {
@@ -29,21 +28,9 @@ export default function LogInPage() {
   const router = useRouter();
 
   async function onSubmit(formData: TLoginSchema) {
-    const res = await logIn(formData);
-    console.log(res);
+    const data = axios.post('/api/auth/login', formData);
 
-    // const res = await fetch(`${'http://localhost:8085/api/v1'}/users/login`, {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     email: formData.email,
-    //     password: formData.password,
-    //   }),
-    //   headers: {
-    //     'Content-type': 'application/json',
-    //   },
-    // });
-
-    // console.log(res);
+    console.log(data);
   }
 
   return (
