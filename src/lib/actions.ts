@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 import { TLoginSchema, TSignUpSchema } from './types';
 
 export async function signUp(formData: TSignUpSchema) {
+
   const res = await fetch(`${process.env.BASE_URL}/users/signup`, {
     method: 'POST',
     body: JSON.stringify({
@@ -15,6 +16,7 @@ export async function signUp(formData: TSignUpSchema) {
       'Content-type': 'application/json',
     },
   });
+
   console.log(res);
   // getAndSetCookies(res);
 
@@ -23,6 +25,7 @@ export async function signUp(formData: TSignUpSchema) {
 
 export async function logIn(formData: TLoginSchema) {
   const res = await fetch(`${process.env.BASE_URL}/users/login`, {
+
     method: 'POST',
     body: JSON.stringify({
       email: formData.email,
@@ -33,10 +36,12 @@ export async function logIn(formData: TLoginSchema) {
     },
   });
 
+
   console.log(res);
   // getAndSetCookies(res);
 
   return res.json();
+
 }
 
 // function parseCookieString(cookieString: []) {
