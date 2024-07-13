@@ -15,6 +15,8 @@ import { Button } from '@/components/ui/chad-cn/button';
 import { Separator } from '@/components/ui/chad-cn/separator';
 import { signUp } from '@/lib/actions';
 
+import axios from 'axios';
+
 export default function SignUpPage() {
   const router = useRouter();
   const {
@@ -26,18 +28,10 @@ export default function SignUpPage() {
     resolver: zodResolver(signUpSchema),
   });
 
-  async function onSubmit(data: TSignUpSchema) {
-    const res = await signUp(data);
+  async function onSubmit(formData: TSignUpSchema) {
+    const data = axios.post('/api/auth/signup', formData);
 
-    console.log(res);
-
-    if (res.status === 'success') {
-      console.log(res);
-      router.push('/verify');
-    } else {
-      console.error(res);
-      throw new Error('SignUp failed');
-    }
+    console.log(data);
   }
 
   return (

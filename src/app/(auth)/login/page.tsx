@@ -28,9 +28,7 @@ export default function LogInPage() {
   const router = useRouter();
 
   async function onSubmit(formData: TLoginSchema) {
-    const data = axios.post('/api/auth/login', formData, {
-      withCredentials: true,
-    });
+    const data = axios.post('/api/auth/login', formData);
 
     console.log(data);
   }

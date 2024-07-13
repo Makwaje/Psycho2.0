@@ -1,15 +1,17 @@
+import { TSignUpSchema } from '@/lib/types';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-  const { email, password } = await request.json();
+  const { email, password, name } = (await request.json()) as TSignUpSchema;
 
   // 1. get the data from the API
-  const res = await fetch(`${process.env.BASE_URL}/users/login`, {
+  const res = await fetch(`${process.env.BASE_URL}/users/signup`, {
     method: 'POST',
     credentials: 'include',
     body: JSON.stringify({
-      email: email,
-      password: password,
+      name,
+      email,
+      password,
     }),
     headers: {
       'Content-type': 'application/json',
