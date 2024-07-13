@@ -15,6 +15,8 @@ import { Button } from '@/components/ui/chad-cn/button';
 import { Separator } from '@/components/ui/chad-cn/separator';
 import { logIn } from '@/lib/actions';
 
+import { setCookie, getCookies } from 'cookies-next';
+
 export default function LogInPage() {
   const {
     register,
@@ -27,7 +29,21 @@ export default function LogInPage() {
   const router = useRouter();
 
   async function onSubmit(formData: TLoginSchema) {
-    await logIn(formData);
+    const res = await logIn(formData);
+    console.log(res);
+
+    // const res = await fetch(`${'http://localhost:8085/api/v1'}/users/login`, {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: formData.email,
+    //     password: formData.password,
+    //   }),
+    //   headers: {
+    //     'Content-type': 'application/json',
+    //   },
+    // });
+
+    // console.log(res);
   }
 
   return (
