@@ -16,8 +16,6 @@ import { useRouter } from 'next/navigation';
 
 import axios from 'axios';
 
-import { setCookie, getCookies } from 'cookies-next';
-
 export default function LogInPage() {
   const {
     register,
