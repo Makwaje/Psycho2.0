@@ -29,9 +29,10 @@ export default function SignUpPage() {
   });
 
   async function onSubmit(formData: TSignUpSchema) {
-    const data = axios.post('/api/auth/signup', formData);
+    const { data } = await axios.post('/api/auth/signup', formData);
 
-    console.log(data);
+    if (data.status === 'success')
+      router.push(`/verify?id=${data.data.user.id}`);
   }
 
   return (
