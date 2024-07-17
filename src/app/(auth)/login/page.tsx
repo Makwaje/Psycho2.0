@@ -29,6 +29,17 @@ export default function LogInPage() {
 
   async function onSubmit(formData: TLoginSchema) {
     const { data } = await axios.post('/api/auth/login', formData);
+
+    console.log(data);
+
+    if (data.status === 'success' && typeof window !== 'undefined') {
+      window.localStorage.setItem('session', JSON.stringify(data.data.user));
+      router.push('/app');
+    } else if (data.message === 'Please verify your email to proceed.') {
+      // FIX - LATER
+      // Musab need to fix this
+      // we need user's {id} in the response - to redirect to verify page.
+    }
   }
 
   return (

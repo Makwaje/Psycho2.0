@@ -31,8 +31,15 @@ export default function SignUpPage() {
   async function onSubmit(formData: TSignUpSchema) {
     const { data } = await axios.post('/api/auth/signup', formData);
 
-    if (data.status === 'success')
+    console.log(data);
+
+    if (data.status === 'success' && typeof window !== 'undefined') {
+      window.localStorage.setItem('session', JSON.stringify(data.data.user));
       router.push(`/verify?id=${data.data.user.id}`);
+    } else if (data?.message === 'User already exist') {
+      // TASK // SHOW A toast that says: 'User already exist'
+      router.push('/login');
+    }
   }
 
   return (
