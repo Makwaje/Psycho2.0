@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Psycho - volunteers-application',
-  description: 'i hope you die soon',
+  description: 'i hope you start with us',
 };
 
 export default function RootLayout({
