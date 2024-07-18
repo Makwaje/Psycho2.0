@@ -1,61 +1,88 @@
-import Headers from "@/components/ui/Headers";
-import { Button } from "@/components/ui/chad-cn/button";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Label } from "@/components/ui/chad-cn/label";
-import Image from "next/image";
-import React from "react";
-import { FaKey } from "react-icons/fa";
+'use client';
+
+import { useForm } from 'react-hook-form';
+
+import { Button } from '@/components/ui/chad-cn/button';
+import { Input } from '@/components/ui/chad-cn/input';
+import { Label } from '@/components/ui/chad-cn/label';
+import Headers from '@/components/ui/Headers';
+import { profileSchema, TProfileSchema } from '@/lib/types';
+import { zodResolver } from '@hookform/resolvers/zod';
+import Image from 'next/image';
+import React from 'react';
 
 export default function ProfileSettings() {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<TProfileSchema>({
+    resolver: zodResolver(profileSchema),
+  });
+
+  function onSubmit(data: TProfileSchema) {
+    console.log(data);
+  }
+
   return (
-    <div className=" flex gap-28 ">
-      <div className="mt-24 flex flex-col gap-6">
-        <Headers>Edit your profile</Headers>
-        <div>
-          <Label htmlFor="name">Full Name</Label>
-          <Input
-            className="w-[35rem]"
-            type="email"
-            id="fullname"
-            placeholder="Name"
-          />
-        </div>
-        <div>
-          <Label htmlFor="name">Birthday</Label>
-          <Input
-            className="w-[35rem]"
-            type="date"
-            id="Birthday"
-            placeholder="birthday"
-          />
-        </div>
-        <div>
-          <Label htmlFor="name">Email Address</Label>
-          <Input
-            className="w-[35rem]"
-            type="email"
-            id="email"
-            placeholder="Email"
-          />
-        </div>
-        <div>
-          <Label htmlFor="name">Phone Number</Label>
-          <Input
-            className="w-[35rem]"
-            type="number"
-            id="phonenumber"
-            placeholder="Phone Number"
-          />
-        </div>
-        <div></div>
-        <Button className="w-[35rem]">save changes</Button>
-      </div>
-      <div className="mt-24 flex flex-col gap-2">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="md:flex md:gap-8 m-auto mb-8 w-full"
+    >
+      {/* IMAGE  */}
+      <div className="flex md:order-last items-center justify-center flex-col gap-2">
         <Image alt="doctor avatar" src="/doctor.jpg" width={300} height={200} />
         <Label htmlFor="picture">Edit avatar</Label>
-        <Input id="picture" type="file" />
-        <Button variant="destructive">Delete avatar</Button>
+        <Input {...register('photo')} id="photo" type="file" />
+        <Button variant="destructive" className="w-full">
+          Delete avatar
+        </Button>
       </div>
-    </div>
+
+      <div className="mt-16 flex flex-col w-full gap-6">
+        <Headers>Edit your profile</Headers>
+        <div className="flex flex-col gap-4 ">
+          {/* USER NAME */}
+
+          <div>
+            <Label>Full Name</Label>
+            <Input
+              {...register('name')}
+              type="text"
+              id="name"
+              placeholder="Name"
+            />
+          </div>
+
+          {/* BIRTHDAY */}
+
+          <div>
+            <Label>Birthday</Label>
+            <Input
+              {...register('birthday')}
+              type="date"
+              id="birthday"
+              placeholder="birthday"
+            />
+          </div>
+
+          {/* EMAIL ADDRESS */}
+
+          <div>
+            <Label>Email Address</Label>
+            <Input
+              {...register('email')}
+              type="email"
+              id="email"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <Button disabled={isSubmitting} type="submit">
+          save changes
+        </Button>
+      </div>
+    </form>
   );
 }

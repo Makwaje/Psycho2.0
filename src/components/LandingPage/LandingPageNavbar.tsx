@@ -1,34 +1,34 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Button } from "../ui/chad-cn/button";
-import { MobileNav } from "./LandingPageMobileNavbar";
+import Link from 'next/link';
+import { Button } from '../ui/chad-cn/button';
+import { MobileNav } from './LandingPageMobileNavbar';
 
 const navItems = [
   {
     id: 1,
     name: "How it's work?",
-    link: "/",
+    link: '/',
   },
   {
     id: 2,
-    name: "Services",
-    link: "/",
+    name: 'Services',
+    link: '/',
   },
   {
     id: 3,
-    name: "FREE",
-    link: "/",
+    name: 'FREE',
+    link: '/',
   },
   {
     id: 4,
-    name: "FAQ",
-    link: "/",
+    name: 'FAQ',
+    link: '/',
   },
   {
     id: 5,
-    name: "For Volunteers",
-    link: "/",
+    name: 'For Volunteers',
+    link: '/volunteers-signup',
   },
 ];
 
@@ -36,7 +36,7 @@ function Navbar() {
   return (
     <nav className=" sticky top-0 z-50 flex max-w-full items-center justify-between  bg-background/80 p-2 drop-shadow-md backdrop-blur-sm  lg:p-3  ">
       <div>
-        <Link href={"/"} className="text-base font-extrabold">
+        <Link href={'/'} className="text-base font-extrabold">
           PSYCHO
         </Link>
       </div>

@@ -1,5 +1,5 @@
-import Headers from "@/components/ui/Headers";
-import { Button } from "@/components/ui/chad-cn/button";
+import Headers from '@/components/ui/Headers';
+import { Button } from '@/components/ui/chad-cn/button';
 import {
   Card,
   CardContent,
@@ -7,10 +7,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/chad-cn/card";
-import { VerifiedIcon } from "lucide-react";
-import Image from "next/image";
-import { LuClock3, LuStar, LuTimerReset } from "react-icons/lu";
+} from '@/components/ui/chad-cn/card';
+import { VerifiedIcon } from 'lucide-react';
+import Image from 'next/image';
+import { LuClock3, LuStar, LuTimerReset } from 'react-icons/lu';
 import {
   Dialog,
   DialogClose,
@@ -20,14 +20,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/chad-cn/dialog";
-import { Separator } from "@/components/ui/chad-cn/separator";
+} from '@/components/ui/chad-cn/dialog';
+import { Separator } from '@/components/ui/chad-cn/separator';
 
 export default function CardComponent() {
-  const name = "Musab Ibrahim";
+  const name = 'Musab Ibrahim';
   const responseTime = Math.floor(Math.random() * 11 + 20);
   const rating = Math.floor(Math.random() * 11);
-  const availabilityTime = "7:25PM - 10:45AM";
+  const availabilityTime = '7:25PM - 10:45AM';
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function CardComponent() {
             className="rounded-full"
           />
           {/* TIME */}
-          <div className="flex flex-col gap-2 ">
+          <div className="flex flex-col gap-2">
             <div className="flex items-center gap-1.5">
               <LuTimerReset size={25} />
               <div className="text-sm">
@@ -72,7 +72,7 @@ export default function CardComponent() {
             </div>
           </div>
         </CardContent>
-        <CardFooter className=" flex flex-row-reverse gap-2">
+        <CardFooter className="flex flex-row-reverse gap-2">
           <Button variant="default">Send chat request</Button>
           {/* MODAL */}
           <Dialog>
