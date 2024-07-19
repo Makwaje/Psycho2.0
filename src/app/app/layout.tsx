@@ -1,6 +1,5 @@
 import { AppMobileSideBar } from '@/components/appComponents/appMobileSidebar';
 import Sidebar from '@/components/appComponents/Sidebar';
-import { MobileNav } from '@/components/LandingPage/LandingPageMobileNavbar';
 
 import type { Metadata } from 'next';
 // import { Inter } from "next/font/google";

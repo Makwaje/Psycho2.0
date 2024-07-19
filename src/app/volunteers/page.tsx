@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/chad-cn/button';
+import Footer from '@/components/ui/footer';
 import Headers from '@/components/ui/Headers';
 import VolunteersHeader from '@/components/volunteersComponents/volunteersApplication/volunteersHeader';
 import Image from 'next/image';
@@ -51,6 +52,7 @@ export default function VolunteersApplicationPage() {
           className="md:w-[60vw]"
         />
       </main>
+      <Footer />
     </div>
   );
 }
