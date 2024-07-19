@@ -8,14 +8,14 @@ import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 export default function VolunteersApplicationPage() {
   return (
-    <div className="h-screen">
+    <div>
       <header>
         <VolunteersHeader />
       </header>
 
-      <main className="mx-10 mt-20 flex flex-col items-center justify-center md:flex-row">
+      <main className="mx-10 mt-5 flex flex-col items-center justify-center md:mt-10 md:flex-row">
         <div>
-          <Headers size={'xxl'}>
+          <Headers size={'xl'}>
             Things to check <br /> before we start
           </Headers>
           <ul className="mt-6 flex flex-col flex-wrap gap-2">
@@ -38,7 +38,10 @@ export default function VolunteersApplicationPage() {
           </ul>
           <div className="mt-4 flex items-center gap-6">
             <Link href="/volunteers/login">
-              <Button className="uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground">
+              <Button
+                size={'lg'}
+                className="uppercase transition-all duration-150 hover:bg-primary hover:text-primary-foreground"
+              >
                 Apply Now
               </Button>
             </Link>

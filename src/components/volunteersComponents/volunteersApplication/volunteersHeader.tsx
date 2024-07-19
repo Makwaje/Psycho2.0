@@ -1,8 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { Button } from '../../ui/chad-cn/button';
-import { MobileNav } from '../../LandingPage/LandingPageMobileNavbar';
 
 function VolunteersHeader() {
   return (
