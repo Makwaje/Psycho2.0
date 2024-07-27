@@ -25,6 +25,9 @@ export async function POST(request: Request) {
     return new NextResponse(JSON.stringify(response));
   }
 
+  // NO NEED COOKIE FOR SIGNUP!
+
+  /*
   // extract the [set-cookie] string
 
   const serialized = `${res.headers.getSetCookie().at(0)}`;
@@ -43,4 +46,7 @@ export async function POST(request: Request) {
   return new NextResponse(JSON.stringify(response), {
     headers: { 'Set-Cookie': serialized },
   });
+*/
+  // POST back the same response BUT add headers options to set the cookie using the {serialized}
+  return new NextResponse(JSON.stringify(await res.json()));
 }
