@@ -28,7 +28,7 @@ const navItems = [
   {
     id: 5,
     name: 'For Volunteers',
-    link: '/volunteers/signup',
+    link: '/volunteers',
   },
 ];
 

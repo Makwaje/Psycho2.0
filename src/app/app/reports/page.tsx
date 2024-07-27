@@ -1,20 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client';
 
-import Data from "@/lib/Data.json";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Data from '@/lib/Data.json';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
-import { ResponsiveLine } from "@nivo/line";
+import { ResponsiveLine } from '@nivo/line';
 
-import { IoMdPerson } from "react-icons/io";
-import { FaWeight } from "react-icons/fa";
-import { GiRelationshipBounds } from "react-icons/gi";
-import Headers from "@/components/ui/Headers";
-import Paragraph from "@/components/ui/Paragraph";
-import { Card, CardHeader } from "@/components/ui/chad-cn/card";
-import { Button } from "@/components/ui/chad-cn/button";
+import { IoMdPerson } from 'react-icons/io';
+import { FaWeight } from 'react-icons/fa';
+import { GiRelationshipBounds } from 'react-icons/gi';
+import Headers from '@/components/ui/Headers';
+import Paragraph from '@/components/ui/Paragraph';
+import { Card, CardHeader } from '@/components/ui/chad-cn/card';
+import { Button } from '@/components/ui/chad-cn/button';
 
 export default function Reports() {
   const year = new Date().getFullYear();
@@ -29,11 +29,7 @@ export default function Reports() {
       </Paragraph>
       <div>
         <Card className="flex w-full flex-wrap p-4 md:w-[30rem]">
-          <img
-            src="/file.jpg"
-            alt="The doctor"
-            className="h-32 rounded-full "
-          />
+          <img src="/file.jpg" alt="The doctor" className="h-32 rounded-full" />
           <CardHeader>
             <Headers size="sm">Musab Softare</Headers>
             <div className="rounded-sm p-1">
@@ -67,8 +63,7 @@ export default function Reports() {
           </Link>
         </Card>
       </div>
-      <div className=" w-[24rem] md:h-[34rem] md:w-full">
-        <MyResponsiveLine data={Data} />
+      <div className="w-[24rem] md:h-[34rem] md:w-full">
       </div>
     </div>
   );
@@ -89,11 +84,11 @@ const MyResponsiveLine = ({ data }: dataProps) => (
   <ResponsiveLine
     data={data}
     margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-    xScale={{ type: "point" }}
+    xScale={{ type: 'point' }}
     yScale={{
-      type: "linear",
-      min: "auto",
-      max: "auto",
+      type: 'linear',
+      min: 'auto',
+      max: 'auto',
       stacked: true,
       reverse: false,
     }}
@@ -104,44 +99,44 @@ const MyResponsiveLine = ({ data }: dataProps) => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "transportation",
+      legend: 'transportation',
       legendOffset: 36,
-      legendPosition: "middle",
+      legendPosition: 'middle',
     }}
     axisLeft={{
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "count",
+      legend: 'count',
       legendOffset: -40,
-      legendPosition: "middle",
+      legendPosition: 'middle',
     }}
     pointSize={10}
-    pointColor={{ theme: "background" }}
+    pointColor={{ theme: 'background' }}
     pointBorderWidth={2}
-    pointBorderColor={{ from: "serieColor" }}
+    pointBorderColor={{ from: 'serieColor' }}
     pointLabelYOffset={-12}
     useMesh={true}
     legends={[
       {
-        anchor: "bottom-right",
-        direction: "column",
+        anchor: 'bottom-right',
+        direction: 'column',
         justify: false,
         translateX: 100,
         translateY: 0,
         itemsSpacing: 0,
-        itemDirection: "left-to-right",
+        itemDirection: 'left-to-right',
         itemWidth: 80,
         itemHeight: 20,
         itemOpacity: 0.75,
         symbolSize: 12,
-        symbolShape: "circle",
-        symbolBorderColor: "rgba(0, 0, 0, .5)",
+        symbolShape: 'circle',
+        symbolBorderColor: 'rgba(0, 0, 0, .5)',
         effects: [
           {
-            on: "hover",
+            on: 'hover',
             style: {
-              itemBackground: "rgba(0, 0, 0, .03)",
+              itemBackground: 'rgba(0, 0, 0, .03)',
               itemOpacity: 1,
             },
           },

@@ -17,7 +17,7 @@ export default function HowSection(): React.ReactNode {
       <div className="mt-12">
         <div className="mt-12 rounded-2xl pb-12">
           <Headers
-            className="text-center font-extrabold tracking-wider"
+            className=" text-center font-extrabold tracking-wider"
             size="xxl"
           >
             How our program helps

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
+
 export default function VolunteersApplicationPage() {
   return (
     <div>
