@@ -9,8 +9,10 @@ import { SessionTypes } from '@/lib/types';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import OtpInput from 'react-otp-input';
+
+axios.defaults.withCredentials = true;
 
 export default function VerifyPage() {
   const [otp, setOtp] = useState('');
@@ -25,7 +27,10 @@ export default function VerifyPage() {
 
     console.log(data);
 
-    if (data.message === 'OTP verified successfully') router.push('/login');
+    if (data.message === 'OTP verified successfully') {
+      window.localStorage.removeItem('session');
+      router.push('/login');
+    }
   }
 
   useEffect(
@@ -36,7 +41,7 @@ export default function VerifyPage() {
   );
 
   async function RequestOTP() {
-    const data = await axios.get(
+    const { data } = await axios.post(
       `${'http://localhost:8085/api/v1'}/users/request-otp/${session?.id}`
     );
     console.log(data);

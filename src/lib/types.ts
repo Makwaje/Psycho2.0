@@ -29,6 +29,18 @@ export const signUpSchema = z
   });
 export type TSignUpSchema = z.infer<typeof signUpSchema>;
 
+// reset password schema validation to be used in react hook form
+export const resetPasswordSchema = z
+  .object({
+    password: z.string().min(8, 'Password must be at least 8 characters'),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.confirmPassword === data.password, {
+    message: 'Password must match',
+    path: ['confirmPassword'],
+  });
+export type TResetPasswordSchema = z.infer<typeof resetPasswordSchema>;
+
 // ----------------------------------------------------------------------
 
 export type SessionTypes = {
