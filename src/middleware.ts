@@ -1,13 +1,12 @@
-import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
-const protectedRoutes = ['/app'];
+const protectedRouteRegex = /^\/app/; // Matches any path starting with /app
 
 export default function middleware(req: NextRequest) {
   const verify = req.cookies.get('jwt');
   const url = req.url;
 
-  if (!verify && protectedRoutes.includes(req.nextUrl.pathname)) {
+  if (!verify && protectedRouteRegex.test(req.nextUrl.pathname)) {
     return NextResponse.redirect('http://localhost:3000/login');
   }
 
