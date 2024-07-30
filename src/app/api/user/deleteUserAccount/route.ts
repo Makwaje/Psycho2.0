@@ -6,7 +6,7 @@ export async function DELETE(request: Request) {
   // 1. get the cookie from the browser
   const cookie = cookies().get('jwt')?.value;
 
-  // 2. get the data from the API
+  // 2. request and get the data from the API
   const { data } = await axios.delete(
     `${process.env.BASE_URL}/users/update-me`,
     {

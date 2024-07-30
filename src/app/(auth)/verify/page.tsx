@@ -19,6 +19,8 @@ export default function VerifyPage() {
   const router = useRouter();
   const session = useSession() as SessionTypes;
 
+  console.log(session);
+
   async function handleSubmitCode() {
     const { data } = await axios.post(
       `${'http://localhost:8085/api/v1'}/users/verify-otp/${session?.id}`,
@@ -29,6 +31,7 @@ export default function VerifyPage() {
 
     if (data.message === 'OTP verified successfully') {
       window.localStorage.removeItem('session');
+      // TASK: How a toast
       router.push('/login');
     }
   }

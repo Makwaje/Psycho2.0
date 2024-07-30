@@ -19,10 +19,10 @@ export default function ResetPage() {
     getValues,
   } = useForm();
 
-  async function onSubmit(formData: { email: string }) {
+  async function onSubmit(formData: any) {
     const data = await axios.post(
       `${'http://localhost:8085/api/v1'}/users/forgot-password`,
-      { email: formData.email }
+      { email: formData?.email }
     );
 
     console.log(data);
@@ -40,7 +40,7 @@ export default function ResetPage() {
         <Headers size="xl" className="mx-auto mb-20 text-3xl md:text-4xl">
           Don&#39;t panic!
         </Headers>
-        <p className="mb-12 font-medium ">
+        <p className="mb-12 font-medium">
           Please fill the required fields below, so we can help you to return
           your account
         </p>

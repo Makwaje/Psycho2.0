@@ -16,7 +16,6 @@ import { cn } from '@/lib/utils';
 import useSession from '@/hooks/useSession';
 import { SessionTypes } from '@/lib/types';
 
-import { deleteCookie } from 'cookies-next';
 import { Button } from '../ui/chad-cn/button';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
@@ -64,7 +63,7 @@ export default function Sidebar() {
             Messages
           </NavItem>
         </div>
-        <div className=" mt-6 flex flex-col gap-4">
+        <div className="mt-6 flex flex-col gap-4">
           <NavItem href="/app/settings/password">
             <FaGear size={20} />
             Settings
@@ -79,9 +78,9 @@ export default function Sidebar() {
 
       <Button onClick={() => logout()}>logout</Button>
 
-      <NavItem href="/app/settings/profile" className="mb-4 ring-2">
+      <NavItem href="/app/settings/profile" className="mb-4 w-40 ring-2">
         <CgProfile size={22} />
-        {session?.name}
+        <span>{session?.name}</span>
       </NavItem>
     </aside>
   );

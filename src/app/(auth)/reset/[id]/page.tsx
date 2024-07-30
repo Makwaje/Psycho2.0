@@ -26,7 +26,7 @@ export default function ResetPage({ params }: { params: Params }) {
   async function onSubmit(formData: { password: string }) {
     console.log(formData.password);
 
-    const data = await axios.post(
+    const data = await axios.patch(
       `${'http://localhost:8085/api/v1'}/users/reset-password/${params.id}`,
       { password: formData.password }
     );
@@ -46,7 +46,7 @@ export default function ResetPage({ params }: { params: Params }) {
         <Headers size="xl" className="mx-auto mb-20 text-3xl md:text-4xl">
           Reset Password
         </Headers>
-        <p className="mb-12 font-medium ">
+        <p className="mb-12 font-medium">
           Please fill the required fields below, so we can set your new password
         </p>
       </div>
