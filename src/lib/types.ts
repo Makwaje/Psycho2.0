@@ -1,9 +1,11 @@
-import { z } from "zod";
+import { z } from 'zod';
+
+// ------------------------------ ZOD TYPES ------------------------------
 
 // login schema validation to be used in react hook form
 export const loginSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(8, "Password must be at least 8 characters"),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
 });
 export type TLoginSchema = z.infer<typeof loginSchema>;
 
@@ -11,10 +13,10 @@ export type TLoginSchema = z.infer<typeof loginSchema>;
 export const signUpSchema = z
   .object({
     name: z
-      .string({ required_error: "This field is required" })
-      .includes(" ", { message: "Full name is required" }),
+      .string({ required_error: 'This field is required' })
+      .includes(' ', { message: 'Full name is required' }),
     email: z.string().email(),
-    password: z.string().min(8, "Password must be at least 8 characters"),
+    password: z.string().min(8, 'Password must be at least 8 characters'),
     confirmPassword: z.string(),
     // phoneNumber: z
     //   .string()
@@ -22,7 +24,28 @@ export const signUpSchema = z
     //   .max(10, "Please provide valid phone number"),
   })
   .refine((data) => data.confirmPassword === data.password, {
-    message: "Password must match",
-    path: ["confirmPassword"],
+    message: 'Password must match',
+    path: ['confirmPassword'],
   });
 export type TSignUpSchema = z.infer<typeof signUpSchema>;
+
+// reset password schema validation to be used in react hook form
+export const resetPasswordSchema = z
+  .object({
+    password: z.string().min(8, 'Password must be at least 8 characters'),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.confirmPassword === data.password, {
+    message: 'Password must match',
+    path: ['confirmPassword'],
+  });
+export type TResetPasswordSchema = z.infer<typeof resetPasswordSchema>;
+
+// ----------------------------------------------------------------------
+
+export type SessionTypes = {
+  email: string;
+  id: string;
+  name: string;
+  photo: string;
+};

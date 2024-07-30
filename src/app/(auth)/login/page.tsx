@@ -28,9 +28,17 @@ export default function LogInPage() {
   const router = useRouter();
 
   async function onSubmit(formData: TLoginSchema) {
-    const data = axios.post('/api/auth/login', formData);
+    const { data } = await axios.post('/api/auth/login', formData);
 
     console.log(data);
+
+    if (data.status === 'success' && typeof window !== 'undefined') {
+      window.localStorage.setItem('session', JSON.stringify(data.data.user));
+      router.push('/app');
+    } else if (data.message === 'Please verify your email to proceed.') {
+      window.localStorage.setItem('session', JSON.stringify(data.data));
+      router.push('/verify');
+    }
   }
 
   return (
