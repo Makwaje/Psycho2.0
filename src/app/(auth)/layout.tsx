@@ -22,7 +22,7 @@ export default function RootLayout({
             width={0}
             height={0}
             className="hidden h-screen w-full object-cover md:block"
-            src="doctor signup.svg"
+            src="AssetLogin.svg"
             alt="hi mom"
             loading="eager"
           />
