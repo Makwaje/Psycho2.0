@@ -29,9 +29,33 @@ export default function SignUpPage() {
   });
 
   async function onSubmit(formData: TSignUpSchema) {
-    const data = axios.post('/api/auth/signup', formData);
+    const { data } = await axios.post('/api/auth/signup', formData);
 
     console.log(data);
+
+    if (data.status === 'success') {
+      const otpReq = await fetch(
+        'http://localhost:8085/api/v1/users/request-otp',
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            email: formData.email,
+          }),
+          headers: {
+            'Content-type': 'application/json',
+          },
+        }
+      );
+
+      const reqData = await otpReq.json();
+
+      console.log(reqData);
+
+      router.push(`/verify?id=${data.user.id}`);
+    } else if (data?.message === 'User already exist') {
+      // TASK // SHOW A toast that says: 'User already exist'
+      router.push('/login');
+    }
   }
 
   return (
@@ -80,6 +104,7 @@ export default function SignUpPage() {
               className="w-full"
             />
           </div>
+
           {errors?.email && (
             <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
               {`${errors.email.message}`}
@@ -146,7 +171,7 @@ export default function SignUpPage() {
       </form>
 
       <Separator className="my-6 w-1/2" orientation="horizontal" />
-      <div className=" flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <p className="mb-6">Or SignUp With</p>
         <div className="space-x-4">
           <Button variant="secondary" className="px-4 py-8">

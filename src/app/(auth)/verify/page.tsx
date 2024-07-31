@@ -1,20 +1,58 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/chad-cn/button";
-import { Input } from "@/components/ui/chad-cn/input";
-import { Separator } from "@/components/ui/chad-cn/separator";
-import Headers from "@/components/ui/Headers";
-import Link from "next/link";
-import { useState } from "react";
-import OtpInput from "react-otp-input";
+import { Button } from '@/components/ui/chad-cn/button';
+import { Input } from '@/components/ui/chad-cn/input';
+import { Separator } from '@/components/ui/chad-cn/separator';
+import Headers from '@/components/ui/Headers';
+import useSession from '@/hooks/useSession';
+import { SessionTypes } from '@/lib/types';
+import axios from 'axios';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useCallback, useEffect, useState } from 'react';
+import OtpInput from 'react-otp-input';
 
 export default function VerifyPage() {
-  const [otp, setOtp] = useState("");
+  const [otp, setOtp] = useState('');
+  const router = useRouter();
+  const session = useSession() as SessionTypes;
 
-  const email = "M*****@gmail.com";
+  console.log(session?.id);
 
-  function handleSubmitCode() {
-    console.log(otp);
+  async function handleSubmitCode() {
+    const res = await fetch(
+      `http://localhost:8085/api/v1/users/verify-otp/66a662c121460a26b4d0e461`,
+      {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify({
+          code: otp,
+        }),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      }
+    );
+
+    const requestData = await res.json();
+
+    console.log(requestData);
+
+    // if (req?.data.message === 'OTP verified successfully') router.push('/login');
+  }
+
+  useEffect(
+    function () {
+      if (session === null) router.replace('/login');
+    },
+    [router, session]
+  );
+
+  async function RequestOTP() {
+    const data = await axios.get(
+      `${'http://localhost:8085/api/v1'}/users/request-otp/${session?.id}`
+    );
+    console.log(data);
   }
 
   return (
@@ -30,8 +68,10 @@ export default function VerifyPage() {
           Verification
         </Headers>
         <p className="mb-10">
-          We&apos;ve sent you a code in{""}
-          <span className="block text-center font-bold">({email})</span>
+          We&apos;ve sent you a code in{''}
+          <span className="block text-center font-bold">
+            ({session?.email})
+          </span>
         </p>
       </div>
 
@@ -72,7 +112,11 @@ export default function VerifyPage() {
 
       <Separator className="my-6 w-1/2" orientation="horizontal" />
       <p className="mt-4 text-lg font-medium">Didn&apos;t receive the code?</p>
-      <Button variant="link" className="pl-1 text-lg text-blue-600">
+      <Button
+        variant="link"
+        className="pl-1 text-lg text-blue-600"
+        onClick={() => RequestOTP()}
+      >
         Resend
       </Button>
     </div>

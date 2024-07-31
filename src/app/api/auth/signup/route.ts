@@ -20,11 +20,15 @@ export async function POST(request: Request) {
 
   // if user does not exist or any error happened, just return the response as it as
   // with out setting a cookie!
+
   if (res.status !== 200) {
     const response = await res.json();
     return new NextResponse(JSON.stringify(response));
   }
 
+  // NO NEED COOKIE FOR SIGNUP!
+
+  /*
   // extract the [set-cookie] string
 
   const serialized = `${res.headers.getSetCookie().at(0)}`;
@@ -34,8 +38,16 @@ export async function POST(request: Request) {
 
   const response = await res.json();
 
+  // set the url to verify page
+  const verifyUrl = new URL('/verify', request.url);
+  verifyUrl.searchParams.set('id', response.data.user.id);
+  console.log(verifyUrl.href);
+
   // POST back the same response BUT add headers options to set the cookie using the {serialized}
   return new NextResponse(JSON.stringify(response), {
     headers: { 'Set-Cookie': serialized },
   });
+*/
+  // POST back the same response BUT add headers options to set the cookie using the {serialized}
+  return new NextResponse(JSON.stringify(await res.json()));
 }

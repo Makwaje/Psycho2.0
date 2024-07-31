@@ -18,6 +18,7 @@ export async function POST(request: Request) {
 
   // if user does not exist or any error happened, just return the response as it as
   // with out setting a cookie!
+
   if (res.status !== 200) {
     const response = await res.json();
     return new NextResponse(JSON.stringify(response));
@@ -33,7 +34,5 @@ export async function POST(request: Request) {
   const response = await res.json();
 
   // POST back the same response BUT add headers options to set the cookie using the {serialized}
-  return new NextResponse(JSON.stringify(response), {
-    headers: { 'Set-Cookie': serialized },
-  });
+  return new NextResponse(JSON.stringify(response));
 }

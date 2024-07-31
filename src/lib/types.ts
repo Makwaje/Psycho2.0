@@ -54,3 +54,10 @@ export const profileSchema = z.object({
 });
 
 export type TProfileSchema = z.infer<typeof profileSchema>;
+
+export type SessionTypes = {
+  email: string;
+  id: string;
+  name: string;
+  photo: string;
+};
