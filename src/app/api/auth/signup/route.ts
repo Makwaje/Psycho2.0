@@ -20,6 +20,7 @@ export async function POST(request: Request) {
 
   // if user does not exist or any error happened, just return the response as it as
   // with out setting a cookie!
+
   if (res.status !== 200) {
     const response = await res.json();
     return new NextResponse(JSON.stringify(response));

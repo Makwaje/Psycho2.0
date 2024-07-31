@@ -2,42 +2,27 @@
 
 import { useForm } from 'react-hook-form';
 
-import Link from 'next/link';
 import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
-
+import Link from 'next/link';
 import { zodResolver } from '@hookform/resolvers/zod';
-
-import { Button } from '@/components/ui/chad-cn/button';
-import { Input } from '@/components/ui/chad-cn/input';
-import { Separator } from '@/components/ui/chad-cn/separator';
+import { signUpVolunteersSchema, TSignUpVolunteersSchema } from '@/lib/types';
 import Headers from '@/components/ui/Headers';
-import { signUpSchema, TSignUpSchema } from '@/lib/types';
-import { useRouter } from 'next/navigation';
+import { Input } from '@/components/ui/chad-cn/input';
+import { Button } from '@/components/ui/chad-cn/button';
+import { Separator } from '@/components/ui/chad-cn/separator';
 
-import axios from 'axios';
-
-export default function SignUpPage() {
-  const router = useRouter();
+export default function VolunteersSignUpPage() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<TSignUpSchema>({
-    resolver: zodResolver(signUpSchema),
+  } = useForm<TSignUpVolunteersSchema>({
+    resolver: zodResolver(signUpVolunteersSchema),
   });
 
-  async function onSubmit(formData: TSignUpSchema) {
-    const { data } = await axios.post('/api/auth/signup', formData);
-
+  async function onSubmit(data: TSignUpVolunteersSchema) {
     console.log(data);
-
-    if (data.status === 'success' && typeof window !== 'undefined') {
-      window.localStorage.setItem('session', JSON.stringify(data.user));
-      router.push(`/verify?id=${data.user.id}`);
-    } else if (data?.message === 'User already exist') {
-      // TASK // SHOW A toast that says: 'User already exist'
-    }
   }
 
   return (
@@ -86,7 +71,6 @@ export default function SignUpPage() {
               className="w-full"
             />
           </div>
-
           {errors?.email && (
             <div className="-mt-2 w-full rounded-sm bg-destructive px-3 py-0.5 text-sm font-medium text-destructive-foreground">
               {`${errors.email.message}`}
@@ -128,7 +112,7 @@ export default function SignUpPage() {
           </div>
 
           {/* Phone Number */}
-          {/* <div className="w-full max-w-2xl space-y-1">
+          <div className="w-full max-w-2xl space-y-1">
             <label htmlFor="phoneNumber" className="text-sm">
               Phone number
             </label>
@@ -139,7 +123,7 @@ export default function SignUpPage() {
               placeholder="09XXXXXXXX"
               className="w-full"
             />
-          </div>  */}
+          </div>
 
           <Button
             disabled={isSubmitting}

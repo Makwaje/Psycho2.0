@@ -9,31 +9,36 @@ import { SessionTypes } from '@/lib/types';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import OtpInput from 'react-otp-input';
-
-axios.defaults.withCredentials = true;
 
 export default function VerifyPage() {
   const [otp, setOtp] = useState('');
   const router = useRouter();
   const session = useSession() as SessionTypes;
 
-  console.log(session);
+  console.log(session?.id);
 
   async function handleSubmitCode() {
-    const { data } = await axios.post(
-      `${'http://localhost:8085/api/v1'}/users/verify-otp/${session?.id}`,
-      { code: otp }
+    const res = await fetch(
+      `http://localhost:8085/api/v1/users/verify-otp/66a662c121460a26b4d0e461`,
+      {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify({
+          code: otp,
+        }),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      }
     );
 
-    console.log(data);
+    const requestData = await res.json();
 
-    if (data.message === 'OTP verified successfully') {
-      window.localStorage.removeItem('session');
-      // TASK: How a toast
-      router.push('/login');
-    }
+    console.log(requestData);
+
+    // if (req?.data.message === 'OTP verified successfully') router.push('/login');
   }
 
   useEffect(
@@ -44,7 +49,7 @@ export default function VerifyPage() {
   );
 
   async function RequestOTP() {
-    const { data } = await axios.post(
+    const data = await axios.get(
       `${'http://localhost:8085/api/v1'}/users/request-otp/${session?.id}`
     );
     console.log(data);
