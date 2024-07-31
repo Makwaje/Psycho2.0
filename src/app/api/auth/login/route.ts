@@ -24,6 +24,8 @@ export async function POST(request: Request) {
     return new NextResponse(JSON.stringify(response));
   }
 
+  console.log(res);
+
   // extract the [set-cookie] string
 
   const serialized = `${res.headers.getSetCookie().at(0)}`;
@@ -34,5 +36,7 @@ export async function POST(request: Request) {
   const response = await res.json();
 
   // POST back the same response BUT add headers options to set the cookie using the {serialized}
-  return new NextResponse(JSON.stringify(response));
+  return new NextResponse(JSON.stringify(response), {
+    headers: { 'set-cookie': serialized },
+  });
 }

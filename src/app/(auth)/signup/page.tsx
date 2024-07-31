@@ -2,18 +2,17 @@
 
 import { useForm } from 'react-hook-form';
 
-import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
+import { FaGoogle, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { useRouter } from 'next/navigation';
-import { signUpSchema, TSignUpSchema } from '@/lib/types';
-import Headers from '@/components/ui/Headers';
-import { Input } from '@/components/ui/chad-cn/input';
 import { Button } from '@/components/ui/chad-cn/button';
+import { Input } from '@/components/ui/chad-cn/input';
 import { Separator } from '@/components/ui/chad-cn/separator';
-import { signUp } from '@/lib/actions';
+import Headers from '@/components/ui/Headers';
+import { signUpSchema, TSignUpSchema } from '@/lib/types';
+import { useRouter } from 'next/navigation';
 
 import axios from 'axios';
 
@@ -33,28 +32,11 @@ export default function SignUpPage() {
 
     console.log(data);
 
-    if (data.status === 'success') {
-      const otpReq = await fetch(
-        'http://localhost:8085/api/v1/users/request-otp',
-        {
-          method: 'POST',
-          body: JSON.stringify({
-            email: formData.email,
-          }),
-          headers: {
-            'Content-type': 'application/json',
-          },
-        }
-      );
-
-      const reqData = await otpReq.json();
-
-      console.log(reqData);
-
+    if (data.status === 'success' && typeof window !== 'undefined') {
+      window.localStorage.setItem('session', JSON.stringify(data.user));
       router.push(`/verify?id=${data.user.id}`);
     } else if (data?.message === 'User already exist') {
       // TASK // SHOW A toast that says: 'User already exist'
-      router.push('/login');
     }
   }
 

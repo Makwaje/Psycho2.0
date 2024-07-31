@@ -36,9 +36,8 @@ export default function LogInPage() {
       window.localStorage.setItem('session', JSON.stringify(data.data.user));
       router.push('/app');
     } else if (data.message === 'Please verify your email to proceed.') {
-      // FIX - LATER
-      // Musab need to fix this
-      // we need user's {id} in the response - to redirect to verify page.
+      window.localStorage.setItem('session', JSON.stringify(data.data));
+      router.push('/verify');
     }
   }
 

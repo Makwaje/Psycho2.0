@@ -1,3 +1,4 @@
+'use client';
 import { AiFillMessage } from 'react-icons/ai';
 import { BiSolidReport } from 'react-icons/bi';
 import { CgProfile } from 'react-icons/cg';
@@ -12,8 +13,25 @@ import React from 'react';
 import { Separator } from '../ui/chad-cn/separator';
 import Headers from '../ui/Headers';
 import { cn } from '@/lib/utils';
+import useSession from '@/hooks/useSession';
+import { SessionTypes } from '@/lib/types';
+
+import { Button } from '../ui/chad-cn/button';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export default function Sidebar() {
+  const session = useSession() as SessionTypes;
+  const router = useRouter();
+
+  const logout = async () => {
+    const { data } = await axios.get('/api/auth/logout');
+
+    if (data) {
+      router.push('/login');
+    }
+  };
+
   return (
     <aside className="top-0 sticky flex flex-col bg-popover px-4 w-full h-screen text-popover-foreground">
       <Headers size="xl" className="mt-4 mb-12 -ml-2">
@@ -45,7 +63,7 @@ export default function Sidebar() {
             Messages
           </NavItem>
         </div>
-        <div className="flex flex-col gap-4 mt-6">
+        <div className="mt-6 flex flex-col gap-4">
           <NavItem href="/app/settings/password">
             <FaGear size={20} />
             Settings
@@ -58,9 +76,11 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <NavItem href="/app/settings/profile" className="mb-4 ring-2">
+      <Button onClick={() => logout()}>logout</Button>
+
+      <NavItem href="/app/settings/profile" className="mb-4 w-40 ring-2">
         <CgProfile size={22} />
-        Mohamed Alfadel
+        <span>{session?.name}</span>
       </NavItem>
     </aside>
   );
