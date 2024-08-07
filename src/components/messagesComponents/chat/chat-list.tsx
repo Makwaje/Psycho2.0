@@ -28,10 +28,10 @@ export function ChatList({
   }, [messages]);
 
   return (
-    <div className="flex h-full w-full flex-col overflow-y-auto overflow-x-hidden">
+    <div className="flex h-full w-full flex-col overflow-hidden">
       <div
         ref={messagesContainerRef}
-        className="flex h-full w-full flex-col overflow-y-auto overflow-x-hidden"
+        className="flex h-full w-full flex-col overflow-hidden"
       >
         <AnimatePresence>
           {messages?.map((message, index) => (
