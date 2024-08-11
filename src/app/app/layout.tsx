@@ -18,15 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <main className="w-full md:flex">
-      <div className=" hidden md:block">
+      <div className="hidden md:block">
         <Sidebar />
       </div>
       <AppMobileSideBar />
-      <div className="w-full flex-1 px-6 pt-6">
+      <section className="w-full flex-1 px-6 pt-6">
         {children}
 
         {/* Add footer */}
-      </div>
+      </section>
     </main>
   );
 }
