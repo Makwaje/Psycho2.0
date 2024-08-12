@@ -17,16 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="w-full md:flex">
-      <div className=" hidden md:block">
+    <main className="relative w-full md:flex">
+      <div className="hidden md:block">
         <Sidebar />
       </div>
       <AppMobileSideBar />
-      <div className="w-full flex-1 px-6 pt-6">
+      <section className="w-full flex-1 px-6 sm:pt-6">
         {children}
 
         {/* Add footer */}
-      </div>
+      </section>
     </main>
   );
 }
