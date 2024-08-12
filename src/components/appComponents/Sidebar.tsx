@@ -33,12 +33,12 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="top-0 sticky flex flex-col bg-popover px-4 w-full h-screen text-popover-foreground">
-      <Headers size="xl" className="mt-4 mb-12 -ml-2">
+    <aside className="sticky top-0 flex h-screen w-full flex-col overflow-hidden bg-popover px-4 text-popover-foreground">
+      <Headers size="xl" className="-ml-2 mb-12 mt-4">
         Psycho
       </Headers>
 
-      <div className="flex flex-col gap-4 h-full">
+      <div className="flex h-full flex-col gap-4">
         <div className="flex flex-col gap-4">
           <NavItem href="/app/home">
             <FaHome size={20} /> Home

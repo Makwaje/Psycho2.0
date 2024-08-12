@@ -15,6 +15,7 @@ export default function Messages() {
         <Headers size="lg" className="mb-8">
           Active Chats
           <span className="text-primary/50"> (1)</span>
+          <Separator className="mt-2" />
         </Headers>
 
         <ChatCard
@@ -25,9 +26,10 @@ export default function Messages() {
           isActive={true}
         />
 
-        <Headers size="lg" className="my-8 border-b-2 opacity-70">
+        <Headers size="lg" className="my-8 opacity-70">
           Dead Chats
           <span className="text-primary/50"> (3)</span>
+          <Separator className="mt-2" />
         </Headers>
         <ChatCard
           name="Mohamed Bakri"
@@ -63,6 +65,7 @@ import {
 
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { Separator } from '@/components/ui/chad-cn/separator';
 
 type ChatCardTypes = {
   name: string;
